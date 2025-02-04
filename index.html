@@ -1,200 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Latin Note Taking</title>
-    <style>
-    /* CSS styles */
+  <meta charset="UTF-8">
+  <title>Latin Note Taking</title>
+  <style>
+    /* Enhanced Classic Theme with More Spacing and Thematic Background */
+
+    /* Body with a multi-layered background gradient for added depth */
     body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-    }
-    
-    #titleInput {
-        width: 100%;
-        font-size: 18px;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
-    
-    #inputArea, #translationArea {
-        width: 100%;
-        height: 100px;
-    }
-    
-    #processButton {
-        margin-top: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-    
-    /* Added styling for the instruction sentence */
-    #processInstruction {
-        margin-left: 10px;
-        font-size: 12px;
-        color: #555;
-        vertical-align: middle;
-    }
-    
-    #mainContainer {
-        display: flex;
-        margin-top: 10px; /* Reduced margin-top to bring buttons closer to top */
-    }
-    
-    #displayArea {
-        border: 1px solid #ccc;
-        padding: 20px; /* Increased padding to provide more space for lines */
-        min-height: 400px;
-        max-height: 600px;
-        overflow: auto;
-        position: relative;
-        line-height: 1.8;
-        flex-grow: 1;
-    }
-    
-    .lineContainer {
-        /* Optional styling for lines */
-        margin-bottom: 5px;
-    }
-    
-    .word {
-        cursor: pointer;
-        padding: 2px;
-        position: relative;
-        z-index: 1; /* Ensure words are above the canvas */
-    }
-    
-    .punctuation {
-        padding: 2px;
-        position: relative;
-        z-index: 1; /* Ensure punctuation is above the canvas */
-    }
-    
-    .selected {
-        outline: 2px solid #000;
+      font-family: Georgia, "Times New Roman", serif;
+      /* Base parchment-like gradient with an extra radial gradient for subtle shading */
+      background: 
+        radial-gradient(circle at top left, rgba(255,255,255,0.4), transparent 70%),
+        linear-gradient(135deg, #fdf6e3 0%, #faf0d7 100%);
+      color: #333;
+      margin: 20px;
+      line-height: 1.6;
     }
 
-    /* Highlight for multi-selected words */
-    .multi-selected {
-        outline: 2px dashed #000;
+    /* Inputs & Textareas with border radius, padding and shadows */
+    #titleInput,
+    #inputArea,
+    #translationArea {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #aaa;
+      background-color: #fff;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
     }
-    
-    .buttons {
-        margin-left: 20px;
-        display: flex;
-        flex-direction: column;
-        flex-shrink: 0;
+    #titleInput {
+      font-size: 18px;
+      margin-bottom: 15px;
     }
-    
+    #titleInput:focus,
+    #inputArea:focus,
+    #translationArea:focus {
+      outline: none;
+      border-color: #888;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Buttons styling with border radius, smooth transitions, and hover effects */
+    button,
     .button {
-        display: inline-block;
-        width: 50px; /* Reduced width */
-        height: 25px; /* Reduced height */
-        margin-bottom: 5px; /* Reduced margin-bottom */
-        cursor: pointer;
-        text-align: center;
-        line-height: 25px; /* Adjusted line-height to match height */
-        border: 1px solid #000;
-        box-sizing: border-box;
-        font-size: 10px; /* Reduced font-size */
-        background-color: #f0f0f0;
+      background-color: #e0dcd3;
+      border: 1px solid #888;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+      border-radius: 4px;
     }
-    
+    button:hover,
     .button:hover {
-        background-color: #e0e0e0;
+      background-color: #d4cec2;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
     }
-    
-    #underlineButton {
-        font-weight: bold;
-        text-decoration: underline;
+    button:focus,
+    .button:focus {
+      outline: 2px solid #555;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     }
-    
-    #notesSection, #vocabSection {
-        margin-top: 20px;
-    }
-    
-    #notesList, #vocabList {
-        list-style-type: none;
-        padding: 0;
-    }
-    
+    /* Specific buttons */
+    #processButton,
     #exportButton {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
     }
-    </style>
+    #multiSelectButton {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    /* Instruction sentence styling */
+    #processInstruction {
+      margin-left: 10px;
+      font-size: 12px;
+      color: #555;
+      vertical-align: middle;
+    }
+
+    /* Main container for display area & annotation buttons */
+    #mainContainer {
+      display: flex;
+      margin-top: 10px;
+    }
+
+    /* Display area with a white background, subtle border, and drop shadow */
+    #displayArea {
+      border: 1px solid #aaa;
+      padding: 20px;
+      min-height: 400px;
+      max-height: 600px;
+      overflow: auto;
+      position: relative;
+      background-color: #fff;
+      line-height: 1.8;
+      flex-grow: 1;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Custom scrollbar for display area (Webkit Browsers) */
+    #displayArea::-webkit-scrollbar {
+      width: 8px;
+    }
+    #displayArea::-webkit-scrollbar-track {
+      background: #fdf6e3;
+    }
+    #displayArea::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    /* Line container with extra bottom margin for more space between lines */
+    .lineContainer {
+      margin-bottom: 10px;
+    }
+
+    /* Word styling with a subtle hover effect */
+    .word {
+      cursor: pointer;
+      padding: 2px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.1s ease;
+    }
+    .word:hover {
+      transform: scale(1.05);
+    }
+
+    /* Punctuation styling */
+    .punctuation {
+      padding: 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Selected word styling */
+    .selected {
+      outline: 2px solid #000;
+    }
+
+    /* Multi-selected word styling */
+    .multi-selected {
+      outline: 2px dashed #000;
+    }
+
+    /* Annotation buttons container */
+    .buttons {
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    /* Annotation buttons */
+    .button {
+      display: inline-block;
+      width: 50px;
+      height: 25px;
+      margin-bottom: 5px;
+      text-align: center;
+      line-height: 25px;
+      font-size: 10px;
+      box-sizing: border-box;
+    }
+
+    /* Underline button special styling */
+    #underlineButton {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Sections for notes and vocabulary */
+    #notesSection,
+    #vocabSection {
+      margin-top: 20px;
+    }
+    #notesList,
+    #vocabList {
+      list-style-type: none;
+      padding: 0;
+    }
+  </style>
 </head>
 <body>
+  <!-- Title Input -->
+  <input id="titleInput" placeholder="Enter the title of the reading..." />
 
-    <!-- Title Input -->
-    <input id="titleInput" placeholder="Enter the title of the reading..." />
-    
-    <!-- Input Area -->
-    <textarea id="inputArea" placeholder="Paste your text with accents here..."></textarea><br>
-    <button id="processButton" title="process text from above into the box below for editing">Process Text</button>
-    <!-- Instruction Sentence Added -->
-    <span id="processInstruction">Drag a word onto another word to make a connection</span>
-    <!-- Multi Select Button Added -->
-    <button id="multiSelectButton" title="click this to annotate more than one word at a time" style="margin-left: 10px; padding: 5px 10px; font-size: 12px;">Multi Select</button>
-    
-    <!-- Main Container -->
-    <div id="mainContainer">
-        <!-- Display Area with Canvas for Connections -->
-        <div id="displayArea">
-            <!-- Canvas will be added dynamically -->
-        </div>
-    
-        <!-- Buttons for Annotations -->
-        <div class="buttons">
-            <div class="button" id="redButton" style="background-color: #ff9999;" title="highlight selected word"></div>
-            <div class="button" id="greenButton" style="background-color: #99ff99;" title="highlight selected word"></div>
-            <div class="button" id="orangeButton" style="background-color: orange;" title="highlight selected word"></div>
-            <div class="button" id="blueButton" style="background-color: lightblue;" title="highlight selected word"></div>
-            <div class="button" id="purpleButton" style="background-color: #cc99ff;" title="highlight selected word"></div>
-            <div class="button" id="yellowButton" style="background-color: yellow;" title="highlight selected word"></div>
-            <div class="button" id="noHighlightButton" style="background-color: transparent;" title="remove highlight">X</div>
-            <div class="button" id="underlineButton">U</div>
-            <div class="button" id="leftBracketButton">[</div>
-            <div class="button" id="rightBracketButton">]</div>
-            <div class="button" id="leftAngleButton">&lt;</div>
-            <div class="button" id="rightAngleButton">&gt;</div>
-            <div class="button" id="notesButton" title="add a note to a word">Notes</div>
-            <div class="button" id="vocabButton" title="add selected word to vocab list">Vocab</div>
-            <div class="button" id="undoButton">Undo</div>
-            <div class="button" id="clearButton" title="clear all markings from highlighted word">Clear</div>
-        </div>
+  <!-- Input Area -->
+  <textarea id="inputArea" placeholder="Paste your text with accents here..."></textarea><br>
+  <button id="processButton" title="Process text from above into the box below for editing">Process Text</button>
+  <!-- Instruction Sentence -->
+  <span id="processInstruction">Drag a word onto another word to make a connection</span>
+  <!-- Multi Select Button -->
+  <button id="multiSelectButton" title="Click this to annotate more than one word at a time">Multi Select</button>
+
+  <!-- Main Container -->
+  <div id="mainContainer">
+    <!-- Display Area with Canvas for Connections -->
+    <div id="displayArea">
+      <!-- Canvas will be added dynamically -->
     </div>
-    
-    <!-- Translation Section -->
-    <div id="translationSection">
-        <h3>Translation</h3>
-        <textarea id="translationArea" placeholder="Type your translation here..."></textarea>
+
+    <!-- Buttons for Annotations -->
+    <div class="buttons">
+      <div class="button" id="redButton" style="background-color: #ff9999;" title="Highlight selected word"></div>
+      <div class="button" id="greenButton" style="background-color: #99ff99;" title="Highlight selected word"></div>
+      <div class="button" id="orangeButton" style="background-color: orange;" title="Highlight selected word"></div>
+      <div class="button" id="blueButton" style="background-color: lightblue;" title="Highlight selected word"></div>
+      <div class="button" id="purpleButton" style="background-color: #cc99ff;" title="Highlight selected word"></div>
+      <div class="button" id="yellowButton" style="background-color: yellow;" title="Highlight selected word"></div>
+      <div class="button" id="noHighlightButton" style="background-color: transparent;" title="Remove highlight">X</div>
+      <div class="button" id="underlineButton">U</div>
+      <div class="button" id="leftBracketButton">[</div>
+      <div class="button" id="rightBracketButton">]</div>
+      <div class="button" id="leftAngleButton">&lt;</div>
+      <div class="button" id="rightAngleButton">&gt;</div>
+      <div class="button" id="notesButton" title="Add a note to a word">Notes</div>
+      <div class="button" id="vocabButton" title="Add selected word to vocab list">Vocab</div>
+      <div class="button" id="undoButton">Undo</div>
+      <div class="button" id="clearButton" title="Clear all markings from highlighted word">Clear</div>
     </div>
-    
-    <!-- Notes Section -->
-    <div id="notesSection">
-        <h3>Notes</h3>
-        <ul id="notesList"></ul>
-    </div>
-    
-    <!-- Vocabulary Section -->
-    <div id="vocabSection">
-        <h3>Vocabulary</h3>
-        <ul id="vocabList"></ul>
-    </div>
-    
-    <!-- Export Button -->
-    <button id="exportButton">Export</button>
-    
-    <!-- Include html2canvas library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    
-    <!-- Place the script at the end of the body -->
-    <script>
+  </div>
+
+  <!-- Translation Section -->
+  <div id="translationSection">
+    <h3>Translation</h3>
+    <textarea id="translationArea" placeholder="Type your translation here..."></textarea>
+  </div>
+
+  <!-- Notes Section -->
+  <div id="notesSection">
+    <h3>Notes</h3>
+    <ul id="notesList"></ul>
+  </div>
+
+  <!-- Vocabulary Section -->
+  <div id="vocabSection">
+    <h3>Vocabulary</h3>
+    <ul id="vocabList"></ul>
+  </div>
+
+  <!-- Export Button -->
+  <button id="exportButton">Export</button>
+
+  <!-- Include html2canvas library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <!-- JavaScript remains unchanged -->
+  <script>
     // JavaScript code
-    
+
     let selectedWord = null;
     let actionsStack = [];
     let connections = [];
@@ -202,17 +264,17 @@
     let multiSelectMode = false; // New state for multi-select mode
     let multiSelectedWords = new Set(); // Store multiple selected words
     let groupNotes = []; // Store group notes
-    
+
     const LINE_OFFSET_INCREMENT = 3; // Reduced increment for smoother spacing
     const MAX_LINE_OFFSET = 50; // Maximum pixels a line can be offset vertically
-    
+
     // Process Text Button Event
     document.getElementById('processButton').addEventListener('click', processText);
-    
+
     // Multi Select Button Event
     document.getElementById('multiSelectButton').addEventListener('click', toggleMultiSelect);
 
-    // --- UPDATED processText to preserve lines & handle accented letters ---
+    // --- Updated processText to preserve lines & handle accented letters ---
     function processText() {
       const text = document.getElementById('inputArea').value;
       const displayArea = document.getElementById('displayArea');
@@ -244,7 +306,7 @@
 
       let globalWordIndex = 0;
 
-      // This regex treats accented letters and combining marks as part of the same "word."
+      // Regex to handle accented letters and combining marks as part of the same "word."
       const regex = /[\p{L}\p{M}]+|[^\s\p{L}\p{M}]/gu;
 
       lines.forEach(lineText => {
@@ -256,54 +318,48 @@
           return;
         }
 
-        // Create a container (div) for this line
+        // Create a container for this line
         const lineContainer = document.createElement('div');
         lineContainer.classList.add('lineContainer');
 
-        // Match the words/punctuation in this line with the new regex
         const words = lineText.match(regex);
         if (words) {
           words.forEach(word => {
             const span = document.createElement('span');
 
-            // We'll consider it a "word" if it has at least one letter. Alternatively, you could check if it matches your regex again.
             if (/\p{L}/u.test(word)) {
               span.className = 'word';
               span.dataset.index = globalWordIndex.toString();
               span.draggable = true;
               span.textContent = word;
 
-              // Click event
+              // Click event for word selection
               span.addEventListener('click', () => {
                 if (multiSelectMode) {
-                  // Multi-select logic
                   if (multiSelectedWords.has(span)) {
-                      multiSelectedWords.delete(span);
-                      span.classList.remove('multi-selected');
+                    multiSelectedWords.delete(span);
+                    span.classList.remove('multi-selected');
                   } else {
-                      multiSelectedWords.add(span);
-                      span.classList.add('multi-selected');
+                    multiSelectedWords.add(span);
+                    span.classList.add('multi-selected');
                   }
-                  // Clear single selection
                   if (selectedWord && !multiSelectedWords.has(selectedWord)) {
-                      selectedWord.classList.remove('selected');
-                      selectedWord = null;
+                    selectedWord.classList.remove('selected');
+                    selectedWord = null;
                   }
                 } else {
-                  // Single selection logic
                   if (selectedWord) {
-                      selectedWord.classList.remove('selected');
-                      if (selectedWord === span) {
-                          selectedWord = null;
-                          return;
-                      }
+                    selectedWord.classList.remove('selected');
+                    if (selectedWord === span) {
+                      selectedWord = null;
+                      return;
+                    }
                   }
                   selectedWord = span;
                   selectedWord.classList.add('selected');
 
-                  // Show note if exists
                   if (selectedWord.dataset.note) {
-                      alert('Note for "' + selectedWord.textContent.trim() + '": ' + selectedWord.dataset.note);
+                    alert('Note for "' + selectedWord.textContent.trim() + '": ' + selectedWord.dataset.note);
                   }
                 }
               });
@@ -315,38 +371,34 @@
 
               globalWordIndex++;
             } else {
-              // It's punctuation or something else (non-letter)
               span.className = 'punctuation';
               span.textContent = word;
             }
 
-            // Append the word/punctuation to the line container
             lineContainer.appendChild(span);
             lineContainer.appendChild(document.createTextNode(' '));
           });
         }
 
-        // Finally, append the entire line container to the display area
         displayArea.appendChild(lineContainer);
       });
 
-      // Resize canvas after building out the lines
       resizeCanvas();
     }
-    // --- End of updated processText() ---
+    // --- End processText ---
 
     window.addEventListener('resize', resizeCanvas);
-    
+
     function resizeCanvas() {
       const canvas = document.getElementById('lineCanvas');
       const displayArea = document.getElementById('displayArea');
-    
+
       canvas.width = displayArea.clientWidth;
       canvas.height = displayArea.clientHeight;
-    
+
       drawConnections();
     }
-    
+
     // Annotation Buttons Events
     document.getElementById('redButton').addEventListener('click', () => applyColor('#ff9999'));
     document.getElementById('greenButton').addEventListener('click', () => applyColor('#99ff99'));
@@ -355,685 +407,640 @@
     document.getElementById('purpleButton').addEventListener('click', () => applyColor('#cc99ff'));
     document.getElementById('yellowButton').addEventListener('click', () => applyColor('yellow'));
     document.getElementById('noHighlightButton').addEventListener('click', () => applyColor('transparent'));
-    
+
     function applyColor(color) {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevColor = word.style.backgroundColor || 'transparent';
-                word.style.backgroundColor = color;
-                actionsStack.push({
-                    type: 'highlight',
-                    element: word,
-                    prevColor: prevColor
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevColor = selectedWord.style.backgroundColor || 'transparent';
-                selectedWord.style.backgroundColor = color;
-                actionsStack.push({
-                    type: 'highlight',
-                    element: selectedWord,
-                    prevColor: prevColor
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevColor = word.style.backgroundColor || 'transparent';
+          word.style.backgroundColor = color;
+          actionsStack.push({
+            type: 'highlight',
+            element: word,
+            prevColor: prevColor
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevColor = selectedWord.style.backgroundColor || 'transparent';
+          selectedWord.style.backgroundColor = color;
+          actionsStack.push({
+            type: 'highlight',
+            element: selectedWord,
+            prevColor: prevColor
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     }
-    
+
     // Underline Button Event
     document.getElementById('underlineButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevDecoration = word.style.textDecoration || 'none';
-                if (word.style.textDecoration === 'underline') {
-                    word.style.textDecoration = 'none';
-                } else {
-                    word.style.textDecoration = 'underline';
-                }
-                actionsStack.push({
-                    type: 'underline',
-                    element: word,
-                    prevDecoration: prevDecoration
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevDecoration = selectedWord.style.textDecoration || 'none';
-                if (selectedWord.style.textDecoration === 'underline') {
-                    selectedWord.style.textDecoration = 'none';
-                } else {
-                    selectedWord.style.textDecoration = 'underline';
-                }
-                actionsStack.push({
-                    type: 'underline',
-                    element: selectedWord,
-                    prevDecoration: prevDecoration
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevDecoration = word.style.textDecoration || 'none';
+          word.style.textDecoration = word.style.textDecoration === 'underline' ? 'none' : 'underline';
+          actionsStack.push({
+            type: 'underline',
+            element: word,
+            prevDecoration: prevDecoration
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevDecoration = selectedWord.style.textDecoration || 'none';
+          selectedWord.style.textDecoration = selectedWord.style.textDecoration === 'underline' ? 'none' : 'underline';
+          actionsStack.push({
+            type: 'underline',
+            element: selectedWord,
+            prevDecoration: prevDecoration
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Bracket Buttons Events
     document.getElementById('leftBracketButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevTextContent = word.textContent;
-                word.textContent = '[' + word.textContent;
-                actionsStack.push({
-                    type: 'leftBracket',
-                    element: word,
-                    prevTextContent: prevTextContent
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevTextContent = selectedWord.textContent;
-                selectedWord.textContent = '[' + selectedWord.textContent;
-                actionsStack.push({
-                    type: 'leftBracket',
-                    element: selectedWord,
-                    prevTextContent: prevTextContent
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevTextContent = word.textContent;
+          word.textContent = '[' + word.textContent;
+          actionsStack.push({
+            type: 'leftBracket',
+            element: word,
+            prevTextContent: prevTextContent
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevTextContent = selectedWord.textContent;
+          selectedWord.textContent = '[' + selectedWord.textContent;
+          actionsStack.push({
+            type: 'leftBracket',
+            element: selectedWord,
+            prevTextContent: prevTextContent
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     document.getElementById('rightBracketButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevTextContent = word.textContent;
-                word.textContent = word.textContent + ']';
-                actionsStack.push({
-                    type: 'rightBracket',
-                    element: word,
-                    prevTextContent: prevTextContent
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevTextContent = selectedWord.textContent;
-                selectedWord.textContent = selectedWord.textContent + ']';
-                actionsStack.push({
-                    type: 'rightBracket',
-                    element: selectedWord,
-                    prevTextContent: prevTextContent
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevTextContent = word.textContent;
+          word.textContent = word.textContent + ']';
+          actionsStack.push({
+            type: 'rightBracket',
+            element: word,
+            prevTextContent: prevTextContent
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevTextContent = selectedWord.textContent;
+          selectedWord.textContent = selectedWord.textContent + ']';
+          actionsStack.push({
+            type: 'rightBracket',
+            element: selectedWord,
+            prevTextContent: prevTextContent
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Angle Bracket Buttons Events
     document.getElementById('leftAngleButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevTextContent = word.textContent;
-                word.textContent = '<' + word.textContent;
-                actionsStack.push({
-                    type: 'leftAngle',
-                    element: word,
-                    prevTextContent: prevTextContent
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevTextContent = selectedWord.textContent;
-                selectedWord.textContent = '<' + selectedWord.textContent;
-                actionsStack.push({
-                    type: 'leftAngle',
-                    element: selectedWord,
-                    prevTextContent: prevTextContent
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevTextContent = word.textContent;
+          word.textContent = '<' + word.textContent;
+          actionsStack.push({
+            type: 'leftAngle',
+            element: word,
+            prevTextContent: prevTextContent
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevTextContent = selectedWord.textContent;
+          selectedWord.textContent = '<' + selectedWord.textContent;
+          actionsStack.push({
+            type: 'leftAngle',
+            element: selectedWord,
+            prevTextContent: prevTextContent
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     document.getElementById('rightAngleButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevTextContent = word.textContent;
-                word.textContent = word.textContent + '>';
-                actionsStack.push({
-                    type: 'rightAngle',
-                    element: word,
-                    prevTextContent: prevTextContent
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevTextContent = selectedWord.textContent;
-                selectedWord.textContent = selectedWord.textContent + '>';
-                actionsStack.push({
-                    type: 'rightAngle',
-                    element: selectedWord,
-                    prevTextContent: prevTextContent
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevTextContent = word.textContent;
+          word.textContent = word.textContent + '>';
+          actionsStack.push({
+            type: 'rightAngle',
+            element: word,
+            prevTextContent: prevTextContent
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevTextContent = selectedWord.textContent;
+          selectedWord.textContent = selectedWord.textContent + '>';
+          actionsStack.push({
+            type: 'rightAngle',
+            element: selectedWord,
+            prevTextContent: prevTextContent
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Notes Button Event
     document.getElementById('notesButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            // Prompt once for the note
-            let note = prompt('Enter your note for the selected words:');
-            if (note !== null && note.trim() !== '') {
-                // Combine selected words into a single string
-                const combinedWords = Array.from(multiSelectedWords).map(word => word.textContent.trim()).join(' ');
-                groupNotes.push({ words: combinedWords, note: note.trim() });
-                actionsStack.push({
-                    type: 'groupNote',
-                    group: { words: combinedWords, note: note.trim() }
-                });
-                updateNotesList();
-            }
-        } else {
-            if (selectedWord) {
-                let note = prompt('Enter your note for "' + selectedWord.textContent.trim() + '":');
-                if (note !== null && note.trim() !== '') {
-                    const prevFontWeight = selectedWord.style.fontWeight || 'normal';
-                    const prevNote = selectedWord.dataset.note || '';
-                    selectedWord.dataset.note = note.trim();
-                    selectedWord.style.fontWeight = 'bold';
-                    actionsStack.push({
-                        type: 'note',
-                        element: selectedWord,
-                        prevFontWeight: prevFontWeight,
-                        prevNote: prevNote
-                    });
-                    updateNotesList();
-                }
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        let note = prompt('Enter your note for the selected words:');
+        if (note !== null && note.trim() !== '') {
+          const combinedWords = Array.from(multiSelectedWords).map(word => word.textContent.trim()).join(' ');
+          groupNotes.push({ words: combinedWords, note: note.trim() });
+          actionsStack.push({
+            type: 'groupNote',
+            group: { words: combinedWords, note: note.trim() }
+          });
+          updateNotesList();
+        }
+      } else {
+        if (selectedWord) {
+          let note = prompt('Enter your note for "' + selectedWord.textContent.trim() + '":');
+          if (note !== null && note.trim() !== '') {
+            const prevFontWeight = selectedWord.style.fontWeight || 'normal';
+            const prevNote = selectedWord.dataset.note || '';
+            selectedWord.dataset.note = note.trim();
+            selectedWord.style.fontWeight = 'bold';
+            actionsStack.push({
+              type: 'note',
+              element: selectedWord,
+              prevFontWeight: prevFontWeight,
+              prevNote: prevNote
+            });
+            updateNotesList();
+          }
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Add Vocab Button Event
     document.getElementById('vocabButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            // Combine selected words into a single vocab entry
-            const combinedWords = Array.from(multiSelectedWords).map(word => word.textContent.trim()).join(', ');
-            if (!vocabList.includes(combinedWords)) {
-                vocabList.push(combinedWords);
-                actionsStack.push({
-                    type: 'vocab',
-                    word: combinedWords
-                });
-                updateVocabList();
-            } else {
-                alert('Selected words are already in the vocabulary list.');
-            }
-        } else {
-            if (selectedWord) {
-                const wordText = selectedWord.textContent.trim();
-                if (!vocabList.includes(wordText)) {
-                    vocabList.push(wordText);
-                    actionsStack.push({
-                        type: 'vocab',
-                        word: wordText
-                    });
-                } else {
-                    alert('Word already in vocabulary list.');
-                }
-                updateVocabList();
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        const combinedWords = Array.from(multiSelectedWords).map(word => word.textContent.trim()).join(', ');
+        if (!vocabList.includes(combinedWords)) {
+          vocabList.push(combinedWords);
+          actionsStack.push({
+            type: 'vocab',
+            word: combinedWords
+          });
+          updateVocabList();
+        } else {
+          alert('Selected words are already in the vocabulary list.');
+        }
+      } else {
+        if (selectedWord) {
+          const wordText = selectedWord.textContent.trim();
+          if (!vocabList.includes(wordText)) {
+            vocabList.push(wordText);
+            actionsStack.push({
+              type: 'vocab',
+              word: wordText
+            });
+          } else {
+            alert('Word already in vocabulary list.');
+          }
+          updateVocabList();
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Update Notes List
     function updateNotesList() {
-        const notesList = document.getElementById('notesList');
-        notesList.innerHTML = '';
-        
-        // Display group notes first
-        groupNotes.forEach(group => {
-            const li = document.createElement('li');
-            li.textContent = group.words + ': ' + group.note;
-            notesList.appendChild(li);
-        });
-        
-        // Display individual word notes
-        const wordsWithNotes = Array.from(document.querySelectorAll('.word')).filter(word => word.dataset.note);
-        wordsWithNotes.sort((a, b) => parseInt(a.dataset.index) - parseInt(b.dataset.index));
-    
-        wordsWithNotes.forEach(word => {
-            const li = document.createElement('li');
-            li.textContent = '"' + word.textContent.trim() + '": ' + word.dataset.note;
-            notesList.appendChild(li);
-        });
+      const notesList = document.getElementById('notesList');
+      notesList.innerHTML = '';
+
+      groupNotes.forEach(group => {
+        const li = document.createElement('li');
+        li.textContent = group.words + ': ' + group.note;
+        notesList.appendChild(li);
+      });
+
+      const wordsWithNotes = Array.from(document.querySelectorAll('.word')).filter(word => word.dataset.note);
+      wordsWithNotes.sort((a, b) => parseInt(a.dataset.index) - parseInt(b.dataset.index));
+
+      wordsWithNotes.forEach(word => {
+        const li = document.createElement('li');
+        li.textContent = '"' + word.textContent.trim() + '": ' + word.dataset.note;
+        notesList.appendChild(li);
+      });
     }
-    
+
     // Update Vocab List
     function updateVocabList() {
-        const vocabListElement = document.getElementById('vocabList');
-        vocabListElement.innerHTML = '';
-        vocabList.forEach(word => {
-            const li = document.createElement('li');
-            li.textContent = word;
-            vocabListElement.appendChild(li);
-        });
+      const vocabListElement = document.getElementById('vocabList');
+      vocabListElement.innerHTML = '';
+      vocabList.forEach(word => {
+        const li = document.createElement('li');
+        li.textContent = word;
+        vocabListElement.appendChild(li);
+      });
     }
-    
+
     // Undo Button Event
     document.getElementById('undoButton').addEventListener('click', undoAction);
-    
+
     function undoAction() {
-        if (actionsStack.length === 0) {
-            alert('No actions to undo');
-            return;
-        }
-    
-        const lastAction = actionsStack.pop();
-        switch (lastAction.type) {
-            case 'highlight':
-                lastAction.element.style.backgroundColor = lastAction.prevColor;
-                break;
-            case 'underline':
-                lastAction.element.style.textDecoration = lastAction.prevDecoration;
-                break;
-            case 'leftBracket':
-            case 'rightBracket':
-            case 'leftAngle':
-            case 'rightAngle':
-                lastAction.element.textContent = lastAction.prevTextContent;
-                break;
-            case 'connect':
-                // Remove the last connection
-                connections.pop();
-                drawConnections();
-                break;
-            case 'note':
-                lastAction.element.style.fontWeight = lastAction.prevFontWeight;
-                if (lastAction.prevNote !== '') {
-                    lastAction.element.dataset.note = lastAction.prevNote;
-                } else {
-                    delete lastAction.element.dataset.note;
-                }
-                updateNotesList();
-                break;
-            case 'groupNote':
-                // Remove the last group note
-                groupNotes.pop();
-                updateNotesList();
-                break;
-            case 'vocab':
-                vocabList.pop();
-                updateVocabList();
-                break;
-            case 'clear':
-                restoreWordState(lastAction.element, lastAction.prevState);
-                break;
-            default:
-                break;
-        }
+      if (actionsStack.length === 0) {
+        alert('No actions to undo');
+        return;
+      }
+
+      const lastAction = actionsStack.pop();
+      switch (lastAction.type) {
+        case 'highlight':
+          lastAction.element.style.backgroundColor = lastAction.prevColor;
+          break;
+        case 'underline':
+          lastAction.element.style.textDecoration = lastAction.prevDecoration;
+          break;
+        case 'leftBracket':
+        case 'rightBracket':
+        case 'leftAngle':
+        case 'rightAngle':
+          lastAction.element.textContent = lastAction.prevTextContent;
+          break;
+        case 'connect':
+          connections.pop();
+          drawConnections();
+          break;
+        case 'note':
+          lastAction.element.style.fontWeight = lastAction.prevFontWeight;
+          if (lastAction.prevNote !== '') {
+            lastAction.element.dataset.note = lastAction.prevNote;
+          } else {
+            delete lastAction.element.dataset.note;
+          }
+          updateNotesList();
+          break;
+        case 'groupNote':
+          groupNotes.pop();
+          updateNotesList();
+          break;
+        case 'vocab':
+          vocabList.pop();
+          updateVocabList();
+          break;
+        case 'clear':
+          restoreWordState(lastAction.element, lastAction.prevState);
+          break;
+        default:
+          break;
+      }
     }
-    
+
     // Clear Button Event
     document.getElementById('clearButton').addEventListener('click', () => {
-        if (multiSelectMode) {
-            if (multiSelectedWords.size === 0) {
-                alert('Please select at least one word.');
-                return;
-            }
-            multiSelectedWords.forEach(word => {
-                const prevState = saveWordState(word);
-                clearWordFormatting(word);
-                actionsStack.push({
-                    type: 'clear',
-                    element: word,
-                    prevState: prevState
-                });
-            });
-        } else {
-            if (selectedWord) {
-                const prevState = saveWordState(selectedWord);
-                clearWordFormatting(selectedWord);
-                actionsStack.push({
-                    type: 'clear',
-                    element: selectedWord,
-                    prevState: prevState
-                });
-            } else {
-                alert('Please select a word first.');
-            }
+      if (multiSelectMode) {
+        if (multiSelectedWords.size === 0) {
+          alert('Please select at least one word.');
+          return;
         }
+        multiSelectedWords.forEach(word => {
+          const prevState = saveWordState(word);
+          clearWordFormatting(word);
+          actionsStack.push({
+            type: 'clear',
+            element: word,
+            prevState: prevState
+          });
+        });
+      } else {
+        if (selectedWord) {
+          const prevState = saveWordState(selectedWord);
+          clearWordFormatting(selectedWord);
+          actionsStack.push({
+            type: 'clear',
+            element: selectedWord,
+            prevState: prevState
+          });
+        } else {
+          alert('Please select a word first.');
+        }
+      }
     });
-    
+
     // Save Word State for Undo
     function saveWordState(word) {
-        return {
-            backgroundColor: word.style.backgroundColor || 'transparent',
-            textDecoration: word.style.textDecoration || 'none',
-            fontWeight: word.style.fontWeight || 'normal',
-            textContent: word.textContent,
-            note: word.dataset.note || '',
-            connections: connections.filter(conn => conn.from === word.dataset.index || conn.to === word.dataset.index)
-        };
+      return {
+        backgroundColor: word.style.backgroundColor || 'transparent',
+        textDecoration: word.style.textDecoration || 'none',
+        fontWeight: word.style.fontWeight || 'normal',
+        textContent: word.textContent,
+        note: word.dataset.note || '',
+        connections: connections.filter(conn => conn.from === word.dataset.index || conn.to === word.dataset.index)
+      };
     }
-    
+
     // Restore Word State for Undo
     function restoreWordState(word, state) {
-        word.style.backgroundColor = state.backgroundColor;
-        word.style.textDecoration = state.textDecoration;
-        word.style.fontWeight = state.fontWeight;
-        word.textContent = state.textContent;
-        if (state.note !== '') {
-            word.dataset.note = state.note;
-        } else {
-            delete word.dataset.note;
-        }
-        // Restore connections
-        connections = connections.concat(state.connections);
-        drawConnections();
-        updateNotesList();
+      word.style.backgroundColor = state.backgroundColor;
+      word.style.textDecoration = state.textDecoration;
+      word.style.fontWeight = state.fontWeight;
+      word.textContent = state.textContent;
+      if (state.note !== '') {
+        word.dataset.note = state.note;
+      } else {
+        delete word.dataset.note;
+      }
+      connections = connections.concat(state.connections);
+      drawConnections();
+      updateNotesList();
     }
-    
+
     // Clear Word Formatting
     function clearWordFormatting(word) {
-        word.style.backgroundColor = '';
-        word.style.textDecoration = '';
-        word.style.fontWeight = '';
-        // Remove leading/trailing brackets or angles
-        word.textContent = word.textContent.replace(/^[\[\]\<\>]+|[\[\]\<\>]+$/g, '');
-        delete word.dataset.note;
-        // Remove connections involving this word
-        connections = connections.filter(conn => conn.from !== word.dataset.index && conn.to !== word.dataset.index);
-        drawConnections();
-        updateNotesList();
+      word.style.backgroundColor = '';
+      word.style.textDecoration = '';
+      word.style.fontWeight = '';
+      word.textContent = word.textContent.replace(/^[\[\]\<\>]+|[\[\]\<\>]+$/g, '');
+      delete word.dataset.note;
+      connections = connections.filter(conn => conn.from !== word.dataset.index && conn.to !== word.dataset.index);
+      drawConnections();
+      updateNotesList();
     }
-    
+
     // Drag and Drop Functions for Connections
     function dragStart(event) {
-        event.dataTransfer.setData('text/plain', event.target.dataset.index);
+      event.dataTransfer.setData('text/plain', event.target.dataset.index);
     }
-    
+
     function dragOver(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        event.dataTransfer.dropEffect = 'move';
+      event.preventDefault();
+      event.stopPropagation();
+      event.dataTransfer.dropEffect = 'move';
     }
-    
+
     function drop(event) {
-        event.preventDefault();
-        event.stopPropagation();
-        const fromIndex = event.dataTransfer.getData('text/plain');
-    
-        // Ensure the drop target is a word span
-        const dropTarget = event.target;
-        if (!dropTarget.classList.contains('word')) {
-            alert('Please drop on a valid word.');
-            return;
-        }
-    
-        const toIndex = dropTarget.dataset.index;
-    
-        if (fromIndex !== toIndex) {
-            connections.push({ from: fromIndex, to: toIndex });
-            drawConnections();
-            actionsStack.push({
-                type: 'connect',
-                fromIndex: fromIndex,
-                toIndex: toIndex
-            });
-        }
+      event.preventDefault();
+      event.stopPropagation();
+      const fromIndex = event.dataTransfer.getData('text/plain');
+      const dropTarget = event.target;
+      if (!dropTarget.classList.contains('word')) {
+        alert('Please drop on a valid word.');
+        return;
+      }
+      const toIndex = dropTarget.dataset.index;
+      if (fromIndex !== toIndex) {
+        connections.push({ from: fromIndex, to: toIndex });
+        drawConnections();
+        actionsStack.push({
+          type: 'connect',
+          fromIndex: fromIndex,
+          toIndex: toIndex
+        });
+      }
     }
-    
+
     // Multi Select Toggle Function
     function toggleMultiSelect() {
-        multiSelectMode = !multiSelectMode;
-        const button = document.getElementById('multiSelectButton');
-        if (multiSelectMode) {
-            button.style.backgroundColor = '#d0d0d0'; // Indicate active mode
-        } else {
-            button.style.backgroundColor = ''; // Reset to default
-            multiSelectedWords.forEach(word => {
-                word.classList.remove('multi-selected');
-            });
-            multiSelectedWords.clear();
-        }
+      multiSelectMode = !multiSelectMode;
+      const button = document.getElementById('multiSelectButton');
+      if (multiSelectMode) {
+        button.style.backgroundColor = '#d0d0d0';
+      } else {
+        button.style.backgroundColor = '';
+        multiSelectedWords.forEach(word => {
+          word.classList.remove('multi-selected');
+        });
+        multiSelectedWords.clear();
+      }
     }
-    
+
     // Draw Connections Function with line offsetting
     function drawConnections() {
-        const canvas = document.getElementById('lineCanvas');
-        const displayArea = document.getElementById('displayArea');
-    
-        canvas.width = displayArea.clientWidth;
-        canvas.height = displayArea.clientHeight;
-    
-        const ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-        ctx.strokeStyle = 'black'; // Set line color
-        ctx.lineWidth = 2; // Set line width
-    
-        const lineSegments = []; // Store line segments to detect overlaps
-        const lineConnectionCounts = {}; // Keep track of connections per line
-    
-        connections.forEach(conn => {
-            const fromWord = displayArea.querySelector(`[data-index="${conn.from}"]`);
-            const toWord = displayArea.querySelector(`[data-index="${conn.to}"]`);
-    
-            if (fromWord && toWord) {
-                const fromRect = fromWord.getBoundingClientRect();
-                const toRect = toWord.getBoundingClientRect();
-                const displayRect = displayArea.getBoundingClientRect();
-    
-                let startX = fromRect.left + fromRect.width / 2 - displayRect.left + displayArea.scrollLeft;
-                let startY = fromRect.top - displayRect.top + displayArea.scrollTop;
-                let endX = toRect.left + toRect.width / 2 - displayRect.left + displayArea.scrollLeft;
-                let endY = toRect.top - displayRect.top + displayArea.scrollTop;
-    
-                const lineHeight = parseFloat(getComputedStyle(displayArea).lineHeight);
-                const baseOffsetY = lineHeight / 6; // Reduced height
-    
-                // Position just above the word
-                let adjustedStartY = startY - baseOffsetY;
-                let adjustedEndY = endY - baseOffsetY;
-    
-                // Check if words are on the same line (within 2 px)
-                const lineThreshold = 2;
-                const isSameLine = Math.abs(startY - endY) < lineThreshold;
-    
-                let offsetIncrement = 0;
-    
-                if (isSameLine) {
-                    const lineKey = Math.round(startY);
-                    if (!lineConnectionCounts[lineKey]) {
-                        lineConnectionCounts[lineKey] = 0;
-                    }
-                    offsetIncrement = lineConnectionCounts[lineKey] * LINE_OFFSET_INCREMENT;
-                    lineConnectionCounts[lineKey]++;
-                } else {
-                    // Check for overlaps and adjust offset if necessary
-                    while (lineOverlaps(lineSegments, startX, adjustedStartY - offsetIncrement, endX, adjustedEndY - offsetIncrement) 
-                           && offsetIncrement < MAX_LINE_OFFSET) {
-                        offsetIncrement += LINE_OFFSET_INCREMENT;
-                    }
-                }
-    
-                if (offsetIncrement >= MAX_LINE_OFFSET) {
-                    offsetIncrement = MAX_LINE_OFFSET;
-                }
-    
-                adjustedStartY -= offsetIncrement;
-                adjustedEndY -= offsetIncrement;
-    
-                lineSegments.push({
-                    startX: startX,
-                    startY: adjustedStartY,
-                    endX: endX,
-                    endY: adjustedEndY
-                });
-    
-                ctx.beginPath();
-                // Move up from the word baseline to the adjustedStartY
-                ctx.moveTo(startX, startY);
-                ctx.lineTo(startX, adjustedStartY);
-                // Horizontal line to endX
-                ctx.lineTo(endX, adjustedEndY);
-                // Down to the second word baseline
-                ctx.lineTo(endX, endY);
-                ctx.stroke();
+      const canvas = document.getElementById('lineCanvas');
+      const displayArea = document.getElementById('displayArea');
+
+      canvas.width = displayArea.clientWidth;
+      canvas.height = displayArea.clientHeight;
+
+      const ctx = canvas.getContext('2d');
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.strokeStyle = 'black';
+      ctx.lineWidth = 2;
+
+      const lineSegments = [];
+      const lineConnectionCounts = {};
+
+      connections.forEach(conn => {
+        const fromWord = displayArea.querySelector(`[data-index="${conn.from}"]`);
+        const toWord = displayArea.querySelector(`[data-index="${conn.to}"]`);
+
+        if (fromWord && toWord) {
+          const fromRect = fromWord.getBoundingClientRect();
+          const toRect = toWord.getBoundingClientRect();
+          const displayRect = displayArea.getBoundingClientRect();
+
+          let startX = fromRect.left + fromRect.width / 2 - displayRect.left + displayArea.scrollLeft;
+          let startY = fromRect.top - displayRect.top + displayArea.scrollTop;
+          let endX = toRect.left + toRect.width / 2 - displayRect.left + displayArea.scrollLeft;
+          let endY = toRect.top - displayRect.top + displayArea.scrollTop;
+
+          const lineHeight = parseFloat(getComputedStyle(displayArea).lineHeight);
+          const baseOffsetY = lineHeight / 6;
+
+          let adjustedStartY = startY - baseOffsetY;
+          let adjustedEndY = endY - baseOffsetY;
+
+          const lineThreshold = 2;
+          const isSameLine = Math.abs(startY - endY) < lineThreshold;
+
+          let offsetIncrement = 0;
+
+          if (isSameLine) {
+            const lineKey = Math.round(startY);
+            if (!lineConnectionCounts[lineKey]) {
+              lineConnectionCounts[lineKey] = 0;
             }
-        });
+            offsetIncrement = lineConnectionCounts[lineKey] * LINE_OFFSET_INCREMENT;
+            lineConnectionCounts[lineKey]++;
+          } else {
+            while (lineOverlaps(lineSegments, startX, adjustedStartY - offsetIncrement, endX, adjustedEndY - offsetIncrement) 
+                   && offsetIncrement < MAX_LINE_OFFSET) {
+              offsetIncrement += LINE_OFFSET_INCREMENT;
+            }
+          }
+
+          if (offsetIncrement >= MAX_LINE_OFFSET) {
+            offsetIncrement = MAX_LINE_OFFSET;
+          }
+
+          adjustedStartY -= offsetIncrement;
+          adjustedEndY -= offsetIncrement;
+
+          lineSegments.push({
+            startX: startX,
+            startY: adjustedStartY,
+            endX: endX,
+            endY: adjustedEndY
+          });
+
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(startX, adjustedStartY);
+          ctx.lineTo(endX, adjustedEndY);
+          ctx.lineTo(endX, endY);
+          ctx.stroke();
+        }
+      });
     }
-    
-    // Check if a line overlaps with existing lines
+
     function lineOverlaps(lineSegments, x1, y1, x2, y2) {
-        for (let segment of lineSegments) {
-            if (linesIntersect(x1, y1, x2, y2, segment.startX, segment.startY, segment.endX, segment.endY)) {
-                return true;
-            }
+      for (let segment of lineSegments) {
+        if (linesIntersect(x1, y1, x2, y2, segment.startX, segment.startY, segment.endX, segment.endY)) {
+          return true;
         }
-        return false;
+      }
+      return false;
     }
-    
-    // Check if two line segments intersect
+
     function linesIntersect(x1, y1, x2, y2, x3, y3, x4, y4) {
-        function ccw(ax, ay, bx, by, cx, cy) {
-            return (cy - ay) * (bx - ax) > (by - ay) * (cx - ax);
-        }
-        return (ccw(x1, y1, x3, y3, x4, y4) !== ccw(x2, y2, x3, y3, x4, y4)) &&
-               (ccw(x1, y1, x2, y2, x3, y3) !== ccw(x1, y1, x2, y2, x4, y4));
+      function ccw(ax, ay, bx, by, cx, cy) {
+        return (cy - ay) * (bx - ax) > (by - ay) * (cx - ax);
+      }
+      return (ccw(x1, y1, x3, y3, x4, y4) !== ccw(x2, y2, x3, y3, x4, y4)) &&
+             (ccw(x1, y1, x2, y2, x3, y3) !== ccw(x1, y1, x2, y2, x4, y4));
     }
-    
+
     // Export Button Event
     document.getElementById('exportButton').addEventListener('click', () => {
-        const exportWindow = window.open('', '', 'width=1000,height=800');
-    
-        // Build the HTML content
-        let htmlContent = '<html><head><title>Exported Notes</title>';
-    
-        // Include CSS styles
-        const styleContent = document.querySelector('style').innerHTML;
-        htmlContent += `<style>${styleContent}</style>`;
-    
-        htmlContent += '</head><body>';
-        
-        // Title
-        const title = document.getElementById('titleInput').value.trim();
-        if (title !== '') {
-            htmlContent += '<h1>' + escapeHtml(title) + '</h1>';
+      const exportWindow = window.open('', '', 'width=1000,height=800');
+      let htmlContent = '<html><head><title>Exported Notes</title>';
+
+      const styleContent = document.querySelector('style').innerHTML;
+      htmlContent += `<style>${styleContent}</style>`;
+
+      htmlContent += '</head><body>';
+
+      const title = document.getElementById('titleInput').value.trim();
+      if (title !== '') {
+        htmlContent += '<h1>' + escapeHtml(title) + '</h1>';
+      }
+
+      const displayArea = document.getElementById('displayArea');
+
+      html2canvas(displayArea).then(canvas => {
+        const canvasDataURL = canvas.toDataURL();
+        const img = document.createElement('img');
+        img.src = canvasDataURL;
+        img.style.maxWidth = '100%';
+
+        htmlContent += '<h2>Annotated Text</h2>';
+        htmlContent += '<div>' + img.outerHTML + '</div>';
+
+        const translation = document.getElementById('translationArea').value.trim();
+        if (translation !== '') {
+          htmlContent += '<h2>Translation</h2>';
+          htmlContent += '<div>' + nl2br(escapeHtml(translation)) + '</div>';
         }
-    
-        // Annotated Text with Connections as Image using html2canvas
-        const displayArea = document.getElementById('displayArea');
-    
-        // Use html2canvas to capture the displayArea
-        html2canvas(displayArea).then(canvas => {
-            const canvasDataURL = canvas.toDataURL();
-    
-            // Create an image element for the captured displayArea
-            const img = document.createElement('img');
-            img.src = canvasDataURL;
-            img.style.maxWidth = '100%'; // Ensure the image fits
-    
-            htmlContent += '<h2>Annotated Text</h2>';
-            htmlContent += '<div>' + img.outerHTML + '</div>';
-    
-            // Translation
-            const translation = document.getElementById('translationArea').value.trim();
-            if (translation !== '') {
-                htmlContent += '<h2>Translation</h2>';
-                htmlContent += '<div>' + nl2br(escapeHtml(translation)) + '</div>';
-            }
-    
-            // Notes
-            const notesList = document.getElementById('notesList').innerHTML;
-            if (notesList.trim() !== '') {
-                htmlContent += '<h2>Notes</h2>';
-                htmlContent += '<ul>' + notesList + '</ul>';
-            }
-    
-            // Vocabulary
-            const vocabListHTML = document.getElementById('vocabList').innerHTML;
-            if (vocabListHTML.trim() !== '') {
-                htmlContent += '<h2>Vocabulary</h2>';
-                htmlContent += '<ul>' + vocabListHTML + '</ul>';
-            }
-    
-            htmlContent += '</body></html>';
-    
-            // Write the content to the new window
-            exportWindow.document.open();
-            exportWindow.document.write(htmlContent);
-            exportWindow.document.close();
-    
-            // After the document is loaded, trigger the print dialog
-            exportWindow.onload = function() {
-                exportWindow.print();
-            };
-        }).catch(error => {
-            console.error('Error capturing display area:', error);
-            alert('An error occurred while exporting. Please try again.');
-        });
-    });
-    
-    // Helper Functions
-    
-    // Escape HTML to prevent issues in export
-    function escapeHtml(text) {
-        const map = {
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#039;'
+
+        const notesList = document.getElementById('notesList').innerHTML;
+        if (notesList.trim() !== '') {
+          htmlContent += '<h2>Notes</h2>';
+          htmlContent += '<ul>' + notesList + '</ul>';
+        }
+
+        const vocabListHTML = document.getElementById('vocabList').innerHTML;
+        if (vocabListHTML.trim() !== '') {
+          htmlContent += '<h2>Vocabulary</h2>';
+          htmlContent += '<ul>' + vocabListHTML + '</ul>';
+        }
+
+        htmlContent += '</body></html>';
+
+        exportWindow.document.open();
+        exportWindow.document.write(htmlContent);
+        exportWindow.document.close();
+
+        exportWindow.onload = function() {
+          exportWindow.print();
         };
-        return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+      }).catch(error => {
+        console.error('Error capturing display area:', error);
+        alert('An error occurred while exporting. Please try again.');
+      });
+    });
+
+    // Helper Functions
+
+    function escapeHtml(text) {
+      const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+      };
+      return text.replace(/[&<>"']/g, function(m) { return map[m]; });
     }
-    
-    // Convert newlines to <br> tags
+
     function nl2br(str) {
-        return str.replace(/\n/g, '<br>');
+      return str.replace(/\n/g, '<br>');
     }
-    </script>
+  </script>
 </body>
 </html>
