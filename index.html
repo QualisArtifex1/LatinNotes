@@ -152,12 +152,7 @@
     }
 
     /* Annotation buttons container */
-    .buttons {
-      margin-left: 20px;
-      display: flex;
-      flex-direction: column;
-      flex-shrink: 0;
-    }
+        }
 
     /* Annotation buttons */
     .button {
@@ -187,11 +182,97 @@
       list-style-type: none;
       padding: 0;
     }
+
+    /* Preloaded Text Dropdown styling */
+    #preloadedTextContainer {
+      margin-bottom: 15px;
+    }
+    #preloadedTextSelect {
+      font-size: 16px;
+      padding: 5px;
+      margin-right: 10px;
+    }
+  .buttonBar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    gap: 6px;
+    margin-top: 10px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .buttons .button {
+  min-width: 80px; /* or 100px if you want it even wider */
+  padding: 8px 12px;
+  height: auto;
+  font-size: 12px;
+  line-height: 1.2;
+  border: 1px solid #888;
+  background-color: #e0dcd3;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+  .buttons .button:hover {
+    background-color: #d4cec2;
+    transform: scale(1.05);
+  }
   </style>
 </head>
 <body>
   <!-- Title Input -->
   <input id="titleInput" placeholder="Enter the title of the reading..." />
+
+  <!-- Preloaded Text Dropdown -->
+  <div id="preloadedTextContainer">
+    <label for="preloadedTextSelect">Select Preloaded Text:</label>
+    <select id="preloadedTextSelect">
+      <option value="">-- Select a text --</option>
+      <option value="chapter1">Caesar's De Bello Gallico 1.1</option>
+      <option value="chapter2">Caesar's De Bello Gallico 1.2</option>
+      <option value="chapter3">Caesar's De Bello Gallico 1.3</option>
+      <option value="chapter4">Caesar's De Bello Gallico 1.4</option>
+      <option value="chapter5">Caesar's De Bello Gallico 1.5</option>
+      <option value="chapter6">Caesar's De Bello Gallico 1.6</option>
+      <option value="chapter7">Caesar's De Bello Gallico 1.7</option>
+      <option value="Pliny 6.4">Pliny's Letters 6.4 (Letters to Calpurnia)</option>
+      <option value="Pliny 6.7">Pliny's Letters 6.7 (Letters to Calpurnia)</option>
+      <option value="Pliny 6.16">Pliny's Letters 6.16 (Eruption of Mt. Vesuvius and Pliny the Elder)</option>
+      <option value="Pliny 6.20">Pliny's Letters 6.20 (Eruption of Mt. Vesuvius and Pliny the Younger)</option>
+      <option value="Pliny 7.27">Pliny's Letters 7.27 (Ghosts and Apparitions)</option>
+      <option value="Pliny 10.5">Pliny's Letters 10.5 (Letters to Emperor Trajan, Citizenship for Pliny’s Doctor)</option>
+      <option value="Pliny 10.6">Pliny's Letters 10.6 (Letters to Emperor Trajan, Citizenship for Pliny’s Doctor)</option>
+      <option value="Pliny 10.7">Pliny's Letters 10.7 (Letters to Emperor Trajan, Citizenship for Pliny’s Doctor)</option>
+      <option value="Pliny 10.37">Pliny's Letters 10.37 (Letters to Emperor Trajan, Aqueducts)</option>
+      <option value="Pliny 10.90">Pliny's Letters 10.90 (Letters to Emperor Trajan, Aqueducts)</option>
+      <option value="Aeneid 1.1-33">Vergil's Aeneid 1.1-33 (The Epic Begins)</option>
+      <option value="Aeneid 1.88-107">Vergil's Aeneid 1.88-107 (The Storm)</option>
+      <option value="Aeneid 1.496-508">Vergil's Aeneid 1.496-805 (Queen Dido)</option>
+      <option value="Aeneid 2.40-56">Vergil's Aeneid 2.40-56 (Laocoon and the Trojan Horse)</option>
+      <option value="Aeneid 2.201-249">Vergil's Aeneid 2.201-249 (Laocoon and the Trojan Horse)</option>
+      <option value="Aeneid 4.74-89">Vergil's Aeneid 4.74-89 (Dido Feels the Effect of Cupid)</option>
+      <option value="Aeneid 4.164-197">Vergil's Aeneid 4.164-197 (Rumor Reaches Jupiter)</option>
+      <option value="Aeneid 4.305-361">Vergil's Aeneid 4.305-361 (Aeneas Leave Dido)</option>
+      <option value="Aeneid 6.450-476">Vergil's Aeneid 6.450-476 (The Shade of Dido)</option>
+      <option value="Aeneid 6.788-800">Vergil's Aeneid 6.788-800 (Meeting Anchises)</option>
+      <option value="Aeneid 6.847-853">Vergil's Aeneid 6.847-853 (Meeting Anchises)</option> 
+      <option value="Aeneid 7.45-58">Vergil's Aeneid 7.45-58 (King Latinus)</option> 
+      <option value="Aeneid 7.783-792">Vergil's Aeneid 7.783-792 (Turnus Prepares for War)</option> 
+      <option value="Aeneid 7.803-817">Vergil's Aeneid 7.803-817 (Turnus Prepares for War)</option> 
+      <option value="Aeneid 11.532-594">Vergil's Aeneid 11.532-594 (Story of Camilla)</option> 
+      <option value="Aeneid 12.791-796, 803-812, 818-828">Vergil's Aeneid 12.791-796, 803-812, 818-828(Fate of Trojans is Decided)</option>
+      <option value="Aeneid 12.919-952">Vergil's Aeneid 12.919-952(Final Battle of Aeneas and Turnus)</option>
+    </select>
+    <button id="loadTextButton">Load Text</button>
+  </div>
 
   <!-- Input Area -->
   <textarea id="inputArea" placeholder="Paste your text with accents here..."></textarea><br>
@@ -201,16 +282,10 @@
   <!-- Multi Select Button -->
   <button id="multiSelectButton" title="Click this to annotate more than one word at a time">Multi Select</button>
 
-  <!-- Main Container -->
-  <div id="mainContainer">
-    <!-- Display Area with Canvas for Connections -->
-    <div id="displayArea">
-      <!-- Canvas will be added dynamically -->
-    </div>
-
-    <!-- Buttons for Annotations -->
-    <div class="buttons">
-      <div class="button" id="redButton" style="background-color: #ff9999;" title="Highlight selected word"></div>
+ <!-- Buttons Row Above -->
+<div class="buttonBar">
+  <div class="buttons">
+     <div class="button" id="redButton" style="background-color: #ff9999;" title="Highlight selected word"></div>
       <div class="button" id="greenButton" style="background-color: #99ff99;" title="Highlight selected word"></div>
       <div class="button" id="orangeButton" style="background-color: orange;" title="Highlight selected word"></div>
       <div class="button" id="blueButton" style="background-color: lightblue;" title="Highlight selected word"></div>
@@ -226,8 +301,13 @@
       <div class="button" id="vocabButton" title="Add selected word to vocab list">Vocab</div>
       <div class="button" id="undoButton">Undo</div>
       <div class="button" id="clearButton" title="Clear all markings from highlighted word">Clear</div>
-    </div>
   </div>
+</div>
+
+<!-- Main Container (text only now) -->
+<div id="mainContainer">
+  <div id="displayArea"></div>
+</div>
 
   <!-- Translation Section -->
   <div id="translationSection">
@@ -253,20 +333,625 @@
   <!-- Include html2canvas library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
-  <!-- JavaScript remains unchanged -->
+  <!-- JavaScript -->
   <script>
-    // JavaScript code
+    // Preloaded texts for Caesar's De Bello Gallico Book 1 (first ten chapters)
+    const preloadedTexts = {
+      "chapter1":
 
+ `Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana dividit. Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate provinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt. Qua de causa Helvetii quoque reliquos Gallos virtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos prohibent aut ipsi in eorum finibus bellum gerunt. Eorum una pars, quam Gallos obtinere dictum est, initium capit a flumine Rhodano, continetur Garumna flumine, Oceano, finibus Belgarum, attingit etiam ab Sequanis et Helvetiis flumen Rhenum, vergit ad septentriones. Belgae ab extremis Galliae finibus oriuntur, pertinent ad inferiorem partem fluminis Rheni, spectant in septentrionem et orientem solem. Aquitania a Garumna flumine ad Pyrenaeos montes et eam partem Oceani quae est ad Hispaniam pertinet; spectat inter occasum solis et septentriones.`,
+      "chapter2": 
+
+`Apud Helvetios longe nobilissimus fuit et ditissimus Orgetorix. Is M. Messala, [et P.] M. Pisone consulibus regni cupiditate inductus coniurationem nobilitatis fecit et civitati persuasit ut de finibus suis cum omnibus copiis exirent: perfacile esse, cum virtute omnibus praestarent, totius Galliae imperio potiri. Id hoc facilius iis persuasit, quod undique loci natura Helvetii continentur: una ex parte flumine Rheno latissimo atque altissimo, qui agrum Helvetium a Germanis dividit; altera ex parte monte Iura altissimo, qui est inter Sequanos et Helvetios; tertia lacu Lemanno et flumine Rhodano, qui provinciam nostram ab Helvetiis dividit. His rebus fiebat ut et minus late vagarentur et minus facile finitimis bellum inferre possent; qua ex parte homines bellandi cupidi magno dolore adficiebantur. Pro multitudine autem hominum et pro gloria belli atque fortitudinis angustos se fines habere arbitrabantur, qui in longitudinem milia passuum CCXL, in latitudinem CLXXX patebant.`,
+      "chapter3": 
+
+`His rebus adducti et auctoritate Orgetorigis permoti constituerunt ea quae ad proficiscendum pertinerent comparare, iumentorum et carrorum quam maximum numerum coemere, sementes quam maximas facere, ut in itinere copia frumenti suppeteret, cum proximis civitatibus pacem et amicitiam confirmare. Ad eas res conficiendas biennium sibi satis esse duxerunt; in tertium annum profectionem lege confirmant. Ad eas res conficiendas Orgetorix deligitur. Is sibi legationem ad civitates suscipit. In eo itinere persuadet Castico, Catamantaloedis filio, Sequano, cuius pater regnum in Sequanis multos annos obtinuerat et a senatu populi Romani amicus appellatus erat, ut regnum in civitate sua occuparet, quod pater ante habuerit; itemque Dumnorigi Haeduo, fratri Diviciaci, qui eo tempore principatum in civitate obtinebat ac maxime plebi acceptus erat, ut idem conaretur persuadet eique filiam suam in matrimonium dat.  Perfacile factu esse illis probat conata perficere, propterea quod ipse suae civitatis imperium obtenturus esset: non esse dubium quin totius Galliae plurimum Helvetii possent; se suis copiis suoque exercitu illis regna conciliaturum confirmat.  Hac oratione adducti inter se fidem et ius iurandum dant et regno occupato per tres potentissimos ac firmissimos populos totius Galliae sese potiri posse sperant.`,      
+	"chapter4": 
+
+`Ea res est Helvetiis per indicium enuntiata. Moribus suis Orgetoricem ex vinculis causam dicere coegerunt; damnatum poenam sequi oportebat, ut igni cremaretur. Die constituta causae dictionis Orgetorix ad iudicium omnem suam familiam, ad hominum milia decem, undique coegit, et omnes clientes obaeratosque suos, quorum magnum numerum habebat, eodem conduxit; per eos ne causam diceret se eripuit. Cum civitas ob eam rem incitata armis ius suum exsequi conaretur multitudinemque hominum ex agris magistratus cogerent, Orgetorix mortuus est; neque abest suspicio, ut Helvetii arbitrantur, quin ipse sibi mortem consciverit.`,
+      "chapter5": 
+
+`Post eius mortem nihilo minus Helvetii id quod constituerant facere conantur, ut e finibus suis exeant. Ubi iam se ad eam rem paratos esse arbitrati sunt, oppida sua omnia, numero ad duodecim, vicos ad quadringentos, reliqua privata aedificia incendunt; frumentum omne, praeter quod secum portaturi erant, comburunt, ut domum reditionis spe sublata paratiores ad omnia pericula subeunda essent; trium mensum molita cibaria sibi quemque domo efferre iubent. Persuadent Rauracis et Tulingis et Latobrigis finitimis, uti eodem usi consilio oppidis suis vicisque exustis una cum iis proficiscantur, Boiosque, qui trans Rhenum incoluerant et in agrum Noricum transierant Noreiamque oppugnabant, receptos ad se socios sibi adsciscunt.`,
+      "chapter6":
+
+`Erant omnino itinera duo, quibus itineribus domo exire possent: unum per Sequanos, angustum et difficile, inter montem Iuram et flumen Rhodanum, vix qua singuli carri ducerentur, mons autem altissimus impendebat, ut facile perpauci prohibere possent; alterum per provinciam nostram, multo facilius atque expeditius, propterea quod inter fines Helvetiorum et Allobrogum, qui nuper pacati erant, Rhodanus fluit isque non nullis locis vado transitur. Extremum oppidum Allobrogum est proximumque Helvetiorum finibus Genava. Ex eo oppido pons ad Helvetios pertinet. Allobrogibus sese vel persuasuros, quod nondum bono animo in populum Romanum viderentur, existimabant vel vi coacturos ut per suos fines eos ire paterentur. Omnibus rebus ad profectionem comparatis diem dicunt, qua die ad ripam Rhodani omnes conveniant. Is dies erat a. d. V. Kal. Apr. L. Pisone, A. Gabinio consulibus.`,
+      "chapter7": 
+`Caesari cum id nuntiatum esset, eos per provinciam nostram iter facere conari, maturat ab urbe proficisci et quam maximis potest itineribus in Galliam ulteriorem contendit et ad Genavam pervenit. Provinciae toti quam maximum potest militum numerum imperat (erat omnino in Gallia ulteriore legio una), pontem, qui erat ad Genavam, iubet rescindi. Ubi de eius adventu Helvetii certiores facti sunt, legatos ad eum mittunt nobilissimos civitatis, cuius legationis Nammeius et Verucloetius principem locum obtinebant, qui dicerent sibi esse in animo sine ullo maleficio iter per provinciam facere, propterea quod aliud iter haberent nullum: rogare ut eius voluntate id sibi facere liceat. Caesar, quod memoria tenebat L. Cassium consulem occisum exercitumque eius ab Helvetiis pulsum et sub iugum missum, concedendum non putabat; neque homines inimico animo, data facultate per provinciam itineris faciundi, temperaturos ab iniuria et maleficio existimabat. Tamen, ut spatium intercedere posset dum milites quos imperaverat convenirent, legatis respondit diem se ad deliberandum sumpturum: si quid vellent, ad Id. April. reverterentur.`,
+
+"Pliny 6.4":
+
+`C. PLINIUS CALPURNIAE SUAE S.
+
+Numquam sum magis de occupationibus meis questus, quae me non sunt passae aut proficiscentem te valetudinis causa in Campaniam prosequi aut profectam e vestigio subsequi. Nunc enim praecipue simul esse cupiebam, ut oculis meis crederem quid viribus quid corpusculo apparares, ecquid denique secessus voluptates regionisque abundantiam inoffensa transmitteres. Equidem etiam fortem te non sine cura desiderarem; est enim suspensum et anxium de eo quem ardentissime diligas interdum nihil scire. Nunc vero me cum absentiae tum infirmitatis tuae ratio incerta et varia sollicitudine exterret. Vereor omnia, imaginor omnia, quaeque natura metuentium est, ea maxime mihi quae maxime abominor fingo. Quo impensius rogo, ut timori meo cottidie singulis vel etiam binis epistulis consulas. Ero enim securior dum lego, statimque timebo cum legero. Vale.`,
+
+"Pliny 6.7":
+
+`C. PLINIUS CALPURNIAE SUAE S.
+
+Scribis te absentia mea non mediocriter affici unumque habere solacium, quod pro me libellos meos teneas, saepe etiam in vestigio meo colloces. Gratum est quod nos requiris, gratum quod his fomentis acquiescis; invicem ego epistulas tuas lectito atque identidem in manus quasi novas sumo. Sed eo magis ad desiderium tui accendor: nam cuius litterae tantum habent suavitatis, huius sermonibus quantum dulcedinis inest! Tu tamen quam frequentissime scribe, licet hoc ita me delectet ut torqueat. Vale.`,
+
+"Pliny 6.16":
+
+`C. PLINIUS TACITO SUO S.
+
+Petis ut tibi avunculi mei exitum scribam, quo verius tradere posteris possis. Gratias ago; nam video morti eius si celebretur a te immortalem gloriam esse propositam. Quamvis enim pulcherrimarum clade terrarum, ut populi ut urbes memorabili casu, quasi semper victurus occiderit, quamvis ipse plurima opera et mansura condiderit, multum tamen perpetuitati eius scriptorum tuorum aeternitas addet. Equidem beatos puto, quibus deorum munere datum est aut facere scribenda aut scribere legenda, beatissimos vero quibus utrumque. Horum in numero avunculus meus et suis libris et tuis erit. Quo libentius suscipio, deposco etiam quod iniungis.
+
+Erat Miseni classemque imperio praesens regebat. Nonum Kal. Septembres hora fere septima mater mea indicat ei apparere nubem inusitata et magnitudine et specie. Usus ille sole, mox frigida, gustaverat iacens studebatque; poscit soleas, ascendit locum ex quo maxime miraculum illud conspici poterat. Nubes — incertum procul intuentibus ex quo monte; Vesuvium fuisse postea cognitum est — oriebatur, cuius similitudinem et formam non alia magis arbor quam pinus expresserit. Nam longissimo velut trunco elata in altum quibusdam ramis diffundebatur, credo quia recenti spiritu evecta, dein senescente eo destituta aut etiam pondere suo victa in latitudinem vanescebat, candida interdum, interdum sordida et maculosa prout terram cineremve sustulerat. Magnum propiusque noscendum ut eruditissimo viro visum. Iubet liburnicam aptari; mihi si venire una vellem facit copiam; respondi studere me malle, et forte ipse quod scriberem dederat. Egrediebatur domo; accipit codicillos Rectinae Tasci imminenti periculo exterritae — nam villa eius subiacebat, nec ulla nisi navibus fuga -: ut se tanto discrimini eriperet orabat. Vertit ille consilium et quod studioso animo incohaverat obit maximo. Deducit quadriremes, ascendit ipse non Rectinae modo sed multis — erat enim frequens amoenitas orae — laturus auxilium. Properat illuc unde alii fugiunt, rectumque cursum recta gubernacula in periculum tenet adeo solutus metu, ut omnes illius mali motus omnes figuras ut deprenderat oculis dictaret enotaretque.
+
+Iam navibus cinis incidebat, quo propius accederent, calidior et densior; iam pumices etiam nigrique et ambusti et fracti igne lapides; iam vadum subitum ruinaque montis litora obstantia. Cunctatus paulum an retro flecteret, mox gubernatori ut ita faceret monenti 'Fortes' inquit 'fortuna iuvat: Pomponianum pete.' Stabiis erat diremptus sinu medio — nam sensim circumactis curvatisque litoribus mare infunditur -; ibi quamquam nondum periculo appropinquante, conspicuo tamen et cum cresceret proximo, sarcinas contulerat in naves, certus fugae si contrarius ventus resedisset. Quo tunc avunculus meus secundissimo invectus, complectitur trepidantem consolatur hortatur, utque timorem eius sua securitate leniret, deferri in balineum iubet; lotus accubat cenat, aut hilaris aut — quod aeque magnum — similis hilari. Interim e Vesuvio monte pluribus locis latissimae flammae altaque incendia relucebant, quorum fulgor et claritas tenebris noctis excitabatur. Ille agrestium trepidatione ignes relictos desertasque villas per solitudinem ardere in remedium formidinis dictitabat. Tum se quieti dedit et quievit verissimo quidem somno; nam meatus animae, qui illi propter amplitudinem corporis gravior et sonantior erat, ab iis qui limini obversabantur audiebatur. Sed area ex qua diaeta adibatur ita iam cinere mixtisque pumicibus oppleta surrexerat, ut si longior in cubiculo mora, exitus negaretur. Excitatus procedit, seque Pomponiano ceterisque qui pervigilaverant reddit. In commune consultant, intra tecta subsistant an in aperto vagentur. Nam crebris vastisque tremoribus tecta nutabant, et quasi emota sedibus suis nunc huc nunc illuc abire aut referri videbantur. Sub dio rursus quamquam levium exesorumque pumicum casus metuebatur, quod tamen periculorum collatio elegit; et apud illum quidem ratio rationem, apud alios timorem timor vicit. Cervicalia capitibus imposita linteis constringunt; id munimentum adversus incidentia fuit. Iam dies alibi, illic nox omnibus noctibus nigrior densiorque; quam tamen faces multae variaque lumina solvebant. Placuit egredi in litus, et ex proximo adspicere, ecquid iam mare admitteret; quod adhuc vastum et adversum permanebat. Ibi super abiectum linteum recubans semel atque iterum frigidam aquam poposcit hausitque. Deinde flammae flammarumque praenuntius odor sulpuris alios in fugam vertunt, excitant illum. Innitens servolis duobus assurrexit et statim concidit, ut ego colligo, crassiore caligine spiritu obstructo, clausoque stomacho qui illi natura invalidus et angustus et frequenter aestuans erat. Ubi dies redditus — is ab eo quem novissime viderat tertius -, corpus inventum integrum illaesum opertumque ut fuerat indutus: habitus corporis quiescenti quam defuncto similior.
+
+Interim Miseni ego et mater — sed nihil ad historiam, nec tu aliud quam de exitu eius scire voluisti. Finem ergo faciam. Unum adiciam, omnia me quibus interfueram quaeque statim, cum maxime vera memorantur, audieram, persecutum. Tu potissima excerpes; aliud est enim epistulam aliud historiam, aliud amico aliud omnibus scribere. Vale.`,
+
+"Pliny 6.20":
+
+`C. PLINIUS TACITO SUO S.
+
+Ais te adductum litteris quas exigenti tibi de morte avunculi mei scripsi, cupere cognoscere, quos ego Miseni relictus — id enim ingressus abruperam — non solum metus verum etiam casus pertulerim.
+
+'Quamquam animus meminisse horret, ...
+incipiam.'
+
+Profecto avunculo ipse reliquum tempus studiis — ideo enim remanseram — impendi; mox balineum cena somnus inquietus et brevis. Praecesserat per multos dies tremor terrae, minus formidolosus quia Campaniae solitus; illa vero nocte ita invaluit, ut non moveri omnia sed verti crederentur. Irrupit cubiculum meum mater; surgebam invicem, si quiesceret excitaturus. Resedimus in area domus, quae mare a tectis modico spatio dividebat. Dubito, constantiam vocare an imprudentiam debeam — agebam enim duodevicensimum annum -: posco librum Titi Livi, et quasi per otium lego atque etiam ut coeperam excerpo. Ecce amicus avunculi qui nuper ad eum ex Hispania venerat, ut me et matrem sedentes, me vero etiam legentem videt, illius patientiam securitatem meam corripit. Nihilo segnius ego intentus in librum.
+
+Iam hora diei prima, et adhuc dubius et quasi languidus dies. Iam quassatis circumiacentibus tectis, quamquam in aperto loco, angusto tamen, magnus et certus ruinae metus. Tum demum excedere oppido visum; sequitur vulgus attonitum, quodque in pavore simile prudentiae, alienum consilium suo praefert, ingentique agmine abeuntes premit et impellit. Egressi tecta consistimus. Multa ibi miranda, multas formidines patimur. Nam vehicula quae produci iusseramus, quamquam in planissimo campo, in contrarias partes agebantur, ac ne lapidibus quidem fulta in eodem vestigio quiescebant. Praeterea mare in se resorberi et tremore terrae quasi repelli videbamus. Certe processerat litus, multaque animalia maris siccis harenis detinebat. Ab altero latere nubes atra et horrenda, ignei spiritus tortis vibratisque discursibus rupta, in longas flammarum figuras dehiscebat; fulguribus illae et similes et maiores erant. Tum vero idem ille ex Hispania amicus acrius et instantius 'Si frater' inquit 'tuus, tuus avunculus vivit, vult esse vos salvos; si periit, superstites voluit. Proinde quid cessatis evadere?' Respondimus non commissuros nos ut de salute illius incerti nostrae consuleremus. Non moratus ultra proripit se effusoque cursu periculo aufertur. Nec multo post illa nubes descendere in terras, operire maria; cinxerat Capreas et absconderat, Miseni quod procurrit abstulerat.  Tum mater orare hortari iubere, quoquo modo fugerem; posse enim iuvenem, se et annis et corpore gravem bene morituram, si mihi causa mortis non fuisset. Ego contra salvum me nisi una non futurum; dein manum eius amplexus addere gradum cogo. Paret aegre incusatque se, quod me moretur.
+
+Iam cinis, adhuc tamen rarus. Respicio: densa caligo tergis imminebat, quae nos torrentis modo infusa terrae sequebatur. 'Deflectamus' inquam 'dum videmus, ne in via strati comitantium turba in tenebris obteramur.' Vix consideramus, et nox — non qualis illunis aut nubila, sed qualis in locis clausis lumine exstincto. Audires ululatus feminarum, infantum quiritatus, clamores virorum; alii parentes alii liberos alii coniuges vocibus requirebant, vocibus noscitabant; hi suum casum, illi suorum miserabantur; erant qui metu mortis mortem precarentur; multi ad deos manus tollere, plures nusquam iam deos ullos aeternamque illam et novissimam noctem mundo interpretabantur. Nec defuerunt qui fictis mentitisque terroribus vera pericula augerent. Aderant qui Miseni illud ruisse illud ardere falso sed credentibus nuntiabant. Paulum reluxit, quod non dies nobis, sed adventantis ignis indicium videbatur. Et ignis quidem longius substitit; tenebrae rursus cinis rursus, multus et gravis. Hunc identidem assurgentes excutiebamus; operti alioqui atque etiam oblisi pondere essemus. Possem gloriari non gemitum mihi, non vocem parum fortem in tantis periculis excidisse, nisi me cum omnibus, omnia mecum perire misero, magno tamen mortalitatis solacio credidissem.
+
+Tandem illa caligo tenuata quasi in fumum nebulamve discessit; mox dies verus; sol etiam effulsit, luridus tamen qualis esse cum deficit solet. Occursabant trepidantibus adhuc oculis mutata omnia altoque cinere tamquam nive obducta. Regressi Misenum curatis utcumque corporibus suspensam dubiamque noctem spe ac metu exegimus. Metus praevalebat; nam et tremor terrae perseverabat, et plerique lymphati terrificis vaticinationibus et sua et aliena mala ludificabantur.
+
+Nobis tamen ne tunc quidem, quamquam et expertis periculum et exspectantibus, abeundi consilium, donec de avunculo nuntius.
+
+Haec nequaquam historia digna non scripturus leges et tibi scilicet qui requisisti imputabis, si digna ne epistula quidem videbuntur. Vale.`,
+
+
+"Pliny 7.27":
+
+`C. PLINIUS SURAE SUO S.
+
+Et mihi discendi et tibi docendi facultatem otium praebet. Igitur perquam velim scire, esse phantasmata et habere propriam figuram numenque aliquod putes an inania et vana ex metu nostro imaginem accipere. Ego ut esse credam in primis eo ducor, quod audio accidisse Curtio Rufo. Tenuis adhuc et obscurus, obtinenti Africam comes haeserat. Inclinato die spatiabatur in porticu; offertur ei mulieris figura humana grandior pulchriorque. Perterrito Africam se futurorum praenuntiam dixit: iturum enim Romam honoresque gesturum, atque etiam cum summo imperio in eandem provinciam reversurum, ibique moriturum. Facta sunt omnia. Praeterea accedenti Carthaginem egredientique nave eadem figura in litore occurrisse narratur. Ipse certe implicitus morbo futura praeteritis, adversa secundis auguratus, spem salutis nullo suorum desperante proiecit.
+
+Iam illud nonne et magis terribile et non minus mirum est quod exponam ut accepi? Erat Athenis spatiosa et capax domus sed infamis et pestilens. Per silentium noctis sonus ferri, et si attenderes acrius, strepitus vinculorum longius primo, deinde e proximo reddebatur: mox apparebat idolon, senex macie et squalore confectus, promissa barba horrenti capillo; cruribus compedes, manibus catenas gerebat quatiebatque. Inde inhabitantibus tristes diraeque noctes per metum vigilabantur; vigiliam morbus et crescente formidine mors sequebatur. Nam interdiu quoque, quamquam abscesserat imago, memoria imaginis oculis inerrabat, longiorque causis timoris timor erat. Deserta inde et damnata solitudine domus totaque illi monstro relicta; proscribebatur tamen, seu quis emere seu quis conducere ignarus tanti mali vellet. Venit Athenas philosophus Athenodorus, legit titulum auditoque pretio, quia suspecta vilitas, percunctatus omnia docetur ac nihilo minus, immo tanto magis conducit. Ubi coepit advesperascere, iubet sterni sibi in prima domus parte, poscit pugillares stilum lumen, suos omnes in interiora dimittit; ipse ad scribendum animum oculos manum intendit, ne vacua mens audita simulacra et inanes sibi metus fingeret. Initio, quale ubique, silentium noctis; dein concuti ferrum, vincula moveri. Ille non tollere oculos, non remittere stilum, sed offirmare animum auribusque praetendere. Tum crebrescere fragor, adventare et iam ut in limine, iam ut intra limen audiri. Respicit, videt agnoscitque narratam sibi effigiem. Stabat innuebatque digito similis vocanti. Hic contra ut paulum exspectaret manu significat rursusque ceris et stilo incumbit. Illa scribentis capiti catenis insonabat. Respicit rursus idem quod prius innuentem, nec moratus tollit lumen et sequitur. Ibat illa lento gradu quasi gravis vinculis. Postquam deflexit in aream domus, repente dilapsa deserit comitem. Desertus herbas et folia concerpta signum loco ponit. Postero die adit magistratus, monet ut illum locum effodi iubeant. Inveniuntur ossa inserta catenis et implicita, quae corpus aevo terraque putrefactum nuda et exesa reliquerat vinculis; collecta publice sepeliuntur. Domus postea rite conditis manibus caruit.
+
+Et haec quidem affirmantibus credo; illud affirmare aliis possum. Est libertus mihi non illitteratus. Cum hoc minor frater eodem lecto quiescebat. Is visus est sibi cernere quendam in toro residentem, admoventemque capiti suo cultros, atque etiam ex ipso vertice amputantem capillos. Ubi illuxit, ipse circa verticem tonsus, capilli iacentes reperiuntur. Exiguum temporis medium, et rursus simile aliud priori fidem fecit. Puer in paedagogio mixtus pluribus dormiebat. Venerunt per fenestras — ita narrat — in tunicis albis duo cubantemque detonderunt et qua venerant recesserunt. Hunc quoque tonsum sparsosque circa capillos dies ostendit. Nihil notabile secutum, nisi forte quod non fui reus, futurus, si Domitianus sub quo haec acciderunt diutius vixisset. Nam in scrinio eius datus a Caro de me libellus inventus est; ex quo coniectari potest, quia reis moris est summittere capillum, recisos meorum capillos depulsi quod imminebat periculi signum fuisse.
+
+Proinde rogo, eruditionem tuam intendas. Digna res est quam diu multumque consideres; ne ego quidem indignus, cui copiam scientiae tuae facias. 16 Licet etiam utramque in partem — ut soles — disputes, ex altera tamen fortius, ne me suspensum incertumque dimittas, cum mihi consulendi causa fuerit, ut dubitare desinerem. Vale.`,
+
+"Pliny 10.5":
+
+`C. PLINIUS TRAIANO IMPERATORI
+
+Proximo anno, domine, gravissima valetudine usque ad periculum vitae vexatus iatralipten assumpsi; cuius sollicitudini et studio tuae tantum indulgentiae beneficio referre gratiam parem possum. Quare rogo des ei civitatem Romanam. Est enim peregrinae condicionis manumissus a peregrina. Vocatur ipse Arpocras, patronam habuit Thermuthin Theonis, quae iam pridem defuncta est. Item rogo des ius Quiritium libertis Antoniae Maximillae, ornatissimae feminae, Hediae et Antoniae Harmeridi; quod a te petente patrona peto.`,
+
+"Pliny 10.6":
+
+`C. PLINIUS TRAIANO IMPERATORI
+
+Ago gratias, domine, quod et ius Quiritium libertis necessariae mihi feminae et civitatem Romanam Arpocrati, iatraliptae meo, sine mora indulsisti. Sed cum annos eius et censum sicut praeceperas ederem, admonitus sum a peritioribus debuisse me ante ei Alexandrinam civitatem impetrare, deinde Romanam, quoniam esset Aegyptius. Ego autem, quia inter Aegyptios ceterosque peregrinos nihil interesse credebam, contentus fueram hoc solum scribere tibi, esse eum a peregrina manumissum patronamque eius iam pridem decessisse. De qua ignorantia mea non queror, per quam stetit ut tibi pro eodem homine saepius obligarer. Rogo itaque, ut beneficio tuo legitime frui possim, tribuas ei et Alexandrinam civitatem [et Romanam]. Annos eius et censum, ne quid rursus indulgentiam tuam moraretur, libertis tuis quibus iusseras misi.`,
+
+"Pliny 10.7": 
+
+`TRAIANUS PLINIO
+
+Civitatem Alexandrinam secundum institutionem principum non temere dare proposui. Sed cum Arpocrati, iatraliptae tuo, iam civitatem Romanam impetraveris, huic quoque petitioni tuae negare non sustineo. Tu, ex quo nomo sit, notum mihi facere debebis, ut epistulam tibi ad Pompeium Plantam praefectum Aegypti amicum meum mittam.`,
+
+
+"Pliny 10.37": 
+
+`C. PLINIUS TRAIANO IMPERATORI
+
+In aquae ductum, domine, Nicomedenses impenderunt HS XXX CCCXVIII, qui imperfectus adhuc omissus, destructus etiam est; rursus in alium ductum erogata sunt CC. Hoc quoque relicto novo impendio est opus, ut aquam habeant, qui tantam pecuniam male perdiderunt. Ipse perveni ad fontem purissimum, ex quo videtur aqua debere perduci, sicut initio temptatum erat, arcuato opere, ne tantum ad plana civitatis et humilia perveniat. Manent adhuc paucissimi arcus: possunt et erigi quidam lapide quadrato, qui ex superiore opere detractus est; aliqua pars, ut mihi videtur, testaceo opere agenda erit, id enim et facilius et vilius. Sed in primis necessarium est mitti a te vel aquilegem vel architectum, ne rursus eveniat quod accidit. Ego illud unum affirmo, et utilitatem operis et pulchritudinem saeculo tuo esse dignissimam.`,
+
+"Pliny 10.90": 
+
+`C. PLINIUS TRAIANO IMPERATORI
+
+Sinopenses, domine, aqua deficiuntur; quae videtur et bona et copiosa ab sexto decimo miliario posse perduci. Est tamen statim ab capite paulo amplius passus mille locus suspectus et mollis, quem ego interim explorari modico impendio iussi, an recipere et sustinere opus possit. Pecunia curantibus nobis contracta non deerit, si tu, domine, hoc genus operis et salubritati et amoenitati valde sitientis coloniae indulseris.`,
+
+"Aeneid 1.1-33":
+`Arma virumque canō, Trōiae quī prīmus ab ōrīs
+Ītaliam, fātō profugus, Lāvīniaque vēnit
+lītora, multum ille et terrīs iactātus et altō
+vī superum saevae memorem Iūnōnis ob īram;
+multa quoque et bellō passus, dum conderet urbem,               5
+inferretque deōs Latiō, genus unde Latīnum,
+Albānīque patrēs, atque altae moenia Rōmae.
+
+Mūsa, mihī causās memorā, quō nūmine laesō,
+quidve dolēns, rēgīna deum tot volvere cāsūs
+īnsīgnem pietāte virum, tot adīre labōrēs                                   10
+impulerit. Tantaene animīs caelestibus īrae?
+
+Urbs antīqua fuit, Tyriī tenuēre colōnī,
+Karthāgō, Ītaliam contrā Tiberīnaque longē
+ōstia, dīves opum studiīsque asperrima bellī,
+quam Iūnō fertur terrīs magis omnibus ūnam                           15
+posthabitā coluisse Samō; hīc illius arma,
+hīc currus fuit; hōc rēgnum dea gentibus esse,
+sī quā Fāta sinant, iam tum tenditque fovetque.
+Prōgeniem sed enim Trōiānō ā sanguine dūcī
+audierat, Tyriās olim quae verteret arcēs;                                   20
+hinc populum lātē regem bellōque superbum
+ventūrum excidiō Libyae: sīc volvere Parcās.
+Id metuēns, veterisque memor Sāturnia bellī,
+prīma quod ad Trōiam prō cārīs gesserat Argīs—
+necdum etiam causae īrārum saevīque dolōrēs                          25
+exciderant animō: manet altā mente repostum
+iūdicium Paridis sprētaeque iniūria fōrmae,
+et genus invīsum, et raptī Ganymēdis honōrēs.
+Hīs accēnsa super, iactātōs aequore tōtō
+Trōas, rēliquiās Danaum atque immītis Achillī,                          30
+arcēbat longē Latiō, multōsque per annōs
+errābant, āctī Fātīs, maria omnia circum.
+Tantae mōlis erat Rōmānam condere gentem!`,
+
+"Aeneid 1.88-107":
+`Eripiunt subito nubes caelumque diemque
+Teucrorum ex oculis; ponto nox incubat atra.
+Intonuere poli, et crebris micat ignibus aether,               90
+praesentemque viris intentant omnia mortem.
+
+Extemplo Aeneae solvuntur frigore membra:
+ingemit, et duplicis tendens ad sidera palmas
+talia voce refert: 'O terque quaterque beati,
+quis ante ora patrum Troiae sub moenibus altis               95
+contigit oppetere! O Danaum fortissime gentis
+Tydide! Mene Iliacis occumbere campis
+non potuisse, tuaque animam hanc effundere dextra,
+saevus ubi Aeacidae telo iacet Hector, ubi ingens
+Sarpedon, ubi tot Simois correpta sub undis               100
+scuta virum galeasque et fortia corpora volvit?'
+
+Talia iactanti stridens Aquilone procella
+velum adversa ferit, fluctusque ad sidera tollit.
+Franguntur remi; tum prora avertit, et undis
+dat latus; insequitur cumulo praeruptus aquae mons.               105
+Hi summo in fluctu pendent; his unda dehiscens
+terram inter fluctus aperit; furit aestus harenis.`,
+
+"Aeneid 1.496-508":
+`regina ad templum, forma pulcherrima Dido,
+incessit magna iuvenum stipante caterva.
+Qualis in Eurotae ripis aut per iuga Cynthi
+exercet Diana choros, quam mille secutae
+hinc atque hinc glomerantur oreades; illa pharetram               500
+fert umero, gradiensque deas supereminet omnis:
+Latonae tacitum pertemptant gaudia pectus:
+talis erat Dido, talem se laeta ferebat
+per medios, instans operi regnisque futuris.
+Tum foribus divae, media testudine templi,               505
+saepta armis, solioque alte subnixa resedit.
+Iura dabat legesque viris, operumque laborem
+partibus aequabat iustis, aut sorte trahebat:`,
+
+"Aeneid 2.40-56":
+`Primus ibi ante omnis magna comitante caterva               40
+Laocoon ardens summa decurrit ab arce,
+et procul 'o miseri, quae tanta insania, cives?
+creditis avectos hostis? aut ulla putatis
+dona carere dolis Danaum? sic notus Ulixes?
+aut hoc inclusi ligno occultantur Achivi,               45
+aut haec in nostros fabricata est machina muros,
+inspectura domos venturaque desuper urbi,
+aut aliquis latet error; equo ne credite, Teucri.
+quidquid id est, timeo Danaos et dona ferentis.'
+sic fatus ualidis ingentem viribus hastam               50
+in latus inque feri curvam compagibus alvum
+contorsit. stetit illa tremens, uteroque recusso
+insonuere cavae gemitumque dedere cavernae.
+et, si fata deum, si mens non laeva fuisset,
+impulerat ferro Argolicas foedare latebras,               55
+Troiaque nunc staret, Priamique arx alta maneres.`,
+
+"Aeneid 2.201-249":
+`Laocoon, ductus Neptuno sorte sacerdos,
+sollemnis taurum ingentem mactabat ad aras.
+ecce autem gemini a Tenedo tranquilla per alta
+(horresco referens) immensis orbibus angues
+incumbunt pelago pariterque ad litora tendunt;               205
+pectora quorum inter fluctus arrecta iubaeque
+sanguineae superant undas, pars cetera pontum
+pone legit sinuatque immensa volumine terga.
+fit sonitus spumante salo; iamque arva tenebant
+ardentisque oculos suffecti sanguine et igni               210
+sibila lambebant linguis vibrantibus ora.
+diffugimus visu exsangues. illi agmine certo
+Laocoonta petunt; et primum parva duorum
+corpora natorum serpens amplexus uterque
+implicat et miseros morsu depascitur artus;               215
+post ipsum auxilio subeuntem ac tela ferentem
+corripiunt spirisque ligant ingentibus; et iam
+bis medium amplexi, bis collo squamea circum
+terga dati superant capite et cervicibus altis.
+ille simul manibus tendit divellere nodos               220
+perfusus sanie vittas atroque veneno,
+clamores simul horrendos ad sidera tollit:
+qualis mugitus, fugit cum saucius aram
+taurus et incertam excussit cervice securim.
+at gemini lapsu delubra ad summa dracones               225
+effugiunt saevaeque petunt Tritonidis arcem,
+sub pedibusque deae clipeique sub orbe teguntur.
+tum vero tremefacta novus per pectora cunctis
+insinuat pavor, et scelus expendisse merentem
+Laocoonta ferunt, sacrum qui cuspide robur               230
+laeserit et tergo sceleratam intorserit hastam.
+ducendum ad sedes simulacrum orandaque divae
+numina conclamant.
+dividimus muros et moenia pandimus urbis.
+accingunt omnes operi pedibusque rotarum               235
+subiciunt lapsus, et stuppea vincula collo
+intendunt; scandit fatalis machina muros
+feta armis. pueri circum innuptaeque puellae
+sacra canunt funemque manu contingere gaudent;
+illa subit mediaeque minans inlabitur urbi.               240
+o patria, o divum domus Ilium et incluta bello
+moenia Dardanidum! quater ipso in limine portae
+substitit atque utero sonitum quater arma dedere;
+instamus tamen immemores caecique furore
+et monstrum infelix sacrata sistimus arce.               245
+tunc etiam fatis aperit Cassandra futuris
+ora dei iussu non umquam credita Teucris.
+nos delubra deum miseri, quibus ultimus esset
+ille dies, festa velamus fronde per urbem.`,
+
+"Aeneid 4.74-89":
+`nunc media Aenean secum per moenia ducit
+Sidoniasque ostentat opes urbemque paratam,               75
+incipit effari mediaque in voce resistit;
+nunc eadem labente die convivia quaerit,
+Iliacosque iterum demens audire labores
+exposcit pendetque iterum narrantis ab ore.
+post ubi digressi, lumenque obscura vicissim               80
+luna premit suadentque cadentia sidera somnos,
+sola domo maeret vacua stratisque relictis
+incubat. illum absens absentem auditque videtque,
+aut gremio Ascanium genitoris imagine capta
+detinet, infandum si fallere possit amorem.               85
+non coeptae adsurgunt turres, non arma iuventus
+exercet portusve aut propugnacula bello
+tuta parant: pendent opera interrupta minaeque
+murorum ingentes aequataque machina caelo.`,
+
+"Aeneid 165-197":
+`speluncam Dido dux et Troianus eandem               165
+deveniunt. prima et Tellus et pronuba Iuno
+dant signum; fulsere ignes et conscius aether
+conubiis summoque ulularunt vertice Nymphae.
+ille dies primus leti primusque malorum
+causa fuit; neque enim specie famave movetur               170
+nec iam furtivum Dido meditatur amorem:
+coniugium vocat, hoc praetexit nomine culpam.
+
+Extemplo Libyae magnas it Fama per urbes,
+Fama, malum qua non aliud velocius ullum:
+mobilitate viget virisque adquirit eundo,               175
+parva metu primo, mox sese attollit in auras
+ingrediturque solo et caput inter nubila condit.
+illam Terra parens ira inritata deorum
+extremam, ut perhibent, Coeo Enceladoque sororem
+progenuit pedibus celerem et pernicibus alis,               180
+monstrum horrendum, ingens, cui quot sunt corpore plumae,
+tot vigiles oculi subter (mirabile dictu),
+tot linguae, totidem ora sonant, tot subrigit auris.
+nocte volat caeli medio terraeque per umbram
+stridens, nec dulci declinat lumina somno;               185
+luce sedet custos aut summi culmine tecti
+turribus aut altis, et magnas territat urbes,
+tam ficti pravique tenax quam nuntia veri.
+haec tum multiplici populos sermone replebat
+gaudens, et pariter facta atque infecta canebat:               190
+venisse Aenean Troiano sanguine cretum,
+cui se pulchra viro dignetur iungere Dido;
+nunc hiemem inter se luxu, quam longa, fovere
+regnorum immemores turpique cupidine captos.
+haec passim dea foeda virum diffundit in ora.               195
+protinus ad regem cursus detorquet Iarban
+incenditque animum dictis atque aggerat iras.`,
+
+"Aeneid 4.305-361":
+`'dissimulare etiam sperasti, perfide, tantum               305
+posse nefas tacitusque mea decedere terra?
+nec te noster amor nec te data dextera quondam
+nec moritura tenet crudeli funere Dido?
+quin etiam hiberno moliri sidere classem
+et mediis properas Aquilonibus ire per altum,               310
+crudelis? quid, si non arva aliena domosque
+ignotas peteres, et Troia antiqua maneret,
+Troia per undosum peteretur classibus aequor?
+mene fugis? per ego has lacrimas dextramque tuam te
+(quando aliud mihi iam miserae nihil ipsa reliqui),               315
+per conubia nostra, per inceptos hymenaeos,
+si bene quid de te merui, fuit aut tibi quicquam
+dulce meum, miserere domus labentis et istam,
+oro, si quis adhuc precibus locus, exue mentem.
+te propter Libycae gentes Nomadumque tyranni               320
+odere, infensi Tyrii; te propter eundem
+exstinctus pudor et, qua sola sidera adibam,
+fama prior. cui me moribundam deseris hospes
+(hoc solum nomen quoniam de coniuge restat)?
+quid moror? an mea Pygmalion dum moenia frater               325
+destruat aut captam ducat Gaetulus Iarbas?
+saltem si qua mihi de te suscepta fuisset
+ante fugam suboles, si quis mihi parvulus aula
+luderet Aeneas, qui te tamen ore referret,
+non equidem omnino capta ac deserta viderer.'               330
+
+Dixerat. ille Iovis monitis immota tenebat
+lumina et obnixus curam sub corde premebat.
+tandem pauca refert: 'ego te, quae plurima fando
+enumerare vales, numquam, regina, negabo
+promeritam, nec me meminisse pigebit Elissae               335
+dum memor ipse mei, dum spiritus hos regit artus.
+pro re pauca loquar. neque ego hanc abscondere furto
+speravi (ne finge) fugam, nec coniugis umquam
+praetendi taedas aut haec in foedera veni.
+me si fata meis paterentur ducere vitam               340
+auspiciis et sponte mea componere curas,
+urbem Troianam primum dulcisque meorum
+reliquias colerem, Priami tecta alta manerent,
+et recidiva manu posuissem Pergama victis.
+sed nunc Italiam magnam Gryneus Apollo,               345
+Italiam Lyciae iussere capessere sortes;
+hic amor, haec patria est. si te Karthaginis arces
+Phoenissam Libycaeque aspectus detinet urbis,
+quae tandem Ausonia Teucros considere terra
+invidia est? et nos fas extera quaerere regna.               350
+me patris Anchisae, quotiens umentibus umbris
+nox operit terras, quotiens astra ignea surgunt,
+admonet in somnis et turbida terret imago;
+me puer Ascanius capitisque iniuria cari,
+quem regno Hesperiae fraudo et fatalibus arvis.               355
+nunc etiam interpres divum Iove missus ab ipso
+(testor utrumque caput) celeris mandata per auras
+detulit: ipse deum manifesto in lumine vidi
+intrantem muros vocemque his auribus hausi.
+desine meque tuis incendere teque querelis;               360
+Italiam non sponte sequor.'`,
+
+"Aeneid 6.450-476":
+`inter quas Phoenissa recens a vulnere Dido               450
+errabat silva in magna; quam Troius heros
+ut primum iuxta stetit agnovitque per umbras
+obscuram, qualem primo qui surgere mense
+aut videt aut vidisse putat per nubila lunam,
+demisit lacrimas dulcique adfatus amore est:               455
+'infelix Dido, verus mihi nuntius ergo
+venerat exstinctam ferroque extrema secutam?
+funeris heu tibi causa fui? per sidera iuro,
+per superos et si qua fides tellure sub ima est,
+inuitus, regina, tuo de litore cessi.               460
+sed me iussa deum, quae nunc has ire per umbras,
+per loca senta situ cogunt noctemque profundam,
+imperiis egere suis; nec credere quivi
+hunc tantum tibi me discessu ferre dolorem.
+siste gradum teque aspectu ne subtrahe nostro.               465
+quem fugis? extremum fato quod te adloquor hoc est.'
+talibus Aeneas ardentem et torva tuentem
+lenibat dictis animum lacrimasque ciebat.
+illa solo fixos oculos aversa tenebat
+nec magis incepto vultum sermone movetur               470
+quam si dura silex aut stet Marpesia cautes.
+tandem corripuit sese atque inimica refugit
+in nemus umbriferum, coniunx ubi pristinus illi
+respondet curis aequatque Sychaeus amorem.
+nec minus Aeneas casu percussus iniquo               475
+prosequitur lacrimis longe et miseratur euntem.`,
+
+"Aeneid 6.788-800": 
+`huc geminas nunc flecte acies, hanc aspice gentem
+Romanosque tuos. hic Caesar et omnis Iuli
+progenies magnum caeli ventura sub axem.               790
+hic vir, hic est, tibi quem promitti saepius audis,
+Augustus Caesar, divi genus, aurea condet
+saecula qui rursus Latio regnata per arva
+Saturno quondam, super et Garamantas et Indos
+proferet imperium; iacet extra sidera tellus,               795
+extra anni solisque vias, ubi caelifer Atlas
+axem umero torquet stellis ardentibus aptum.
+huius in adventum iam nunc et Caspia regna
+responsis horrent divum et Maeotia tellus,
+et septemgemini turbant trepida ostia Nili.               800`,
+
+"Aeneid 6.847-853":
+`excudent alii spirantia mollius aera
+(credo equidem), vivos ducent de marmore vultus,
+orabunt causas melius, caelique meatus
+describent radio et surgentia sidera dicent:               850
+tu regere imperio populos, Romane, memento
+(hae tibi erunt artes), pacique imponere morem,
+parcere subiectis et debellare superbos.'`,
+
+"Aeneid 7.45-58":
+`maius opus moveo.               45
+
+Rex arva Latinus et urbes
+iam senior longa placidas in pace regebat.
+hunc Fauno et nympha genitum Laurente Marica
+accipimus; Fauno Picus pater, isque parentem
+te, Saturne, refert, tu sanguinis ultimus auctor.
+filius huic fato divum prolesque virilis               50
+nulla fuit, primaque oriens erepta iuventa est.
+sola domum et tantas servabat filia sedes
+iam matura viro, iam plenis nubilis annis.
+multi illam magno e Latio totaque petebant
+Ausonia; petit ante alios pulcherrimus omnis                55
+Turnus, avis atavisque potens, quem regia coniunx
+adiungi generum miro properabat amore;
+sed variis portenta deum terroribus obstant.`,
+
+"Aeneid 7.783-792":
+`Ipse inter primos praestanti corpore Turnus
+vertitur arma tenens et toto vertice supra est.
+cui triplici crinita iuba galea alta Chimaeram               785
+sustinet Aetnaeos efflantem faucibus ignis;
+tam magis illa fremens et tristibus effera flammis
+quam magis effuso crudescunt sanguine pugnae.
+at levem clipeum sublatis cornibus Io
+auro insignibat, iam saetis obsita, iam bos,               790
+argumentum ingens, et custos virginis Argus,
+caelataque amnem fundens pater Inachus urna.`,
+
+"Aeneid 7.803-817":
+`Hos super advenit Volsca de gente Camilla
+agmen agens equitum et florentis aere catervas,
+bellatrix, non illa colo calathisve Minervae               805
+femineas adsueta manus, sed proelia virgo
+dura pati cursuque pedum praevertere ventos.
+illa vel intactae segetis per summa volaret
+gramina nec teneras cursu laesisset aristas,
+vel mare per medium fluctu suspensa tumenti               810
+ferret iter celeris nec tingeret aequore plantas.
+illam omnis tectis agrisque effusa iuventus
+turbaque miratur matrum et prospectat euntem,
+attonitis inhians animis ut regius ostro
+velet honos levis umeros, ut fibula crinem               815
+auro internectat, Lyciam ut gerat ipsa pharetram
+et pastoralem praefixa cuspide myrtum.`,
+
+"Aeneid 11.532-594":
+`Velocem interea superis in sedibus Opim,
+unam ex virginibus sociis sacraque caterva,
+compellabat et has tristis Latonia voces
+ore dabat: 'graditur bellum ad crudele Camilla,               535
+o virgo, et nostris nequiquam cingitur armis,
+cara mihi ante alias. neque enim novus iste Dianae
+venit amor subitaque animum dulcedine movit.
+pulsus ob invidiam regno virisque superbas
+Priverno antiqua Metabus cum excederet urbe,               540
+infantem fugiens media inter proelia belli
+sustulit exsilio comitem, matrisque vocavit
+nomine Casmillae mutata parte Camillam.
+ipse sinu prae se portans iuga longa petebat
+solorum nemorum: tela undique saeva premebant               545
+et circumfuso volitabant milite Volsci.
+ecce fugae medio summis Amasenus abundans
+spumabat ripis, tantus se nubibus imber
+ruperat. ille innare parans infantis amore
+tardatur caroque oneri timet. omnia secum               550
+versanti subito vix haec sententia sedit:
+telum immane manu valida quod forte gerebat
+bellator, solidum nodis et robore cocto,
+huic natam libro et silvestri subere clausam
+implicat atque habilem mediae circumligat hastae;               555
+quam dextra ingenti librans ita ad aethera fatur:
+"alma, tibi hanc, nemorum cultrix, Latonia virgo,
+ipse pater famulam voveo; tua prima per auras
+tela tenens supplex hostem fugit. accipe, testor,
+diva tuam, quae nunc dubiis committitur auris."               560
+dixit, et adducto contortum hastile lacerto
+immittit: sonuere undae, rapidum super amnem
+infelix fugit in iaculo stridente Camilla.
+at Metabus magna propius iam urgente caterva
+dat sese fluvio, atque hastam cum virgine victor               565
+gramineo, donum Triviae, de caespite vellit.
+non illum tectis ullae, non moenibus urbes
+accepere (neque ipse manus feritate dedisset),
+pastorum et solis exegit montibus aevum.
+hic natam in dumis interque horrentia lustra               570
+armentalis equae mammis et lacte ferino
+nutribat teneris immulgens ubera labris.
+utque pedum primis infans vestigia plantis
+institerat, iaculo palmas armavit acuto
+spiculaque ex umero parvae suspendit et arcum.               575
+pro crinali auro, pro longae tegmine pallae
+tigridis exuviae per dorsum a vertice pendent.
+tela manu iam tum tenera puerilia torsit
+et fundam tereti circum caput egit habena
+Strymoniamque gruem aut album deiecit olorem.               580
+multae illam frustra Tyrrhena per oppida matres
+optavere nurum; sola contenta Diana
+aeternum telorum et virginitatis amorem
+intemerata colit. vellem haud correpta fuisset
+militia tali conata lacessere Teucros:               585
+cara mihi comitumque foret nunc una mearum.
+verum age, quandoquidem fatis urgetur acerbis,
+labere, nympha, polo finisque invise Latinos,
+tristis ubi infausto committitur omine pugna.
+haec cape et ultricem pharetra deprome sagittam:               590
+hac, quicumque sacrum violarit vulnere corpus,
+Tros Italusque, mihi pariter det sanguine poenas.
+post ego nube cava miserandae corpus et arma
+inspoliata feram tumulo patriaeque reponam.'`,
+
+"Aeneid 12.791-796, 803-812, 818-828":
+`Iunonem interea rex omnipotentis Olympi
+adloquitur fulva pugnas de nube tuentem:
+'quae iam finis erit, coniunx? quid denique restat?
+indigetem Aenean scis ipsa et scire fateris
+deberi caelo fatisque ad sidera tolli.               795
+quid struis? aut qua spe gelidis in nubibus haeres?
+
+****************************
+ventum ad supremum est. terris agitare vel undis
+Troianos potuisti, infandum accendere bellum,
+deformare domum et luctu miscere hymenaeos:               805
+ulterius temptare veto.' sic Iuppiter orsus;
+sic dea summisso contra Saturnia vultu:
+'ista quidem quia nota mihi tua, magne, voluntas,
+Iuppiter, et Turnum et terras invita reliqui;
+nec tu me aeria solam nunc sede videres               810
+digna indigna pati, sed flammis cincta sub ipsa
+starem acie traheremque inimica in proelia Teucros.
+
+****************************
+et nunc cedo equidem pugnasque exosa relinquo.
+illud te, nulla fati quod lege tenetur,
+pro Latio obtestor, pro maiestate tuorum:               820
+cum iam conubiis pacem felicibus (esto)
+component, cum iam leges et foedera iungent,
+ne vetus indigenas nomen mutare Latinos
+neu Troas fieri iubeas Teucrosque vocari
+aut vocem mutare viros aut vertere vestem.               825
+sit Latium, sint Albani per saecula reges,
+sit Romana potens Itala virtute propago:
+occidit, occideritque sinas cum nomine Troia.'`,
+
+"Aeneid 12.919-952":
+`Cunctanti telum Aeneas fatale coruscat,
+sortitus fortunam oculis, et corpore toto               920
+eminus intorquet. murali concita numquam
+tormento sic saxa fremunt nec fulmine tanti
+dissultant crepitus. volat atri turbinis instar
+exitium dirum hasta ferens orasque recludit
+loricae et clipei extremos septemplicis orbis;               925
+per medium stridens transit femur. incidit ictus
+ingens ad terram duplicato poplite Turnus.
+consurgunt gemitu Rutuli totusque remugit
+mons circum et vocem late nemora alta remittunt.
+ille humilis supplex oculos dextramque precantem               930
+protendens 'equidem merui nec deprecor' inquit;
+'utere sorte tua. miseri te si qua parentis
+tangere cura potest, oro (fuit et tibi talis
+Anchises genitor) Dauni miserere senectae
+et me, seu corpus spoliatum lumine mavis,               935
+redde meis. vicisti et victum tendere palmas
+Ausonii videre; tua est Lavinia coniunx,
+ulterius ne tende odiis.' stetit acer in armis
+Aeneas volvens oculos dextramque repressit;
+et iam iamque magis cunctantem flectere sermo               940
+coeperat, infelix umero cum apparuit alto
+balteus et notis fulserunt cingula bullis
+Pallantis pueri, victum quem vulnere Turnus
+straverat atque umeris inimicum insigne gerebat.
+ille, oculis postquam saevi monimenta doloris               945
+exuviasque hausit, furiis accensus et ira
+terribilis: 'tune hinc spoliis indute meorum
+eripiare mihi? Pallas te hoc vulnere, Pallas
+immolat et poenam scelerato ex sanguine sumit.'
+hoc dicens ferrum adverso sub pectore condit               950
+fervidus; ast illi solvuntur frigore membra
+vitaque cum gemitu fugit indignata sub umbras.`,
+  };
+
+    // Global variables for annotation and processing
     let selectedWord = null;
     let actionsStack = [];
     let connections = [];
     let vocabList = [];
-    let multiSelectMode = false; // New state for multi-select mode
-    let multiSelectedWords = new Set(); // Store multiple selected words
-    let groupNotes = []; // Store group notes
-
-    const LINE_OFFSET_INCREMENT = 3; // Reduced increment for smoother spacing
-    const MAX_LINE_OFFSET = 50; // Maximum pixels a line can be offset vertically
+    let multiSelectMode = false;
+    let multiSelectedWords = new Set();
+    let groupNotes = [];
+    const LINE_OFFSET_INCREMENT = 3;
+    const MAX_LINE_OFFSET = 50;
 
     // Process Text Button Event
     document.getElementById('processButton').addEventListener('click', processText);
@@ -274,25 +959,34 @@
     // Multi Select Button Event
     document.getElementById('multiSelectButton').addEventListener('click', toggleMultiSelect);
 
-    // --- Updated processText to preserve lines & handle accented letters ---
+    // Load Text Button Event for Preloaded Text Dropdown
+    document.getElementById('loadTextButton').addEventListener('click', () => {
+      const select = document.getElementById('preloadedTextSelect');
+      const selectedValue = select.value;
+      if (selectedValue && preloadedTexts[selectedValue]) {
+        document.getElementById('inputArea').value = preloadedTexts[selectedValue];
+        processText();
+      } else {
+        alert('Please select a valid text.');
+      }
+    });
+
+    // Process Text Function
     function processText() {
       const text = document.getElementById('inputArea').value;
       const displayArea = document.getElementById('displayArea');
-      displayArea.innerHTML = ''; // Clear display area
-
+      displayArea.innerHTML = '';
       connections = [];
       actionsStack = [];
       selectedWord = null;
       multiSelectedWords.clear();
       groupNotes = [];
-      document.getElementById('notesList').innerHTML = ''; // Clear notes
-      document.getElementById('vocabList').innerHTML = ''; // Clear vocab
+      document.getElementById('notesList').innerHTML = '';
+      document.getElementById('vocabList').innerHTML = '';
       vocabList = [];
 
       // Split text into lines (accounting for Windows/macOS newlines)
       const lines = text.split(/\r?\n/);
-
-      // Create and append the canvas before the words
       const canvas = document.createElement('canvas');
       canvas.id = 'lineCanvas';
       canvas.style.position = 'absolute';
@@ -301,39 +995,30 @@
       canvas.style.width = '100%';
       canvas.style.height = '100%';
       canvas.style.pointerEvents = 'none';
-      canvas.style.zIndex = '0'; // behind words
+      canvas.style.zIndex = '1000';
       displayArea.appendChild(canvas);
 
       let globalWordIndex = 0;
-
-      // Regex to handle accented letters and combining marks as part of the same "word."
       const regex = /[\p{L}\p{M}]+|[^\s\p{L}\p{M}]/gu;
 
       lines.forEach(lineText => {
-        // If the line is empty, preserve a blank line visually
         if (!lineText.trim()) {
           const blankLine = document.createElement('div');
           blankLine.style.height = '1em';
           displayArea.appendChild(blankLine);
           return;
         }
-
-        // Create a container for this line
         const lineContainer = document.createElement('div');
         lineContainer.classList.add('lineContainer');
-
         const words = lineText.match(regex);
         if (words) {
           words.forEach(word => {
             const span = document.createElement('span');
-
             if (/\p{L}/u.test(word)) {
               span.className = 'word';
               span.dataset.index = globalWordIndex.toString();
               span.draggable = true;
               span.textContent = word;
-
-              // Click event for word selection
               span.addEventListener('click', () => {
                 if (multiSelectMode) {
                   if (multiSelectedWords.has(span)) {
@@ -357,45 +1042,38 @@
                   }
                   selectedWord = span;
                   selectedWord.classList.add('selected');
-
                   if (selectedWord.dataset.note) {
                     alert('Note for "' + selectedWord.textContent.trim() + '": ' + selectedWord.dataset.note);
                   }
                 }
               });
-
-              // Drag & drop connections
               span.addEventListener('dragstart', dragStart);
               span.addEventListener('dragover', dragOver);
               span.addEventListener('drop', drop);
-
               globalWordIndex++;
             } else {
               span.className = 'punctuation';
               span.textContent = word;
             }
-
             lineContainer.appendChild(span);
             lineContainer.appendChild(document.createTextNode(' '));
           });
         }
-
         displayArea.appendChild(lineContainer);
       });
-
       resizeCanvas();
     }
-    // --- End processText ---
 
     window.addEventListener('resize', resizeCanvas);
+    document.getElementById('displayArea').addEventListener('scroll', drawConnections);
 
     function resizeCanvas() {
       const canvas = document.getElementById('lineCanvas');
       const displayArea = document.getElementById('displayArea');
-
-      canvas.width = displayArea.clientWidth;
-      canvas.height = displayArea.clientHeight;
-
+      canvas.width = displayArea.scrollWidth;
+      canvas.height = displayArea.scrollHeight;
+      canvas.style.width = displayArea.scrollWidth + 'px';
+      canvas.style.height = displayArea.scrollHeight + 'px';
       drawConnections();
     }
 
@@ -438,7 +1116,6 @@
       }
     }
 
-    // Underline Button Event
     document.getElementById('underlineButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -469,7 +1146,6 @@
       }
     });
 
-    // Bracket Buttons Events
     document.getElementById('leftBracketButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -530,7 +1206,6 @@
       }
     });
 
-    // Angle Bracket Buttons Events
     document.getElementById('leftAngleButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -591,7 +1266,6 @@
       }
     });
 
-    // Notes Button Event
     document.getElementById('notesButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -630,7 +1304,6 @@
       }
     });
 
-    // Add Vocab Button Event
     document.getElementById('vocabButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -667,39 +1340,6 @@
       }
     });
 
-    // Update Notes List
-    function updateNotesList() {
-      const notesList = document.getElementById('notesList');
-      notesList.innerHTML = '';
-
-      groupNotes.forEach(group => {
-        const li = document.createElement('li');
-        li.textContent = group.words + ': ' + group.note;
-        notesList.appendChild(li);
-      });
-
-      const wordsWithNotes = Array.from(document.querySelectorAll('.word')).filter(word => word.dataset.note);
-      wordsWithNotes.sort((a, b) => parseInt(a.dataset.index) - parseInt(b.dataset.index));
-
-      wordsWithNotes.forEach(word => {
-        const li = document.createElement('li');
-        li.textContent = '"' + word.textContent.trim() + '": ' + word.dataset.note;
-        notesList.appendChild(li);
-      });
-    }
-
-    // Update Vocab List
-    function updateVocabList() {
-      const vocabListElement = document.getElementById('vocabList');
-      vocabListElement.innerHTML = '';
-      vocabList.forEach(word => {
-        const li = document.createElement('li');
-        li.textContent = word;
-        vocabListElement.appendChild(li);
-      });
-    }
-
-    // Undo Button Event
     document.getElementById('undoButton').addEventListener('click', undoAction);
 
     function undoAction() {
@@ -707,7 +1347,6 @@
         alert('No actions to undo');
         return;
       }
-
       const lastAction = actionsStack.pop();
       switch (lastAction.type) {
         case 'highlight':
@@ -751,7 +1390,6 @@
       }
     }
 
-    // Clear Button Event
     document.getElementById('clearButton').addEventListener('click', () => {
       if (multiSelectMode) {
         if (multiSelectedWords.size === 0) {
@@ -782,7 +1420,6 @@
       }
     });
 
-    // Save Word State for Undo
     function saveWordState(word) {
       return {
         backgroundColor: word.style.backgroundColor || 'transparent',
@@ -794,7 +1431,6 @@
       };
     }
 
-    // Restore Word State for Undo
     function restoreWordState(word, state) {
       word.style.backgroundColor = state.backgroundColor;
       word.style.textDecoration = state.textDecoration;
@@ -810,7 +1446,6 @@
       updateNotesList();
     }
 
-    // Clear Word Formatting
     function clearWordFormatting(word) {
       word.style.backgroundColor = '';
       word.style.textDecoration = '';
@@ -822,7 +1457,6 @@
       updateNotesList();
     }
 
-    // Drag and Drop Functions for Connections
     function dragStart(event) {
       event.dataTransfer.setData('text/plain', event.target.dataset.index);
     }
@@ -854,7 +1488,6 @@
       }
     }
 
-    // Multi Select Toggle Function
     function toggleMultiSelect() {
       multiSelectMode = !multiSelectMode;
       const button = document.getElementById('multiSelectButton');
@@ -869,48 +1502,33 @@
       }
     }
 
-    // Draw Connections Function with line offsetting
     function drawConnections() {
       const canvas = document.getElementById('lineCanvas');
       const displayArea = document.getElementById('displayArea');
-
-      canvas.width = displayArea.clientWidth;
-      canvas.height = displayArea.clientHeight;
-
+      canvas.width = displayArea.scrollWidth;
+      canvas.height = displayArea.scrollHeight;
       const ctx = canvas.getContext('2d');
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       ctx.strokeStyle = 'black';
       ctx.lineWidth = 2;
-
       const lineSegments = [];
       const lineConnectionCounts = {};
-
       connections.forEach(conn => {
         const fromWord = displayArea.querySelector(`[data-index="${conn.from}"]`);
         const toWord = displayArea.querySelector(`[data-index="${conn.to}"]`);
-
         if (fromWord && toWord) {
-          const fromRect = fromWord.getBoundingClientRect();
-          const toRect = toWord.getBoundingClientRect();
-          const displayRect = displayArea.getBoundingClientRect();
-
-          let startX = fromRect.left + fromRect.width / 2 - displayRect.left + displayArea.scrollLeft;
-          let startY = fromRect.top - displayRect.top + displayArea.scrollTop;
-          let endX = toRect.left + toRect.width / 2 - displayRect.left + displayArea.scrollLeft;
-          let endY = toRect.top - displayRect.top + displayArea.scrollTop;
-
+        const VERTICAL_OFFSET = 5; // Adjust this value as needed
+        const startX = fromWord.offsetLeft + fromWord.offsetWidth / 2;
+        const startY = fromWord.offsetTop + fromWord.offsetHeight / 2 - VERTICAL_OFFSET;
+        const endX = toWord.offsetLeft + toWord.offsetWidth / 2;
+        const endY = toWord.offsetTop + toWord.offsetHeight / 2 - VERTICAL_OFFSET;
           const lineHeight = parseFloat(getComputedStyle(displayArea).lineHeight);
           const baseOffsetY = lineHeight / 6;
-
           let adjustedStartY = startY - baseOffsetY;
           let adjustedEndY = endY - baseOffsetY;
-
           const lineThreshold = 2;
           const isSameLine = Math.abs(startY - endY) < lineThreshold;
-
           let offsetIncrement = 0;
-
           if (isSameLine) {
             const lineKey = Math.round(startY);
             if (!lineConnectionCounts[lineKey]) {
@@ -919,26 +1537,21 @@
             offsetIncrement = lineConnectionCounts[lineKey] * LINE_OFFSET_INCREMENT;
             lineConnectionCounts[lineKey]++;
           } else {
-            while (lineOverlaps(lineSegments, startX, adjustedStartY - offsetIncrement, endX, adjustedEndY - offsetIncrement) 
-                   && offsetIncrement < MAX_LINE_OFFSET) {
+            while (lineOverlaps(lineSegments, startX, adjustedStartY - offsetIncrement, endX, adjustedEndY - offsetIncrement) && offsetIncrement < MAX_LINE_OFFSET) {
               offsetIncrement += LINE_OFFSET_INCREMENT;
             }
           }
-
           if (offsetIncrement >= MAX_LINE_OFFSET) {
             offsetIncrement = MAX_LINE_OFFSET;
           }
-
           adjustedStartY -= offsetIncrement;
           adjustedEndY -= offsetIncrement;
-
           lineSegments.push({
             startX: startX,
             startY: adjustedStartY,
             endX: endX,
             endY: adjustedEndY
           });
-
           ctx.beginPath();
           ctx.moveTo(startX, startY);
           ctx.lineTo(startX, adjustedStartY);
@@ -948,6 +1561,37 @@
         }
       });
     }
+function updateNotesList() {
+  const notesList = document.getElementById('notesList');
+  notesList.innerHTML = '';
+
+  // For individual word notes
+  const allWords = document.querySelectorAll('.word');
+  allWords.forEach(word => {
+    if (word.dataset.note) {
+      const li = document.createElement('li');
+      li.textContent = `"${word.textContent.trim()}": ${word.dataset.note}`;
+      notesList.appendChild(li);
+    }
+  });
+
+  // For group notes
+  groupNotes.forEach(group => {
+    const li = document.createElement('li');
+    li.textContent = `"${group.words}": ${group.note}`;
+    notesList.appendChild(li);
+  });
+}
+
+function updateVocabList() {
+  const vocabUl = document.getElementById('vocabList');
+  vocabUl.innerHTML = '';
+  vocabList.forEach(word => {
+    const li = document.createElement('li');
+    li.textContent = word;
+    vocabUl.appendChild(li);
+  });
+}
 
     function lineOverlaps(lineSegments, x1, y1, x2, y2) {
       for (let segment of lineSegments) {
@@ -966,66 +1610,75 @@
              (ccw(x1, y1, x2, y2, x3, y3) !== ccw(x1, y1, x2, y2, x4, y4));
     }
 
-    // Export Button Event
-    document.getElementById('exportButton').addEventListener('click', () => {
-      const exportWindow = window.open('', '', 'width=1000,height=800');
-      let htmlContent = '<html><head><title>Exported Notes</title>';
+document.getElementById('exportButton').addEventListener('click', async () => {
+  const displayArea = document.getElementById('displayArea');
+  const title = document.getElementById('titleInput').value.trim() || 'Latin Notes';
 
-      const styleContent = document.querySelector('style').innerHTML;
-      htmlContent += `<style>${styleContent}</style>`;
-
-      htmlContent += '</head><body>';
-
-      const title = document.getElementById('titleInput').value.trim();
-      if (title !== '') {
-        htmlContent += '<h1>' + escapeHtml(title) + '</h1>';
-      }
-
-      const displayArea = document.getElementById('displayArea');
-
-      html2canvas(displayArea).then(canvas => {
-        const canvasDataURL = canvas.toDataURL();
-        const img = document.createElement('img');
-        img.src = canvasDataURL;
-        img.style.maxWidth = '100%';
-
-        htmlContent += '<h2>Annotated Text</h2>';
-        htmlContent += '<div>' + img.outerHTML + '</div>';
-
-        const translation = document.getElementById('translationArea').value.trim();
-        if (translation !== '') {
-          htmlContent += '<h2>Translation</h2>';
-          htmlContent += '<div>' + nl2br(escapeHtml(translation)) + '</div>';
-        }
-
-        const notesList = document.getElementById('notesList').innerHTML;
-        if (notesList.trim() !== '') {
-          htmlContent += '<h2>Notes</h2>';
-          htmlContent += '<ul>' + notesList + '</ul>';
-        }
-
-        const vocabListHTML = document.getElementById('vocabList').innerHTML;
-        if (vocabListHTML.trim() !== '') {
-          htmlContent += '<h2>Vocabulary</h2>';
-          htmlContent += '<ul>' + vocabListHTML + '</ul>';
-        }
-
-        htmlContent += '</body></html>';
-
-        exportWindow.document.open();
-        exportWindow.document.write(htmlContent);
-        exportWindow.document.close();
-
-        exportWindow.onload = function() {
-          exportWindow.print();
-        };
-      }).catch(error => {
-        console.error('Error capturing display area:', error);
-        alert('An error occurred while exporting. Please try again.');
-      });
+  try {
+    // ✅ Screenshot the live displayArea (with visible canvas lines)
+    const canvas = await html2canvas(displayArea, {
+      backgroundColor: '#ffffff',
+      scale: 2,
+      useCORS: true,
+      logging: false
     });
 
-    // Helper Functions
+    const imgData = canvas.toDataURL('image/png');
+
+    // ✅ Build the export HTML with embedded image
+    let htmlContent = `
+      <html>
+      <head>
+        <title>${title}</title>
+        <style>
+          body { font-family: Georgia, serif; margin: 40px; }
+          h1, h2 { font-family: Georgia; }
+          img { max-width: 100%; }
+        </style>
+      </head>
+      <body>
+        <h1>${title}</h1>
+        <h2>Annotated Text</h2>
+        <img src="${imgData}" alt="Annotated Latin Text" />
+    `;
+
+    // ✅ Translation
+    const translation = document.getElementById('translationArea').value.trim();
+    if (translation) {
+      htmlContent += `
+        <h2>Translation</h2>
+        <p>${translation.replace(/\n/g, '<br>')}</p>
+      `;
+    }
+
+    // ✅ Notes
+    const notes = Array.from(document.querySelectorAll('#notesList li'))
+      .map(li => `<li>${li.textContent}</li>`).join('');
+    if (notes) {
+      htmlContent += `<h2>Notes</h2><ul>${notes}</ul>`;
+    }
+
+    // ✅ Vocabulary
+    const vocab = Array.from(document.querySelectorAll('#vocabList li'))
+      .map(li => `<li>${li.textContent}</li>`).join('');
+    if (vocab) {
+      htmlContent += `<h2>Vocabulary</h2><ul>${vocab}</ul>`;
+    }
+
+    htmlContent += '</body></html>';
+
+    // ✅ Open new tab and write content
+    const exportWindow = window.open('', '_blank');
+    exportWindow.document.open();
+    exportWindow.document.write(htmlContent);
+    exportWindow.document.close();
+
+  } catch (error) {
+    console.error('Export error:', error);
+    alert('Something went wrong during export. Check the console for details.');
+  }
+});
+
 
     function escapeHtml(text) {
       const map = {
@@ -1044,3 +1697,6 @@
   </script>
 </body>
 </html>
+
+
+  
