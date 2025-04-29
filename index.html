@@ -96,8 +96,8 @@
       border: 1px solid #aaa;
       padding: 20px;
       min-height: 400px;
-      max-height: 600px;
-      overflow: auto;
+      max-height: none;
+      overflow: visible;
       position: relative;
       background-color: #fff;
       line-height: 1.8;
@@ -193,7 +193,12 @@
       margin-right: 10px;
     }
   .buttonBar {
-    display: flex;
+     position: sticky;
+     top: 0;                     /* stick to the very top */
+     background: #faf0d7;        /* same as your page background */
+     z-index: 1000;              /* sit above the notes */
+     padding: 10px 0;            /* optional spacing */
+     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 10px;
@@ -283,27 +288,29 @@
   <button id="multiSelectButton" title="Click this to annotate more than one word at a time">Multi Select</button>
 
  <!-- Buttons Row Above -->
+<!-- ONE toolbar, with unique IDs & shortcut titles -->
 <div class="buttonBar">
   <div class="buttons">
-     <div class="button" id="redButton" style="background-color: #ff9999;" title="Highlight selected word"></div>
-      <div class="button" id="greenButton" style="background-color: #99ff99;" title="Highlight selected word"></div>
-      <div class="button" id="orangeButton" style="background-color: orange;" title="Highlight selected word"></div>
-      <div class="button" id="blueButton" style="background-color: lightblue;" title="Highlight selected word"></div>
-      <div class="button" id="purpleButton" style="background-color: #cc99ff;" title="Highlight selected word"></div>
-      <div class="button" id="yellowButton" style="background-color: yellow;" title="Highlight selected word"></div>
-      <div class="button" id="noHighlightButton" style="background-color: transparent;" title="Remove highlight">X</div>
-      <div class="button" id="underlineButton">U</div>
-      <div class="button" id="leftBracketButton">[</div>
-      <div class="button" id="rightBracketButton">]</div>
-      <div class="button" id="leftAngleButton">&lt;</div>
-      <div class="button" id="rightAngleButton">&gt;</div>
-      <div class="button" id="notesButton" title="Add a note to a word">Notes</div>
-      <div class="button" id="vocabButton" title="Add selected word to vocab list">Vocab</div>
-      <div class="button" id="undoButton">Undo</div>
-      <div class="button" id="clearButton" title="Clear all markings from highlighted word">Clear</div>
+    <div class="button" id="redButton"    style="background-color: #ff9999;" title="Highlight (R)"></div>
+    <div class="button" id="greenButton"  style="background-color: #99ff99;" title="Highlight (G)"></div>
+    <div class="button" id="orangeButton" style="background-color: orange;"   title="Highlight (O)"></div>
+    <div class="button" id="blueButton"   style="background-color: lightblue;" title="Highlight (B)"></div>
+    <div class="button" id="purpleButton" style="background-color: #cc99ff;" title="Highlight (P)"></div>
+    <div class="button" id="yellowButton" style="background-color: yellow;"    title="Highlight (Y)"></div>
+    <div class="button" id="noHighlightButton" style="background-color: transparent;" title="Remove highlight (X)">X</div>
+
+    <div class="button" id="underlineButton" title="Underline (U)">U</div>
+    <div class="button" id="leftBracketButton"  title="Add ‘[’ ([) ">[</div>
+    <div class="button" id="rightBracketButton" title="Add ‘]’ (]) ">]</div>
+    <div class="button" id="leftAngleButton"    title="Add ‘<’ (<) ">&lt;</div>
+    <div class="button" id="rightAngleButton"   title="Add ‘>’ (>) ">&gt;</div>
+
+    <div class="button" id="notesButton" title="Add note (N)">Notes</div>
+    <div class="button" id="vocabButton" title="Add to vocab (V)">Add Vocab</div>
+    <div class="button" id="clearButton" title="Clear markings (X)">X</div>
+   <div class="button" id="undoButton" title="Undo (Z)">Undo</div>
   </div>
 </div>
-
 <!-- Main Container (text only now) -->
 <div id="mainContainer">
   <div id="displayArea"></div>
@@ -1694,7 +1701,31 @@ document.getElementById('exportButton').addEventListener('click', async () => {
     function nl2br(str) {
       return str.replace(/\n/g, '<br>');
     }
-  </script>
+  // 🔥 Hotkey support
+document.addEventListener('keydown', event => {
+  const tag = event.target.tagName;
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return;
+  const key = event.key.toUpperCase();
+  switch (key) {
+    case 'U': document.getElementById('underlineButton').click(); break;
+    case 'B': document.getElementById('blueButton').click();      break;
+    case 'R': document.getElementById('redButton').click();       break;
+    case 'G': document.getElementById('greenButton').click();     break;
+    case 'Y': document.getElementById('yellowButton').click();    break;
+    case 'O': document.getElementById('orangeButton').click();    break;
+    case 'P': document.getElementById('purpleButton').click();    break;
+    case '[': document.getElementById('leftBracketButton').click();  break;
+    case ']': document.getElementById('rightBracketButton').click(); break;
+    case '<': document.getElementById('leftAngleButton').click();    break;
+    case '>': document.getElementById('rightAngleButton').click();   break;
+    case 'V': document.getElementById('vocabButton').click();     break;
+    case 'N': document.getElementById('notesButton').click();     break;
+    case 'X': document.getElementById('clearButton').click();     break;
+    default: return;
+  }
+  event.preventDefault();
+});
+</script>
 </body>
 </html>
 
