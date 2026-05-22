@@ -1,5 +1,0 @@
-{
-  "name": "Latin Text Annotator",
-  "description": "An application for students to annotate Latin texts. It allows highlighting, underlining, bracketing, connecting words with lines, looking up selected words with the bundled Open Words dictionary, and exporting the final annotated text as a PDF.",
-  "requestFramePermissions": []
-}
