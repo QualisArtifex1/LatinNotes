@@ -127,6 +127,157 @@
     }
   }
 
+  function getReadingSelect() {
+    return Array.from(document.querySelectorAll("select")).find((select) =>
+      Array.from(select.options).some((option) => option.value.includes("||"))
+    );
+  }
+
+  function setSelectValue(select, value) {
+    const setter = Object.getOwnPropertyDescriptor(HTMLSelectElement.prototype, "value")?.set;
+    if (setter) setter.call(select, value);
+    else select.value = value;
+    select.dispatchEvent(new Event("input", { bubbles: true }));
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  function closeReadingPickers(except) {
+    document.querySelectorAll(".qa-reading-picker").forEach((picker) => {
+      if (picker === except) return;
+      picker.classList.remove("qa-reading-picker-open");
+      picker.querySelector(".qa-reading-picker-panel")?.setAttribute("hidden", "");
+      picker.querySelector(".qa-reading-picker-button")?.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  function pickerEntries(select, filterText) {
+    const filter = normalize(filterText || "");
+    const entries = [];
+    for (const child of select.children) {
+      if (child.tagName === "OPTGROUP") {
+        const groupOptions = Array.from(child.children).filter((option) => !filter || normalize(option.textContent).includes(filter));
+        if (!groupOptions.length) continue;
+        entries.push({ type: "group", label: child.label });
+        groupOptions.forEach((option) => entries.push({ type: "option", label: option.textContent || "", value: option.value }));
+      } else if (child.tagName === "OPTION" && (!filter || normalize(child.textContent).includes(filter))) {
+        entries.push({ type: "option", label: child.textContent || "", value: child.value });
+      }
+    }
+    return entries;
+  }
+
+  function pickerSignature(select) {
+    return `${select.value}::${Array.from(select.options)
+      .map((option) => `${option.value}=${option.textContent}`)
+      .join("|")}`;
+  }
+
+  function renderReadingPicker(select, picker) {
+    const list = picker.querySelector(".qa-reading-picker-list");
+    const buttonLabel = picker.querySelector(".qa-reading-picker-label");
+    const search = picker.querySelector(".qa-reading-picker-search");
+    if (!list || !buttonLabel || !search) return;
+
+    const selectedOption = select.selectedIndex >= 0 ? select.options[select.selectedIndex] : null;
+    buttonLabel.textContent = selectedOption?.textContent || "-- Select a Pre-loaded Text --";
+    list.innerHTML = "";
+    picker.dataset.renderSignature = pickerSignature(select);
+
+    const entries = pickerEntries(select, search.value);
+    if (!entries.length) {
+      const empty = document.createElement("div");
+      empty.className = "qa-reading-picker-empty";
+      empty.textContent = "No readings match.";
+      list.appendChild(empty);
+      return;
+    }
+
+    for (const entry of entries) {
+      if (entry.type === "group") {
+        const heading = document.createElement("div");
+        heading.className = "qa-reading-picker-group";
+        heading.textContent = entry.label;
+        list.appendChild(heading);
+        continue;
+      }
+
+      const item = document.createElement("button");
+      item.type = "button";
+      item.className = "qa-reading-picker-option";
+      item.textContent = entry.label;
+      item.setAttribute("role", "option");
+      item.setAttribute("aria-selected", String(entry.value === select.value));
+      item.addEventListener("click", () => {
+        setSelectValue(select, entry.value);
+        renderReadingPicker(select, picker);
+        closeReadingPickers();
+      });
+      list.appendChild(item);
+    }
+  }
+
+  function enhanceReadingPicker() {
+    const select = getReadingSelect();
+    document.querySelectorAll(".qa-reading-picker").forEach((picker) => {
+      if (!select || picker.dataset.selectId !== select.dataset.qaReadingSelectId) picker.remove();
+    });
+    if (!select) return;
+
+    if (!select.dataset.qaReadingSelectId) select.dataset.qaReadingSelectId = `qa-reading-select-${Date.now()}`;
+    select.classList.add("qa-native-reading-select");
+    select.setAttribute("aria-hidden", "true");
+    select.tabIndex = -1;
+
+    let picker = document.querySelector(`.qa-reading-picker[data-select-id="${select.dataset.qaReadingSelectId}"]`);
+    if (!picker) {
+      picker = document.createElement("div");
+      picker.className = "qa-reading-picker";
+      picker.dataset.selectId = select.dataset.qaReadingSelectId;
+      picker.innerHTML = `
+        <button type="button" class="qa-reading-picker-button" aria-haspopup="listbox" aria-expanded="false">
+          <span class="qa-reading-picker-label"></span>
+          <span class="qa-reading-picker-icon">v</span>
+        </button>
+        <div class="qa-reading-picker-panel" hidden>
+          <input class="qa-reading-picker-search" type="search" placeholder="Search readings..." autocomplete="off" />
+          <div class="qa-reading-picker-list" role="listbox"></div>
+        </div>
+      `;
+      select.insertAdjacentElement("afterend", picker);
+
+      const button = picker.querySelector(".qa-reading-picker-button");
+      const panel = picker.querySelector(".qa-reading-picker-panel");
+      const search = picker.querySelector(".qa-reading-picker-search");
+      button.addEventListener("click", () => {
+        const isOpen = picker.classList.toggle("qa-reading-picker-open");
+        closeReadingPickers(picker);
+        panel.hidden = !isOpen;
+        button.setAttribute("aria-expanded", String(isOpen));
+        if (isOpen) {
+          renderReadingPicker(select, picker);
+          search.focus();
+        }
+      });
+      search.addEventListener("input", () => renderReadingPicker(select, picker));
+      select.addEventListener("change", () => renderReadingPicker(select, picker));
+      picker.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeReadingPickers();
+      });
+    }
+
+    if (picker.dataset.renderSignature !== pickerSignature(select)) renderReadingPicker(select, picker);
+  }
+
+  function installReadingPickerDismiss() {
+    document.addEventListener(
+      "click",
+      (event) => {
+        if (!event.target.closest(".qa-reading-picker")) closeReadingPickers();
+      },
+      true
+    );
+  }
+
   function ensureButton() {
     const entry = commentaryForCurrentReading();
     const toolbar = Array.from(document.querySelectorAll("button"))
@@ -379,6 +530,123 @@
       .qa-commentary-popover-body em {
         font-style: italic;
       }
+      .qa-native-reading-select {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+      .qa-reading-picker {
+        position: relative;
+        width: 100%;
+      }
+      .qa-reading-picker-button {
+        width: 100%;
+        min-height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid rgb(214 211 209);
+        border-radius: 0.375rem;
+        background: rgb(250 250 249);
+        color: rgb(41 37 36);
+        text-align: left;
+        font: inherit;
+        cursor: pointer;
+      }
+      .dark .qa-reading-picker-button {
+        border-color: rgb(87 83 78);
+        background: rgb(41 37 36);
+        color: rgb(245 245 244);
+      }
+      .qa-reading-picker-button:focus {
+        outline: 2px solid rgb(245 158 11);
+        outline-offset: 2px;
+      }
+      .qa-reading-picker-label {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .qa-reading-picker-icon {
+        flex: 0 0 auto;
+        color: rgb(120 113 108);
+        font-size: 0.8rem;
+      }
+      .qa-reading-picker-panel {
+        position: absolute;
+        z-index: 99999;
+        top: calc(100% + 0.35rem);
+        left: 0;
+        right: 0;
+        max-height: min(430px, calc(100vh - 180px));
+        overflow: hidden;
+        border: 1px solid rgba(120, 113, 108, 0.3);
+        border-radius: 0.5rem;
+        background: rgb(255 255 255);
+        box-shadow: 0 18px 45px rgba(28, 25, 23, 0.22);
+      }
+      .dark .qa-reading-picker-panel {
+        background: rgb(28 25 23);
+        border-color: rgba(214, 211, 209, 0.18);
+      }
+      .qa-reading-picker-search {
+        width: calc(100% - 1rem);
+        margin: 0.5rem;
+        padding: 0.45rem 0.6rem;
+        border: 1px solid rgb(214 211 209);
+        border-radius: 0.375rem;
+        background: rgb(250 250 249);
+        color: rgb(41 37 36);
+        font: inherit;
+      }
+      .dark .qa-reading-picker-search {
+        border-color: rgb(87 83 78);
+        background: rgb(41 37 36);
+        color: rgb(245 245 244);
+      }
+      .qa-reading-picker-list {
+        max-height: min(350px, calc(100vh - 245px));
+        overflow: auto;
+        padding: 0.25rem 0;
+      }
+      .qa-reading-picker-group {
+        padding: 0.55rem 0.75rem 0.25rem;
+        font-size: 0.68rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgb(120 113 108);
+      }
+      .qa-reading-picker-option {
+        display: block;
+        width: 100%;
+        padding: 0.48rem 0.75rem;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        font: inherit;
+        cursor: pointer;
+      }
+      .qa-reading-picker-option:hover,
+      .qa-reading-picker-option:focus,
+      .qa-reading-picker-option[aria-selected="true"] {
+        background: rgb(254 243 199);
+        outline: 0;
+      }
+      .dark .qa-reading-picker-option:hover,
+      .dark .qa-reading-picker-option:focus,
+      .dark .qa-reading-picker-option[aria-selected="true"] {
+        background: rgba(180, 83, 9, 0.35);
+      }
+      .qa-reading-picker-empty {
+        padding: 0.9rem 0.75rem;
+        color: rgb(120 113 108);
+      }
     `;
     document.head.appendChild(style);
   }
@@ -399,6 +667,7 @@
         }
         ensureButton();
         updateDropdownLessonLabels();
+        enhanceReadingPicker();
       });
     };
     new MutationObserver(schedule).observe(document.body, { childList: true, subtree: true });
@@ -409,6 +678,7 @@
     installStyles();
     captureSelectedReading();
     installClickHandler();
+    installReadingPickerDismiss();
     watchApp();
     if (window.LATIN_COMMENTARY_PROMISE) {
       window.LATIN_COMMENTARY_PROMISE
@@ -416,6 +686,7 @@
           DATA = data || {};
           updateMode();
           updateDropdownLessonLabels();
+          enhanceReadingPicker();
         })
         .catch((error) => {
           console.error("Unable to load commentary data.", error);
