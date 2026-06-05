@@ -348,8 +348,23 @@
   function updateMode() {
     document.body.classList.toggle("qa-commentary-active", STATE.active);
     ensureButton();
+    updateCreditNotice();
     applyHighlights();
     if (!STATE.active) closePopover();
+  }
+
+  function updateCreditNotice() {
+    let notice = document.getElementById("qa-commentary-credit");
+    if (!STATE.active) {
+      notice?.remove();
+      return;
+    }
+    if (!notice) {
+      notice = document.createElement("div");
+      notice.id = "qa-commentary-credit";
+      notice.textContent = "Thanks to Geoffrey Steadman for creating the commentary";
+      document.body.insertBefore(notice, document.body.firstChild);
+    }
   }
 
   function notesById(entry) {
@@ -447,6 +462,26 @@
       }
       .qa-commentary-active .qa-commentary-word {
         cursor: help;
+      }
+      #qa-commentary-credit {
+        position: sticky;
+        top: 0;
+        z-index: 100001;
+        padding: 0.55rem 1rem;
+        background: rgb(238 242 255);
+        color: rgb(49 46 129);
+        border-bottom: 1px solid rgba(99, 102, 241, 0.22);
+        box-shadow: 0 8px 22px rgba(28, 25, 23, 0.08);
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 0.88rem;
+        font-weight: 800;
+        line-height: 1.25;
+        text-align: center;
+      }
+      .dark #qa-commentary-credit {
+        background: rgb(30 27 75);
+        color: rgb(224 231 255);
+        border-bottom-color: rgba(129, 140, 248, 0.25);
       }
       #qa-commentary-popover {
         position: fixed;
@@ -666,6 +701,7 @@
           applyHighlights();
         }
         ensureButton();
+        updateCreditNotice();
         updateDropdownLessonLabels();
         enhanceReadingPicker();
       });
