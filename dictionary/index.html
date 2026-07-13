@@ -3,97 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Latin Vocab App</title>
-    <script type="module" crossorigin src="./assets/index-D4A1KmQX.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-C3CMYIeg.css">
+    <meta name="description" content="Look up Latin words, meanings, and grammatical forms in context." />
+    <title>Latin Dictionary · Qualis Artifex</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="./app.js"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script>
-      (() => {
-        const findAnalyzeButton = () =>
-          Array.from(document.querySelectorAll('button')).find((button) =>
-            button.textContent && button.textContent.includes('Analyze')
-          );
+    <main class="site-shell">
+      <header class="topbar">
+        <a class="brand" href="https://qualisartifex1.github.io/QualisArtifex/" aria-label="Back to Qualis Artifex">
+          <span class="brand-mark" aria-hidden="true">QA</span>
+          <span>
+            <strong>Latin Dictionary</strong>
+            <small>Qualis Artifex · classical resources</small>
+          </span>
+        </a>
+        <div class="header-actions">
+          <span class="ready-status"><i></i> Dictionary ready</span>
+          <button class="study-trigger" id="open-study-list" type="button">
+            Study list <b id="saved-count">0</b>
+          </button>
+        </div>
+      </header>
 
-        const setTextareaValue = (textarea, value) => {
-          const setter = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set;
-          if (setter) {
-            setter.call(textarea, value);
-          } else {
-            textarea.value = value;
-          }
-          textarea.dispatchEvent(new Event('input', { bubbles: true }));
-        };
+      <a class="back-link" href="https://qualisartifex1.github.io/QualisArtifex/">
+        <span aria-hidden="true">←</span> Back to the library
+      </a>
 
-        const runLookup = (word) => {
-          const cleanWord = String(word || '').trim();
-          if (!cleanWord) return false;
+      <section class="lookup-card" aria-labelledby="lookup-title">
+        <div class="lookup-heading">
+          <div>
+            <span class="eyebrow">Latin lookup</span>
+            <h1 id="lookup-title">Latin passage</h1>
+            <p>Paste a passage, then select any word for its meaning and grammar.</p>
+          </div>
+          <span class="shortcut">⌘ / Ctrl + Enter</span>
+        </div>
 
-          const textarea = document.querySelector('textarea[aria-label="Latin passage"]');
-          if (!textarea) return false;
+        <form id="lookup-form">
+          <label class="sr-only" for="latin-passage">Latin passage</label>
+          <textarea id="latin-passage" placeholder="Enter a Latin word, phrase, or passage…" spellcheck="false"></textarea>
+          <div class="form-footer">
+            <button class="example-button" id="sample-button" type="button">Try an example</button>
+            <button class="analyze-button" id="analyze-button" type="submit" disabled>
+              <span class="analyze-label">Analyze passage</span> <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <p class="lookup-error" id="lookup-error" role="alert" hidden></p>
+        </form>
+      </section>
 
-          setTextareaValue(textarea, cleanWord);
+      <section class="welcome-card" id="welcome-card" aria-label="Getting started">
+        <span class="welcome-number">I</span>
+        <div>
+          <span class="eyebrow">Getting started</span>
+          <h2>Your passage becomes the navigation.</h2>
+          <p>Analyze Latin above. Every word will become selectable, so its definition and grammatical form stay in context.</p>
+        </div>
+        <button id="welcome-sample-button" type="button">Explore Caesar’s opening line</button>
+      </section>
 
-          let attempts = 0;
-          const scrollToResults = () => {
-            window.requestAnimationFrame(() => {
-              const detailPanel = document.querySelector('.detail-panel');
-              if (detailPanel) {
-                detailPanel.scrollIntoView({ block: 'start', behavior: 'auto' });
-              }
-            });
-          };
-          const scrollWhenResultsSettle = () => {
-            let didScroll = false;
-            let observer = null;
-            const finish = () => {
-              if (didScroll) return;
-              didScroll = true;
-              if (observer) observer.disconnect();
-              scrollToResults();
-              window.setTimeout(scrollToResults, 250);
-            };
+      <section class="results-area" id="results-area" aria-live="polite" hidden>
+        <div class="passage-reader">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">Analyzed passage</span>
+              <h2>Select a word</h2>
+            </div>
+            <span id="word-count"></span>
+          </div>
+          <div class="token-ribbon" id="token-ribbon" role="toolbar" aria-label="Words in analyzed passage"></div>
+        </div>
+        <div class="definition-list" id="definition-list"></div>
+      </section>
 
-            observer = new MutationObserver(() => {
-              const results = document.querySelector('.detail-panel .definition-row, .detail-panel .empty-state');
-              if (results) finish();
-            });
-            observer.observe(document.body, { childList: true, subtree: true });
-            window.setTimeout(finish, 700);
-          };
-          const clickWhenReady = () => {
-            const button = findAnalyzeButton();
-            if (button && !button.disabled) {
-              button.click();
-              scrollWhenResultsSettle();
-              return;
-            }
-            attempts += 1;
-            if (attempts < 80) window.setTimeout(clickWhenReady, 50);
-          };
-          window.setTimeout(clickWhenReady, 50);
-          return true;
-        };
+      <footer>
+        <span>Qualis Artifex</span>
+        <p>Definitions and morphology use the bundled local dictionary.</p>
+      </footer>
 
-        const watchForLookup = (word) => {
-          if (runLookup(word)) return;
-          const observer = new MutationObserver(() => {
-            if (runLookup(word)) observer.disconnect();
-          });
-          observer.observe(document.documentElement, { childList: true, subtree: true });
-          window.setTimeout(() => observer.disconnect(), 10000);
-        };
-
-        const initialWord = new URLSearchParams(window.location.search).get('q');
-        if (initialWord) watchForLookup(initialWord);
-
-        window.addEventListener('message', (event) => {
-          if (event.data && event.data.type === 'latin-vocab:lookup') {
-            watchForLookup(event.data.word);
-          }
-        });
-      })();
-    </script>
+      <div class="drawer-backdrop" id="drawer-backdrop"></div>
+      <aside class="study-drawer" id="study-drawer" aria-hidden="true" aria-label="Study list">
+        <div class="drawer-heading">
+          <div>
+            <span class="eyebrow">Review</span>
+            <h2>Study list</h2>
+          </div>
+          <button id="close-study-list" type="button" aria-label="Close study list">×</button>
+        </div>
+        <p class="drawer-intro">Saved entries stay on this device and are ready to export.</p>
+        <div class="export-actions">
+          <button id="copy-list" type="button" disabled>Copy list</button>
+          <button id="download-list" type="button" disabled>Download .tsv</button>
+        </div>
+        <div class="saved-list" id="saved-list"></div>
+      </aside>
+    </main>
   </body>
 </html>
