@@ -665,6 +665,8 @@
         z-index: 100001;
         top: 50%;
         left: 50%;
+        display: flex;
+        flex-direction: column;
         width: min(760px, calc(100vw - 32px));
         max-height: min(82vh, 720px);
         transform: translate(-50%, -50%);
@@ -682,6 +684,7 @@
         border-color: rgba(214, 211, 209, 0.15);
       }
       .qa-reading-notes-header {
+        flex: 0 0 auto;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -709,7 +712,8 @@
         cursor: pointer;
       }
       .qa-reading-notes-body {
-        max-height: calc(min(82vh, 720px) - 78px);
+        flex: 1 1 auto;
+        min-height: 0;
         overflow: auto;
         padding: 1rem 1.2rem 1.2rem;
         font-family: "EB Garamond", serif;
