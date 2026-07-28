@@ -353,6 +353,71 @@
     return index;
   }
 
+  function noteLineRange(line) {
+    const cleaned = String(line || "").replace(/[–—]/g, "-");
+    const match = cleaned.match(/(\d+)(?:\s*-\s*(\d+))?/);
+    if (!match) return null;
+    const start = Number(match[1]);
+    if (!Number.isFinite(start)) return null;
+    let end = match[2] ? Number(match[2]) : start;
+    if (match[2] && match[2].length < match[1].length) {
+      const base = Math.floor(start / 10 ** match[2].length) * 10 ** match[2].length;
+      end = base + end;
+      if (end < start) end += 10 ** match[2].length;
+    }
+    return { start, end };
+  }
+
+  function noteMatchesLine(note, lineNumber) {
+    if (!Number.isFinite(lineNumber)) return false;
+    const range = noteLineRange(note.line);
+    return Boolean(range && lineNumber >= range.start && lineNumber <= range.end);
+  }
+
+  function inferredStartLine(entry) {
+    const match = String(entry?.key || "").match(/\b[A-Za-z]+,\s*\d+\.(\d+)-(\d+)/);
+    if (!match) return null;
+    const start = Number(match[1]);
+    const end = Number(match[2]);
+    return Number.isFinite(start) && Number.isFinite(end) ? { start, end } : null;
+  }
+
+  function lineNumberForIndex(entry, lineIndex) {
+    if (Array.isArray(entry?.lineNumbers)) {
+      const value = Number(entry.lineNumbers[lineIndex]);
+      return Number.isFinite(value) ? value : null;
+    }
+    const inferred = inferredStartLine(entry);
+    if (!inferred) return lineIndex + 1;
+    const value = inferred.start + lineIndex;
+    return value <= inferred.end ? value : null;
+  }
+
+  function hasReliableLineMap(entry) {
+    return Array.isArray(entry?.lineNumbers) || Boolean(inferredStartLine(entry));
+  }
+
+  function wordEntries(entry) {
+    const editor = getEditor();
+    const lineIndexes = new Map();
+    let nextLineIndex = 0;
+    return getWordSpans().map((span, order) => {
+      const lineElement = span.parentElement?.parentElement?.parentElement;
+      if (lineElement && editor?.contains(lineElement) && !lineIndexes.has(lineElement)) {
+        lineIndexes.set(lineElement, nextLineIndex);
+        nextLineIndex += 1;
+      }
+      const lineIndex = lineElement && lineIndexes.has(lineElement) ? lineIndexes.get(lineElement) : order;
+      return {
+        span,
+        order,
+        lineIndex,
+        lineNumber: lineNumberForIndex(entry, lineIndex),
+        key: normalizeWord(span.textContent || ""),
+      };
+    });
+  }
+
   function clearHighlights() {
     document.querySelectorAll(".qa-commentary-word").forEach((span) => {
       span.classList.remove("qa-commentary-word");
@@ -366,12 +431,37 @@
     const entry = commentaryForCurrentReading();
     if (!entry) return;
     const index = buildWordIndex(entry);
-    for (const span of getWordSpans()) {
-      const key = normalizeWord(span.textContent || "");
-      const notes = index.get(key);
-      if (!notes || !notes.length) continue;
+    const words = wordEntries(entry);
+    const assignments = new Map(words.map((word) => [word.span, new Set()]));
+    const reliableLines = hasReliableLineMap(entry);
+
+    for (const [key, notes] of index.entries()) {
+      const matchingWords = words.filter((word) => word.key === key);
+      if (!matchingWords.length) continue;
+
+      const exactlyAssignedNotes = new Set();
+      for (const word of matchingWords) {
+        for (const note of notes) {
+          if (!noteMatchesLine(note, word.lineNumber)) continue;
+          assignments.get(word.span)?.add(note.id);
+          exactlyAssignedNotes.add(note.id);
+        }
+      }
+
+      if (reliableLines) continue;
+
+      const fallbackWords = matchingWords.filter((word) => !assignments.get(word.span)?.size);
+      const fallbackNotes = notes.filter((note) => !exactlyAssignedNotes.has(note.id));
+      fallbackNotes.forEach((note, index) => {
+        const word = fallbackWords[index];
+        if (word) assignments.get(word.span)?.add(note.id);
+      });
+    }
+
+    for (const [span, noteIds] of assignments.entries()) {
+      if (!noteIds.size) continue;
       span.classList.add("qa-commentary-word");
-      span.dataset.commentaryNotes = JSON.stringify(notes.map((note) => note.id));
+      span.dataset.commentaryNotes = JSON.stringify(Array.from(noteIds));
     }
   }
 
