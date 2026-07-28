@@ -309,6 +309,36 @@
     button.title = `${entry.title || STATE.currentKey} commentary`;
   }
 
+  function ensureNotesButton() {
+    const entry = commentaryForCurrentReading();
+    const toolbar = Array.from(document.querySelectorAll("button"))
+      .find((button) => button.textContent && button.textContent.trim() === "Export PDF")
+      ?.parentElement;
+    let button = document.getElementById("qa-reading-notes-button");
+
+    if (!toolbar || !entry?.readingNotesHtml) {
+      if (button) button.remove();
+      closeReadingNotesPopup();
+      return;
+    }
+
+    if (!button) {
+      button = document.createElement("button");
+      button.id = "qa-reading-notes-button";
+      button.type = "button";
+      button.className =
+        "flex items-center gap-2 px-4 py-2 rounded-lg bg-amber-600 text-white font-bold text-sm hover:bg-amber-700 transition-all shadow-md";
+      button.textContent = "Notes";
+      button.addEventListener("click", () => showReadingNotesPopup());
+      const commentaryButton = document.getElementById("qa-commentary-toggle");
+      if (commentaryButton?.parentElement === toolbar) commentaryButton.insertAdjacentElement("afterend", button);
+      else toolbar.insertBefore(button, toolbar.firstChild);
+    }
+
+    button.hidden = false;
+    button.title = `${entry.title || STATE.currentKey} notes`;
+  }
+
   function buildWordIndex(entry) {
     const index = new Map();
     for (const note of entry.notes || []) {
@@ -348,6 +378,7 @@
   function updateMode() {
     document.body.classList.toggle("qa-commentary-active", STATE.active);
     ensureButton();
+    ensureNotesButton();
     updateCreditNotice();
     applyHighlights();
     if (!STATE.active) closePopover();
@@ -359,12 +390,14 @@
       notice?.remove();
       return;
     }
+    const entry = commentaryForCurrentReading();
+    const credit = entry?.credit || "Thanks to Geoffrey Steadman for creating the commentary";
     if (!notice) {
       notice = document.createElement("div");
       notice.id = "qa-commentary-credit";
-      notice.textContent = "Thanks to Geoffrey Steadman for creating the commentary";
       document.body.insertBefore(notice, document.body.firstChild);
     }
+    notice.textContent = credit;
   }
 
   function notesById(entry) {
@@ -417,6 +450,35 @@
 
   function closePopover() {
     document.getElementById("qa-commentary-popover")?.remove();
+  }
+
+  function showReadingNotesPopup() {
+    const entry = commentaryForCurrentReading();
+    if (!entry?.readingNotesHtml) return;
+
+    closeReadingNotesPopup();
+    const backdrop = document.createElement("div");
+    backdrop.id = "qa-reading-notes-backdrop";
+    const popover = document.createElement("aside");
+    popover.id = "qa-reading-notes-popover";
+    popover.innerHTML = `
+      <div class="qa-reading-notes-header">
+        <div>
+          <div class="qa-commentary-popover-kicker">Notes</div>
+          <h3>${escapeHtml(entry.title || STATE.currentKey || "Reading Notes")}</h3>
+        </div>
+        <button type="button" aria-label="Close notes">×</button>
+      </div>
+      <div class="qa-reading-notes-body">${entry.readingNotesHtml}</div>
+    `;
+    document.body.append(backdrop, popover);
+    backdrop.addEventListener("click", closeReadingNotesPopup);
+    popover.querySelector("button").addEventListener("click", closeReadingNotesPopup);
+  }
+
+  function closeReadingNotesPopup() {
+    document.getElementById("qa-reading-notes-popover")?.remove();
+    document.getElementById("qa-reading-notes-backdrop")?.remove();
   }
 
   function escapeHtml(value) {
@@ -500,6 +562,89 @@
         background: rgba(28, 25, 23, 0.98);
         color: rgb(245, 245, 244);
         border-color: rgba(214, 211, 209, 0.15);
+      }
+      #qa-reading-notes-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 100000;
+        background: rgba(28, 25, 23, 0.38);
+        backdrop-filter: blur(2px);
+      }
+      #qa-reading-notes-popover {
+        position: fixed;
+        z-index: 100001;
+        top: 50%;
+        left: 50%;
+        width: min(760px, calc(100vw - 32px));
+        max-height: min(82vh, 720px);
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        border: 1px solid rgba(120, 113, 108, 0.25);
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.99);
+        color: rgb(41, 37, 36);
+        box-shadow: 0 28px 80px rgba(28, 25, 23, 0.35);
+        font-family: Inter, system-ui, sans-serif;
+      }
+      .dark #qa-reading-notes-popover {
+        background: rgba(28, 25, 23, 0.99);
+        color: rgb(245, 245, 244);
+        border-color: rgba(214, 211, 209, 0.15);
+      }
+      .qa-reading-notes-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 1.15rem;
+        border-bottom: 1px solid rgba(120, 113, 108, 0.18);
+        background: rgba(255, 251, 235, 0.96);
+      }
+      .dark .qa-reading-notes-header {
+        background: rgba(120, 53, 15, 0.42);
+      }
+      .qa-reading-notes-header h3 {
+        margin: 0.15rem 0 0;
+        font-family: "EB Garamond", serif;
+        font-size: 1.55rem;
+        line-height: 1.05;
+        font-weight: 800;
+      }
+      .qa-reading-notes-header button {
+        border: 0;
+        background: transparent;
+        color: inherit;
+        font-size: 1.8rem;
+        line-height: 1;
+        cursor: pointer;
+      }
+      .qa-reading-notes-body {
+        max-height: calc(min(82vh, 720px) - 78px);
+        overflow: auto;
+        padding: 1rem 1.2rem 1.2rem;
+        font-family: "EB Garamond", serif;
+        font-size: 1.18rem;
+        line-height: 1.36;
+      }
+      .qa-reading-notes-body section + section {
+        margin-top: 1.1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(120, 113, 108, 0.2);
+      }
+      .qa-reading-notes-body h4 {
+        margin: 0 0 0.45rem;
+        font-size: 1.36rem;
+        line-height: 1.1;
+        font-weight: 800;
+      }
+      .qa-reading-notes-body p {
+        margin: 0;
+      }
+      .qa-reading-notes-body p + p {
+        margin-top: 0.7rem;
+      }
+      .qa-reading-notes-body em {
+        font-style: italic;
       }
       .qa-commentary-popover-header {
         display: flex;
@@ -698,9 +843,11 @@
         if (editorSignature !== STATE.lastEditorKey) {
           STATE.lastEditorKey = editorSignature;
           closePopover();
+          closeReadingNotesPopup();
           applyHighlights();
         }
         ensureButton();
+        ensureNotesButton();
         updateCreditNotice();
         updateDropdownLessonLabels();
         enhanceReadingPicker();

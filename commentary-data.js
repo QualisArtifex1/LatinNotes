@@ -27,11 +27,13 @@
   function unpack(compact) {
     const data = {};
     for (const [key, entry] of Object.entries(compact)) {
-      const [title, sections, signature, readings, notes] = entry;
+      const [title, sections, signature, readings, notes, credit, readingNotesHtml] = entry;
       data[key] = {
         title,
         sections,
         signature,
+        credit,
+        readingNotesHtml,
         notes: notes.map((note, index) => ({
           id: key + ":" + index,
           line: note[0],
