@@ -8,7 +8,7 @@
   };
 
   let DATA = window.LATIN_COMMENTARY || {};
-  const COMMON_SHORT_TERMS = new Set(["a", "ab", "ad", "at", "de", "e", "ex", "in", "is", "ne", "non", "si", "ut"]);
+  const COMMON_SHORT_TERMS = new Set(["a", "ab", "ad", "at", "de", "e", "eo", "ex", "id", "in", "is", "ne", "non", "se", "si", "tu", "ut"]);
 
   function normalize(value) {
     return (value || "")
