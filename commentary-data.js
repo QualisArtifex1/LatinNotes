@@ -45,6 +45,26 @@
         })),
       };
     }
+    // Keep legacy entries for saved annotations, while giving each lesson only its own notes.
+    for (const lesson of window.LATIN_LESSONS || []) {
+      const notes = lesson.commentaryRefs.map(([key, index], position) => {
+        const note = data[key]?.notes[index];
+        if (!note) throw new Error(`Missing commentary for ${lesson.label}: ${key}:${index}`);
+        return { ...note, id: `${lesson.label}:${position}`, reading: lesson.label };
+      });
+      data[lesson.label] = {
+        key: lesson.label,
+        title: lesson.label,
+        sections: [lesson.label],
+        lineNumbers: lesson.author === "Vergil"
+          ? lesson.sources.flatMap(source => source.lines.flatMap(line =>
+            lesson.number === 58 && line === 45 ? [45, 45] : [line]))
+          : undefined,
+        signature: lesson.text.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+          .replace(/[’']/g, "").toLowerCase().replace(/[^a-z0-9]+/g, ""),
+        notes,
+      };
+    }
     return data;
   }
 

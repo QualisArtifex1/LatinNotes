@@ -119,6 +119,7 @@
   function updateDropdownLessonLabels() {
     for (const option of document.querySelectorAll("select option[value*='||']")) {
       const readingKey = option.value.split("||")[1];
+      if (/^Lesson \d+ \(/.test(readingKey)) continue;
       const entry = DATA[readingKey];
       if (!entry) continue;
       if (!option.dataset.commentaryBaseLabel) option.dataset.commentaryBaseLabel = option.textContent || "";
