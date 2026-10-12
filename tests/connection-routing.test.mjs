@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const source=readFileSync(new URL('../connection-routing.js',import.meta.url),'utf8');
+const {routeConnections}=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+const c=(id,x1,x2,row1,row2=row1)=>({id,x1,x2,row1,row2,y1:row1,y2:row2});
+const routes=routeConnections([c('inner',100,250,100),c('outer',100,450,100),c('cross',120,180,100,300),c('cross2',130,200,100,400)],700);
+assert(routes.find(r=>r.id==='outer').lane>routes.find(r=>r.id==='inner').lane);
+const cross=routes.filter(r=>!r.sameRow);
+assert.notEqual(cross[0].gutterLane,cross[1].gutterLane);
+assert(cross.every(r=>!r.d.includes('NaN')&&r.d.includes(' L ')));
+assert.equal(routeConnections([c('wrap',100,150,100,200)],320)[0].sameRow,false);
+assert.equal(routeConnections([c('reverse',600,550,300,100)],700)[0].sameRow,false);
+console.log('PASS: overlapping arches, gutter lane separation, wrapping, reversed endpoints.');
