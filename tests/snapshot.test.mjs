@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const source=readFileSync(new URL('../snapshot.js',import.meta.url),'utf8');
+const {SNAPSHOT_APP_URL,encodeSnapshot,decodeSnapshot,validateSnapshot}=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+assert.equal(SNAPSHOT_APP_URL,'https://qualisartifex1.github.io/LatinNotes/');
+assert(source.includes('new URL(SNAPSHOT_APP_URL)'));
+const session={words:[[{id:'a',text:'parva',highlight:'blue',marker:'①',interlinearNote:'agrees with corpora'},{id:'b',text:'corpora',underline:true}]],lines:[{id:'c',fromWordId:'a',toWordId:'b'}],translation:'Small bodies',notes:'Neuter plural — evidence.',fontSize:48,lineSpacing:32};
+const {code}=await encodeSnapshot(session);assert.deepEqual((await decodeSnapshot(code)).session,session);
+await assert.rejects(()=>decodeSnapshot('invalid!'));
+assert.throws(()=>validateSnapshot({format:'latin-notes-snapshot',version:99}));
+assert.throws(()=>validateSnapshot({format:'latin-notes-snapshot',version:1,session:{...session,lines:[{id:'c',fromWordId:'missing',toWordId:'b'}]}}));
+console.log('PASS: production URL, complete snapshot round trip, malformed data rejection.');
