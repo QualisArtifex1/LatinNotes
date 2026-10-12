@@ -305,7 +305,7 @@
     }
 
     button.hidden = false;
-    button.textContent = STATE.active ? "Commentary On" : "Commentary Mode";
+    button.textContent = "Commentary";
     button.setAttribute("aria-pressed", String(STATE.active));
     button.title = `${entry.title || STATE.currentKey} commentary`;
   }
@@ -477,16 +477,17 @@
 
   function updateCreditNotice() {
     let notice = document.getElementById("qa-commentary-credit");
-    if (!STATE.active) {
+    const entry = commentaryForCurrentReading();
+    const header = document.querySelector(".compact-header");
+    if (!entry || !header || !document.getElementById("qa-commentary-toggle")) {
       notice?.remove();
       return;
     }
-    const entry = commentaryForCurrentReading();
     const credit = entry?.credit || "Thanks to Geoffrey Steadman for creating the commentary";
     if (!notice) {
       notice = document.createElement("div");
       notice.id = "qa-commentary-credit";
-      document.body.insertBefore(notice, document.body.firstChild);
+      header.insertAdjacentElement("afterend", notice);
     }
     notice.textContent = credit;
   }
