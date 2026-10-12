@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const source=readFileSync(new URL('../snapshot.js',import.meta.url),'utf8');
-const {SNAPSHOT_APP_URL,encodeSnapshot,decodeSnapshot,validateSnapshot}=await import(`data:text/javascript;base64,${Buffer.from(source).toString('base64')}`);
+const {SNAPSHOT_APP_URL,encodeSnapshot,decodeSnapshot,validateSnapshot}=await import('../snapshot.js');
 assert.equal(SNAPSHOT_APP_URL,'https://qualisartifex1.github.io/LatinNotes/');
 assert(source.includes('new URL(SNAPSHOT_APP_URL)'));
 const session={words:[[{id:'a',text:'parva',highlight:'blue',marker:'①',interlinearNote:'agrees with corpora'},{id:'b',text:'corpora',underline:true}]],lines:[{id:'c',fromWordId:'a',toWordId:'b'}],translation:'Small bodies',notes:'Neuter plural — evidence.',fontSize:48,lineSpacing:32};

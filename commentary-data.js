@@ -65,6 +65,12 @@
         notes,
       };
     }
+    // This source note falls just before Lesson 48's stored commentary range,
+    // but its bold words "luce" and "custos" begin that lesson's actual Latin.
+    const continuation = data["Aeneid, 4.165-197"]?.notes[20];
+    const nextLesson = data["Lesson 48 (Aeneid 4.165-197)"];
+    if (continuation && nextLesson) nextLesson.notes.unshift({ ...continuation,
+      id: nextLesson.key + ":continuation-185", reading: nextLesson.title });
     return data;
   }
 

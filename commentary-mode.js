@@ -8,7 +8,6 @@
   };
 
   let DATA = window.LATIN_COMMENTARY || {};
-  const COMMON_SHORT_TERMS = new Set(["a", "ab", "ad", "at", "de", "e", "eo", "ex", "id", "in", "is", "ne", "non", "se", "si", "tu", "ut"]);
 
   function normalize(value) {
     return (value || "")
@@ -305,7 +304,7 @@
     }
 
     button.hidden = false;
-    button.textContent = "Commentary";
+    if(button.textContent!=="Commentary")button.textContent = "Commentary";
     button.setAttribute("aria-pressed", String(STATE.active));
     button.title = `${entry.title || STATE.currentKey} commentary`;
   }
@@ -338,41 +337,6 @@
 
     button.hidden = false;
     button.title = `${entry.title || STATE.currentKey} notes`;
-  }
-
-  function buildWordIndex(entry) {
-    const index = new Map();
-    for (const note of entry.notes || []) {
-      for (const term of note.terms || []) {
-        const normalized = normalizeWord(term);
-        if (!normalized) continue;
-        if (normalized.length < 3 && !COMMON_SHORT_TERMS.has(normalized)) continue;
-        if (!index.has(normalized)) index.set(normalized, []);
-        index.get(normalized).push(note);
-      }
-    }
-    return index;
-  }
-
-  function noteLineRange(line) {
-    const cleaned = String(line || "").replace(/[–—]/g, "-");
-    const match = cleaned.match(/(\d+)(?:\s*-\s*(\d+))?/);
-    if (!match) return null;
-    const start = Number(match[1]);
-    if (!Number.isFinite(start)) return null;
-    let end = match[2] ? Number(match[2]) : start;
-    if (match[2] && match[2].length < match[1].length) {
-      const base = Math.floor(start / 10 ** match[2].length) * 10 ** match[2].length;
-      end = base + end;
-      if (end < start) end += 10 ** match[2].length;
-    }
-    return { start, end };
-  }
-
-  function noteMatchesLine(note, lineNumber) {
-    if (!Number.isFinite(lineNumber)) return false;
-    const range = noteLineRange(note.line);
-    return Boolean(range && lineNumber >= range.start && lineNumber <= range.end);
   }
 
   function inferredStartLine(entry) {
@@ -414,7 +378,7 @@
         order,
         lineIndex,
         lineNumber: lineNumberForIndex(entry, lineIndex),
-        key: normalizeWord(span.textContent || ""),
+        key: window.LatinCommentaryMatching.normalize(span.textContent || ""),
       };
     });
   }
@@ -422,7 +386,8 @@
   function clearHighlights() {
     document.querySelectorAll(".qa-commentary-word").forEach((span) => {
       span.classList.remove("qa-commentary-word");
-      span.removeAttribute("data-commentary-notes");
+      span.removeAttribute("data-commentary-notes");span.removeAttribute("data-commentary-marker");
+      span.removeAttribute("tabindex");span.removeAttribute("role");span.removeAttribute("aria-label");
     });
   }
 
@@ -431,39 +396,24 @@
     if (!STATE.active) return;
     const entry = commentaryForCurrentReading();
     if (!entry) return;
-    const index = buildWordIndex(entry);
     const words = wordEntries(entry);
-    const assignments = new Map(words.map((word) => [word.span, new Set()]));
-    const reliableLines = hasReliableLineMap(entry);
-
-    for (const [key, notes] of index.entries()) {
-      const matchingWords = words.filter((word) => word.key === key);
-      if (!matchingWords.length) continue;
-
-      const exactlyAssignedNotes = new Set();
-      for (const word of matchingWords) {
-        for (const note of notes) {
-          if (!noteMatchesLine(note, word.lineNumber)) continue;
-          assignments.get(word.span)?.add(note.id);
-          exactlyAssignedNotes.add(note.id);
-        }
-      }
-
-      if (reliableLines) continue;
-
-      const fallbackWords = matchingWords.filter((word) => !assignments.get(word.span)?.size);
-      const fallbackNotes = notes.filter((note) => !exactlyAssignedNotes.has(note.id));
-      fallbackNotes.forEach((note, index) => {
-        const word = fallbackWords[index];
-        if (word) assignments.get(word.span)?.add(note.id);
-      });
-    }
-
-    for (const [span, noteIds] of assignments.entries()) {
-      if (!noteIds.size) continue;
-      span.classList.add("qa-commentary-word");
-      span.dataset.commentaryNotes = JSON.stringify(Array.from(noteIds));
-    }
+    const result = window.LatinCommentaryMatching.attach(entry.notes || [], words, hasReliableLineMap(entry));
+    STATE.audit = result.audit;
+    STATE.words = words;
+    STATE.assignments = result.assignments;
+    words.forEach((word, i) => {
+      const ids = [...result.assignments[i]];
+      if (!ids.length) return;
+      word.span.classList.add("qa-commentary-word");
+      word.span.dataset.commentaryNotes = JSON.stringify(ids);
+      word.span.tabIndex = 0;
+      word.span.setAttribute("role", "button");
+      word.span.setAttribute("aria-label", `${word.span.textContent}: show commentary`);
+    });
+    const endpoints = new Map();
+    (entry.notes||[]).forEach((note,n)=>{let last=-1;result.assignments.forEach((ids,i)=>{if(ids.has(note.id))last=i;});if(last>=0){if(!endpoints.has(last))endpoints.set(last,[]);endpoints.get(last).push(n+1);}});
+    endpoints.forEach((numbers,i)=>words[i].span.dataset.commentaryMarker=numbers.join(","));
+    ensureCommentaryPanel(entry);
   }
 
   function updateMode() {
@@ -489,7 +439,7 @@
       notice.id = "qa-commentary-credit";
       header.insertAdjacentElement("afterend", notice);
     }
-    notice.textContent = credit;
+    if(notice.textContent!==credit)notice.textContent = credit;
   }
 
   function notesById(entry) {
@@ -498,50 +448,38 @@
     return map;
   }
 
-  function showPopover(target) {
-    const entry = commentaryForCurrentReading();
-    if (!entry) return;
-    const noteIds = JSON.parse(target.dataset.commentaryNotes || "[]");
-    const lookup = notesById(entry);
-    const notes = noteIds.map((id) => lookup.get(id)).filter(Boolean).slice(0, 6);
-    if (!notes.length) return;
-
-    closePopover();
-    const popover = document.createElement("aside");
-    popover.id = "qa-commentary-popover";
-    popover.innerHTML = `
-      <div class="qa-commentary-popover-header">
-        <div>
-          <div class="qa-commentary-popover-kicker">Commentary</div>
-          <h3>${escapeHtml(target.textContent || "Word")}</h3>
-        </div>
-        <button type="button" aria-label="Close commentary">×</button>
-      </div>
-      <div class="qa-commentary-popover-body">
-        ${notes
-          .map(
-            (note) => `
-              <article>
-                <div class="qa-commentary-line">Line ${escapeHtml(note.line)} · ${escapeHtml(note.reading)}</div>
-                <p>${note.commentHtml}</p>
-              </article>`
-          )
-          .join("")}
-      </div>
-    `;
-    document.body.appendChild(popover);
-    popover.querySelector("button").addEventListener("click", closePopover);
-
-    const rect = target.getBoundingClientRect();
-    const popoverRect = popover.getBoundingClientRect();
-    const top = Math.min(window.innerHeight - popoverRect.height - 16, rect.bottom + 14);
-    const left = Math.min(window.innerWidth - popoverRect.width - 16, Math.max(16, rect.left + rect.width / 2 - popoverRect.width / 2));
-    popover.style.top = `${Math.max(16, top)}px`;
-    popover.style.left = `${left}px`;
+  function selectNotes(ids, scroll=true) {
+    const panel=document.getElementById("qa-commentary-panel");
+    if(!panel)return;
+    panel.querySelector("details").open=true;
+    panel.querySelectorAll("article").forEach(article=>article.classList.toggle("qa-note-selected",ids.includes(article.dataset.noteId)));
+    (STATE.words||[]).forEach((word,i)=>word.span.classList.toggle("qa-commentary-selected",ids.some(id=>STATE.assignments[i]?.has(id))));
+    if(scroll){const card=[...panel.querySelectorAll("article")].find(a=>ids.includes(a.dataset.noteId));if(card){const body=panel.querySelector(".qa-panel-body");body.scrollTop+=card.getBoundingClientRect().top-body.getBoundingClientRect().top;}}
   }
-
+  function ensureCommentaryPanel(entry) {
+    const editor=getEditor();
+    if(!editor||!getWordSpans().length){closePopover();return;}
+    let panel=document.getElementById("qa-commentary-panel");
+    if(panel?.dataset.key===entry.key)return;
+    closePopover();
+    panel=document.createElement("section");panel.id="qa-commentary-panel";panel.dataset.key=entry.key;
+    panel.innerHTML=`<details open><summary>Commentary <span>${entry.notes.length} source notes</span></summary><div class="qa-panel-body" tabindex="0" aria-label="Commentary notes">${entry.notes.map((note,i)=>`<article data-note-id="${escapeHtml(note.id)}"><button type="button" class="qa-note-link"><span class="qa-note-number">${i+1}</span> Line ${escapeHtml(note.line)}</button><div>${note.commentHtml}</div>${(STATE.audit||[]).some(a=>a.noteId===note.id&&a.status==="unmatched")?'<p class="qa-unmatched-note">This reference is outside the Latin shown in this lesson.</p>':""}</article>`).join("")}</div></details>`;
+    editor.insertAdjacentElement("afterend",panel);
+    panel.querySelectorAll("article").forEach(article=>article.querySelector("button").addEventListener("click",()=>{
+      selectNotes([article.dataset.noteId],false);
+      const word=(STATE.words||[]).find((w,i)=>STATE.assignments[i]?.has(article.dataset.noteId));
+      if(word){const rect=word.span.getBoundingClientRect(),box=editor.getBoundingClientRect();editor.scrollTop+=rect.top-box.top-30;}
+    }));
+  }
+  function showPopover(target) {
+    const entry=commentaryForCurrentReading();if(!entry)return;
+    ensureCommentaryPanel(entry);
+    selectNotes(JSON.parse(target.dataset.commentaryNotes||"[]"));
+  }
   function closePopover() {
     document.getElementById("qa-commentary-popover")?.remove();
+    document.getElementById("qa-commentary-panel")?.remove();
+    document.querySelectorAll(".qa-commentary-selected").forEach(word=>word.classList.remove("qa-commentary-selected"));
   }
 
   function showReadingNotesPopup() {
@@ -582,13 +520,14 @@
   }
 
   function installClickHandler() {
+    document.addEventListener("keydown",event=>{if(STATE.active && (event.key==="Enter"||event.key===" ") && event.target.matches(".qa-commentary-word")){event.preventDefault();event.stopImmediatePropagation();showPopover(event.target);}},true);
     document.addEventListener(
       "click",
       (event) => {
         if (!STATE.active) return;
         const target = event.target.closest(".qa-commentary-word");
         if (!target) {
-          if (!event.target.closest("#qa-commentary-popover") && !event.target.closest("#qa-commentary-toggle")) closePopover();
+
           return;
         }
         event.preventDefault();

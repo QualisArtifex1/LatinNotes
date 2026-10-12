@@ -1,0 +1,2931 @@
+[
+  {
+    "id": "pliny-introduction",
+    "author": "pliny",
+    "lesson": null,
+    "label": "Introduction",
+    "passage": "Pliny's Epistulae",
+    "subtitle": "People, period, and publication",
+    "source": "PDF pages x-xi",
+    "blocks": [
+      {
+        "heading": "Who is Pliny the Younger (AD 61 - 113)?",
+        "paragraphs": [
+          "Our author was born Gaius Caecilius to Lucius Caecilius Clio and mother Plinia Marcella in the equestrian class. His father died when he was young, and so, when his maternal uncle adopted Gaius Caecilius posthumously in his will in 79 (a common practice to ensure the transfer of an inheritance), Gaius, according to tradition, took his uncle’s name “Gaius Plinius Secundus” and made his own nomen Caecilius a cognomen that was inserted after the nomen Plinius: Gaius Plinius Caecilius Secundus. Today, we use the names Pliny the Younger and Pliny the Elder to distinguish the two men. Pliny was an orator in Rome who focused on inheritance law. His talent in the lawcourts allowed him to gain senatorial rank and rise through many political offices under Domitian, Nerva, and Trajan. We assume that Pliny died while governor around AD 113, since we have no letters after this time."
+        ],
+        "timeline": [
+          {
+            "date": "AD 61",
+            "event": "Born in Novum Comum in northern Italy"
+          },
+          {
+            "date": "Youth",
+            "event": "His father Lucius Caecilius Cilo dies"
+          },
+          {
+            "date": "79",
+            "event": "Witnesses the eruption of Vesuvius; adopted in his uncle's will"
+          },
+          {
+            "date": "81",
+            "event": "Serves as tribunus militum in Syria"
+          },
+          {
+            "date": "88/89",
+            "event": "Becomes quaestor and senator"
+          },
+          {
+            "date": "91/93",
+            "event": "Serves as tribune of the people and praetor"
+          },
+          {
+            "date": "94-96",
+            "event": "Prefect of the Military Treasury"
+          },
+          {
+            "date": "98-100",
+            "event": "Prefect of the Treasury of Saturn"
+          },
+          {
+            "date": "100",
+            "event": "Appointed consul suffectus"
+          },
+          {
+            "date": "111-113",
+            "event": "Imperial governor of Bithynia and Pontus; dies"
+          }
+        ]
+      },
+      {
+        "heading": "Who is Pliny the Elder (23/4 - 79)? Who is Plinia Marcella?",
+        "paragraphs": [
+          "Pliny the Elder, maternal uncle to the author of these letters, was born Gaius Plinius Secundus to Gaius Plinius Celer and Marcella in the equestrian class. He chose not to adopt his father’s cognomen and took Secundus instead. He served in the army near Germania through his 20s, where he formed political connections that would serve him later in life. While Nero was emperor (58-68), Pliny turned to a private law practice in Rome and wrote numerous works. Under the emperor Vespasian (AD 69-79), Pliny resumed public service and was offered various senior positions as procurator in Gallia, Hispania, and possibly Africa. He was Commander of the Imperial Fleet at Misenum when Mt. Vesuvius erupted. Most of Pliny’s writings—including works on military strategies, rhetoric, and Germania —are lost, but his Naturalis Historia, “Natural History,” a vast work about the natural world that was published in part in AD 77 and in part after his death, survives. Pliny’s work inspired the modern encyclopedia. Little unfortunately is known about Plinia Marcella, the Elder’s sister and Younger’s mother, apart from her depiction in the letters. Note that her name includes both her father’s and her mother’s nomen."
+        ],
+        "timeline": [
+          {
+            "date": "AD 23/24",
+            "event": "Born in Novum Comum into the equestrian class"
+          },
+          {
+            "date": "46-56?",
+            "event": "Enters the army and rises to military tribune near Germania"
+          },
+          {
+            "date": "56-69",
+            "event": "Practices law in Rome and writes numerous works"
+          },
+          {
+            "date": "69-79",
+            "event": "Holds procuratorships under Vespasian"
+          },
+          {
+            "date": "79",
+            "event": "Commands the imperial fleet at Misenum; dies during the eruption"
+          }
+        ]
+      },
+      {
+        "heading": "Where do Pliny’s Epistulae fit in the Imperial Period?",
+        "paragraphs": [
+          "After the fall of the Roman Republic (509-31 BC), Caesar Augustus consolidated the loyalty of all legions and all real decision-making under himself as Imperator, “Commander” or more commonly “Emperor.” Thus began the Julio-Claudian dynasty, as successive emperors were selected from Romans joined by kinship or by marriage to the same family of Julii and Claudiani. After the Year of the Four Emperors, the Roman general Vespasian (Titus Flavius Vespasianus) seized power, and the Flavian Dynasty began. He was succeeded by his sons Titus and Domitian respectively. After Domitian was assassinated in 96, Nerva ruled briefly and wisely adopted the general Trajan as his successor. Nerva and Trajan were the first two of what is now called the Five Good Emperors. Pliny the Younger (AD 61-113) flourished during the reigns of Domitian, Nerva, and Trajan."
+        ],
+        "timeline": [
+          {
+            "date": "31 BC-AD 476",
+            "event": "Roman Imperial Period"
+          },
+          {
+            "date": "27 BC-AD 14",
+            "event": "Augustus"
+          },
+          {
+            "date": "AD 14-37",
+            "event": "Tiberius"
+          },
+          {
+            "date": "37-41",
+            "event": "Caligula"
+          },
+          {
+            "date": "41-54",
+            "event": "Claudius"
+          },
+          {
+            "date": "54-68",
+            "event": "Nero"
+          },
+          {
+            "date": "68-69",
+            "event": "Year of the Four Emperors"
+          },
+          {
+            "date": "69-79",
+            "event": "Vespasian"
+          },
+          {
+            "date": "79-81",
+            "event": "Titus; Vesuvius erupts in 79"
+          },
+          {
+            "date": "81-96",
+            "event": "Domitian"
+          },
+          {
+            "date": "96-98",
+            "event": "Nerva"
+          },
+          {
+            "date": "98-117",
+            "event": "Trajan"
+          }
+        ]
+      },
+      {
+        "heading": "When do Pliny’s Epistulae take place? When were they published?",
+        "paragraphs": [
+          "Above is A.N. Sherwin-White’s 1966 reconstruction for the dating of Pliny’s Letters. There continue to be disagreements about the dating, but many agree that (a) Pliny himself arranged and published most of the letters during his lifetime and (b) they were published sequentially in ten books. Books 1-9 include letters from ca. 96 to 108, while Book 10 is devoted to Pliny’s letters with Trajan— both during Pliny’s governorship in Bithynia and Pontus (111-13) and much earlier. We can estimate that Pliny’s two letters to Tacitus about Vesuvius (6.16, 6.20) and two love letters to Calpurnia (6.4, 6.7) were published in 107 (almost 30 years after the eruption!). The letter on ghosts (7.27) was published in 108/9. The letters to Trajan about citizenship (10.5-7) were written in 98 and about aqueducts (10.37, 10.90) in 111-13 but were likely published after his presumed death in 113."
+        ],
+        "table": {
+          "headers": [
+            "Book",
+            "Events",
+            "Publication"
+          ],
+          "rows": [
+            [
+              "1",
+              "96-98",
+              "103/104"
+            ],
+            [
+              "2",
+              "97-100",
+              "103/104"
+            ],
+            [
+              "3",
+              "101-104",
+              "105"
+            ],
+            [
+              "4",
+              "104-105",
+              "107"
+            ],
+            [
+              "5",
+              "105-106",
+              "107"
+            ],
+            [
+              "6",
+              "106-107",
+              "107"
+            ],
+            [
+              "7",
+              "End of 107",
+              "108/109"
+            ],
+            [
+              "8",
+              "107-108",
+              "109-110"
+            ],
+            [
+              "9",
+              "106-108",
+              "109-110"
+            ],
+            [
+              "10",
+              "Various, 110-113",
+              "Possibly posthumous"
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "lesson-1",
+    "author": "pliny",
+    "lesson": 1,
+    "label": "Lesson 1",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 3",
+    "source": "PDF page 3",
+    "blocks": [],
+    "figures": []
+  },
+  {
+    "id": "lesson-2",
+    "author": "pliny",
+    "lesson": 2,
+    "label": "Lesson 2",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 5",
+    "source": "PDF page 5",
+    "blocks": [
+      {
+        "heading": "Context & analysis",
+        "paragraphs": [
+          "The purpose of history for Pliny is to reveal moral character —specifically, how his uncle reacts heroically in response to the eruption. Yes, we learn much about the eruption itself, but Pliny’s real task is to answer the historian Tacitus’ question and describe the final moments ( exitum ) of his uncle. Note how Pliny elevates his uncle’s courage and moral character in every possible way in the letter."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "/figures/lesson-2-vesuvius.png",
+        "alt": "Umbrella pine beside a map of the AD 79 eruption of Vesuvius",
+        "caption": "The umbrella pine comparison and the geography of the AD 79 eruption. Figures 1-2 in the commentary.",
+        "credit": "Nicholas Hartman (CC BY 4.0); MapMaster (CC BY 3.0)"
+      }
+    ]
+  },
+  {
+    "id": "lesson-3",
+    "author": "pliny",
+    "lesson": 3,
+    "label": "Lesson 3",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 7",
+    "source": "PDF page 7",
+    "blocks": [],
+    "figures": []
+  },
+  {
+    "id": "lesson-4",
+    "author": "pliny",
+    "lesson": 4,
+    "label": "Lesson 4",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 9",
+    "source": "PDF page 9",
+    "blocks": [
+      {
+        "heading": "Pliny the Elder turns the fleet to the house of Pomponianus in the town of Stabiae.",
+        "paragraphs": [
+          "Heavy ash prevents Pliny and the fleet from sailing to their destination at the base of Mt. Vesuvius on the eastern coast of the Bay of Naples, and prevailing winds are moving eastward across the bay toward Vesuvius, so Pliny and the fleet cannot turn back to Misenum in the west. Pliny therefore uses the wind to turn to the southeastern coast of the Bay of Naples and the home of a friend Pomponianus in the town of Stabiae."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "The Purpose of History for Pliny is to reveal Moral Character (II)",
+        "paragraphs": [
+          "Note all the ways Pliny highlights his uncle’s good intentions and courage in the face of adversity. The main character in this story is not Vesuvius but the uncle and his response to the eruption."
+        ],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Latin evidence",
+            "Meaning",
+            "Line"
+          ],
+          "rows": [
+            [
+              "quod studiōsō animō incohāverat obit maximō",
+              "what he had begun with an eager heart, he ends with the greatest heart (i.e. courage)",
+              "27"
+            ],
+            [
+              "lātūrus auxilium",
+              "intending to bring help",
+              "29"
+            ],
+            [
+              "Properat illūc unde aliī fugiunt",
+              "he hurries to where others flee",
+              "29"
+            ],
+            [
+              "rēctumque cursum...in perīculum tenet",
+              "he holds a straight course into danger",
+              "30"
+            ],
+            [
+              "solūtus metū",
+              "freed from fear",
+              "30"
+            ],
+            [
+              "‘Fortēs,’ inquit, ‘fortūna iuvat.’",
+              "He says, “Fortune favors the brave.”",
+              "31"
+            ]
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-5",
+    "author": "pliny",
+    "lesson": 5,
+    "label": "Lesson 5",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 11",
+    "source": "PDF page 11",
+    "blocks": [
+      {
+        "heading": "How does Pliny the Younger know what Happened?",
+        "paragraphs": [
+          "Pliny did not witness what his uncle experienced. There must have been at least one survivor who observed the events on the ship and later at the house of Pomponianus at Stabiae and reported them to the author at some time after the eruption."
+        ]
+      },
+      {
+        "heading": "The Uncle’s Calm Response to Pomponianus’ Trembling",
+        "paragraphs": [
+          "Note the many ways Pliny contrasts his uncle’s calm demeanor to Pomponianus’ fearful trembling in lines 5-7. The frequent use of asyndeton (omission of a conjunction) emphasizes the long list of actions that the uncle undertakes to comfort his friend and maintain as normal a routine as possible:",
+          "1. complectitur",
+          "2. cōnsōlātur",
+          "3. hortātur",
+          "4. ut timōrem eius suā sēcūritāte lēnīret,",
+          "5. dēferrī in balineum iubet;",
+          "6. lōtus accubat cēnat,",
+          "7. aut hilaris aut—quod aequē magnum—similis hilarī.",
+          "The uncle’s behavior may seem foolish from our own point of view, but remember that the Romans were not familiar with the dangers of volcanic eruptions. They knew about earthquakes, forest fires, and even lava flows (Pliny the Elder documents lava flows on Mt. Etna in Sicily in his own writings), but the idea that a mountain could explode and endanger people far away was not imaginable. In the final line Pliny acknowledges that his uncle may be pretending to be “cheerful” ( hilāris ), but Pliny praises this behavior as “equally great” ( aequē magnum ). Pliny thinks that it is admirable that the uncle may have private doubts but wishes to avoid adding to the fear of his friend Pomponianus."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-6",
+    "author": "pliny",
+    "lesson": 6,
+    "label": "Lesson 6",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 13",
+    "source": "PDF page 13",
+    "blocks": [
+      {
+        "heading": "Remedies for Fear: Forest Fires and Deep Sleep",
+        "paragraphs": [
+          "1. To comfort others, the uncle suggests the flames are man-made forest fires. There were many farms on the slopes of Vesuvius. The uncle suggests to Pomponianus that farm workers had started fires, perhaps to clear brush, and simply lost control of those fires. Pliny says the uncle kept saying this to address their fear ( in remedium formīdinis ).",
+          "2. The uncle slept soundly, while Pomponianus and others stayed awake all night. Once again, the contrast between the uncle’s tranquility and Pomponianus’ fear is emphasized. The fact that others hear the uncle snore tells us that his sleep was genuine, and others were too anxious to sleep."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-7",
+    "author": "pliny",
+    "lesson": 7,
+    "label": "Lesson 7",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 15",
+    "source": "PDF page 15",
+    "blocks": [
+      {
+        "heading": "Calculation ( ratio ) vs Fear ( timor )",
+        "paragraphs": [
+          "The uncle faces a two-fold threat. ash and pumice, falling into the courtyards ( āreae ) and roof openings threatens to block the uncle and others from leaving. At the same time, frequent earthquakes increase the chances that the houses will collapse and crush everyone inside. At this moment Pliny again contrasts his uncle’s reaction with the others’ reaction and behavior:",
+          "apud illum quidem ratiō ratiōnem, apud aliōs timōrem timor vīcit l. 58 for him at least calculation won over calculation, for the others fear won over fear",
+          "Of course, it is absurd for Pliny to claim without evidence that his uncle weighed the decision to leave rationally while others were driven by emotion to act, but the author’s comment shows once again that Pliny is taking every opportunity to depict his uncle’s character in the most favorable light."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-8",
+    "author": "pliny",
+    "lesson": 8,
+    "label": "Lesson 8",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 17",
+    "source": "PDF page 17",
+    "blocks": [
+      {
+        "heading": "Context & analysis",
+        "paragraphs": [
+          "Pliny the Elder likely suffered from asthma or a similar respiratory ailment where the airway swells and narrows, making it difficult to breathe properly. This explains why the author says that Pliny the Elder’s esophagus was “weak and narrow by nature” ( natūrā invalidus et angustus ). These symptoms could easily flare up in the presence of gases (e.g. odor sulpuris ), dust, and smoke brought by the eruption. Although Pliny asks for cold water to relieve the enflamed ( aestuāns ) airway, cold water and air is now known to exacerbate asthma and create even more tightening and mucus in the airways. Asthma may also explain why Pliny alone collapsed, and the others accompanying him did not."
+        ]
+      },
+      {
+        "heading": "Why did Pliny die in the morning and not earlier?",
+        "paragraphs": [
+          "The winds likely played a role. Recall that on the first day the winds were heading eastward across the bay toward Vesuvius. Pliny the Elder and his ships could not sail back to Misenum on the western tip of the bay because they did not have a favorable wind. When Pliny stopped at Stabiae, directly south from Vesuvius (see p. 8), the wind was driving much of the fallout away from Stabiae. In the second letter, Pliny the Younger describes how in the early morning on the second day the cloud of ash crossed the bay and enveloped Misenum. The wind must have changed directions from east to west and now carried the ash, pumice, and gases westward across the bay. This change of direction would have happened the same morning that Pliny collapsed and died in the first letter. If the uncle died from respiratory failure, as Pliny the Younger suggests, then perhaps the new westward-moving wind brought enough gas and debris to make the uncle’s condition fatal."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-9",
+    "author": "pliny",
+    "lesson": 9,
+    "label": "Lesson 9",
+    "passage": "Pliny 6.16",
+    "subtitle": "Eruption of Vesuvius: Pliny the Elder 19",
+    "source": "PDF page 19",
+    "blocks": [
+      {
+        "heading": "Even in death, Pliny the Elder remained calm",
+        "paragraphs": [
+          "quiēscentī quam dēfūnctō similior more similar to one resting than one dead l. 72",
+          "Pliny the Younger has consistently portrayed his uncle in the best possible light, and his account of his uncle’s corpse is no different. When Pliny uses the word quiēscentī, “one resting,” we cannot help but recall how well the uncle slept while Pomponianus and others anxiously stayed up in the night. Throughout the letter Pliny has drawn attention to his uncle’s courage and tranquity in the face of imminent danger, and he uses this last appearance to remind Tacitus to leave the same impression."
+        ]
+      },
+      {
+        "heading": "The Purpose of History for Pliny is to reveal Moral Character (III)",
+        "paragraphs": [
+          "In the opening of the letter Pliny said that Tacitus asked: “that I write about the death of my uncle to you” ( ut tibi avunculī meī exitum scrībam ), and in the concluding remarks Pliny reminds Tacitus of his singular purpose and says that “you wanted to know about his death” ( dē exitū eius scīre voluistī ). While we moderns can approach the letter with an eye to learning objectively what happened during the eruption from first-hand witnesses, Pliny did not write with that express purpose. For Pliny, history is not about events; it is about how people respond in those events. More specifically, history provides moral examples worthy of praise and imitation and examples worthy of contempt. Tacitus wanted to know how the admiral of the Roman fleet faced adversity in his final hours, and Pliny used this opportunity to depict his uncle’s character as unflinchingly heroic, sober, and calm until the end."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-10",
+    "author": "pliny",
+    "lesson": 10,
+    "label": "Lesson 10",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 21",
+    "source": "PDF page 21",
+    "blocks": [
+      {
+        "heading": "Pliny’s Second Letter Contrasts his own Inaction with his Uncle’s Heroism",
+        "paragraphs": [
+          "In this second and final letter about the eruption, Pliny offers a personal account of what happened to himself and his mother Plinia Marcella as they escaped from Misenum, a city on the western tip of the bay opposite Vesuvius. Pliny was only 17 years old at the time, and his actions will seem reasonable for anyone unaware of the true threat of a volcano. But, just as Pliny elevates his uncle’s response to the eruption in the first letter, the author draws attention to his own inaction in the second."
+        ]
+      },
+      {
+        "heading": "Why does Pliny Cite Vergil’s Aeneid 2.12-3?",
+        "paragraphs": [
+          "The eruption was undoubtedly the most catastrophic event in Pliny’s life, and the quotation draws attention to this fact. In the Aeneid Book 1, Aeneas and the Trojans who survived the fall of Troy are shipwrecked in North Africa on their way to Italy. There, they meet Dido, queen of Carthage, who offers hospitality and invites Aeneas to recall the fall of Troy at a banquet. In Book 2, Aeneas offers the banqueters an eye-witness account and begins his recollection with the line quoted by Pliny."
+        ]
+      },
+      {
+        "heading": "Why Pliny begins with Mundane Tasks that Mimic his Uncle’s",
+        "paragraphs": [
+          "Pliny’s actions at the beginning of this second letter closely mimic those of his uncle at the house of Pomponianus:",
+          "mox (a) balineum (b) cēna (c) somnus inquiētus et brevis l. 6",
+          "While the uncle set out across the bay, Pliny stayed and studied for the rest of the day. Then, he curiously mentions that he (a) took a bath, (b) ate dinner, and finally (c) went to sleep. Why does Pliny mention such mundane tasks rather than give detailed observations of the eruption? Pliny likely includes details about his bath, dinner, and sleep in order to encourage Tacitus to compare Pliny’s less-than-heroic response to that of his uncle. Note that while the uncle slept so soundly that he snored loudly, Pliny is quick to point out that his sleep was “restless and short.” Pliny was filled with the sort of anxiety that his uncle seemed to lack."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-11",
+    "author": "pliny",
+    "lesson": 11,
+    "label": "Lesson 11",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 23",
+    "source": "PDF page 23",
+    "blocks": [
+      {
+        "heading": "Pliny’s Humility and Survivor’s Guilt",
+        "paragraphs": [
+          "Pliny could have portrayed himself positively to Tacitus and not acknowledged the small embarrassing details. But, Pliny takes every opportunity to humble and disparage himself. Each passage below from lines 3-8 gives Tacitus and readers reason to criticize Pliny’s actions in hindsight:",
+          "1. Dubitō cōnstantiam vocāre an imprūdentiam dēbeam",
+          "2. poscō librum Titī Līvī, et quasi per ōtium legō",
+          "3. mē et mātrem sedentēs, mē vērō etiam legentem videt",
+          "4. illīus patientiam sēcūritātem meam corripit",
+          "5. Nihilō sēgnius ego intentus in librum.",
+          "Some scholars argue that Pliny suffers from survivor’s guilt. Pliny’s uncle was a father figure, and Pliny refused an offer to accompany his uncle across the bay. Pliny survived, and his uncle did not. On this interpretation, Pliny’s efforts to humble himself is one more way to exalt his uncle’s actions."
+        ]
+      },
+      {
+        "heading": "The Friend from Hispania highlights Pliny’s Inaction",
+        "paragraphs": [
+          "In the previous letter Pliny used Pomponianus’ trembling, sleeplessness, and fear at Stabiae as a way to highlight his uncle’s desire to console his friends and confront the disaster with equanimity. The friend from Hispania plays a similar role in the second letter but instead draws attention to Pliny’s lack of initiative and urgency. As the friend notes, Pliny is guilty of sēcūritātem, a “lack of concern,” that is inappropriate on this occasion."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-12",
+    "author": "pliny",
+    "lesson": 12,
+    "label": "Lesson 12",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 25",
+    "source": "PDF page 25",
+    "blocks": [
+      {
+        "heading": "Pliny describes the Earthquakes at Dawn.",
+        "paragraphs": [
+          "The earthquakes mentioned by Pliny this morning on August 25th are the same tremors that forced the uncle and Pomponianus out of the house in the first letter. Pliny writes in line 19 that the daylight was uncertain and weak, and this lack of visibility may explain why Pliny does not give a detailed description of what was happening across the bay in the direction of Mt. Vesuvius at this time."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-13",
+    "author": "pliny",
+    "lesson": 13,
+    "label": "Lesson 13",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 27",
+    "source": "PDF page 27",
+    "blocks": [
+      {
+        "heading": "Pliny witnesses the sea withdraw from the shoreline and lightning in the eruption column.",
+        "paragraphs": [
+          "The temors must have created a tidal wave, which is often preceded by a receding shoreline such as the one Pliny observed. The trough of this tidal wave wave is striking the shore before the crest. Lightning is not common in every eruption but is present in eruptions similar to the one on Mt. Vesuvius. Such eruptions are called “Plinian Eruptions.” The column of ash and superheated gas leads to an accumulation of electric charge that is discharged as lightning within the column itself."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-14",
+    "author": "pliny",
+    "lesson": 14,
+    "label": "Lesson 14",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 29",
+    "source": "PDF page 29",
+    "blocks": [
+      {
+        "heading": "Plinia Marcella as Dutiful Mother",
+        "paragraphs": [
+          "Pliny highlights his mother’s self-sacrifice, just as he highlights his uncle’s equanimity. Plinia Marcella insists that she be left behind and declares that she will have a good death, if she is not the reason for her son’s death. Note how Pliny uses verbs and asyndeton in 3-7 (e.g. ōrāre hortārī iubēre... pāret aegrē incūsatque sē) to convey the forcefulness of his mother’s willingness to sacrifice herself."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-15",
+    "author": "pliny",
+    "lesson": 15,
+    "label": "Lesson 15",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 31",
+    "source": "PDF page 31",
+    "blocks": [
+      {
+        "heading": "Parallelism in Pliny’s Description of the Fleeing Crowd",
+        "paragraphs": [
+          "Pliny employs many stylistic devices when describing the plight of the crowd who wandered in the darkness along with Pliny and his mother. Rather than use subordinate clauses or address each observation sequentially, Pliny employs parallelism, which leaves the impression that all of these events are happening at the same time and are therefore overwhelming to the senses. Note the frequent asyndeton (omission of conjunctions), ellipsis (omission of words that must be understood), anaphora (repetition of initial words in a clause), and use of correlatives which help create and highlight the parallellism throughout the passage.",
+          "Correlatives Quālis...quālis... just as...just as... (which sort...which sort) Aliī...aliī...aliī... Some...others...others... Hī....Illī... These...those... Multī...plūrēs... Many...More... Illud...illud... that part...that part...",
+          "There are many parallel clauses, but the three below are particularly notable. Each contains a relative clause, and the missing antecedents are subjects of the main clause:",
+          "erant quī.... There were (those) who... Nec dēfuērunt quī... There were not lacking (those) who... Aderant quī There were present (those) who..."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-16",
+    "author": "pliny",
+    "lesson": 16,
+    "label": "Lesson 16",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 33",
+    "source": "PDF page 33",
+    "blocks": [
+      {
+        "heading": "Pliny’s Humility",
+        "paragraphs": [
+          "Pliny admits that he did not sob or cry out cowardly during the escape, and he is aware that such a response is worthy of glory ( possem glōriārī ), yet, he undercuts such praise and confesses that the source of his calmness and tranquility was not courage but resignation that he is soon going to die with everyone else. Pliny again seems to invite a comparison with his uncle and to disparage his own response. In the first letter the uncle showed equanimity while Pomponianus and the others (a) trembled, (b) stayed up all night, and (c) decided to flee by weighing fear with fear. In this second letter the author admits that he showed no emotion while those around him fled frantically and in despair. But, while Pliny elevates his uncle’s conduct as positive and even heroic, he undercuts such praise for himself and admits that he was motivated not by courage but by despair. For readers who argue that Pliny suffers from survivor’s guilt, Pliny seems to humble himself once again in order to bring greater attention to his uncle’s heroic response."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-17",
+    "author": "pliny",
+    "lesson": 17,
+    "label": "Lesson 17",
+    "passage": "Pliny 6.20",
+    "subtitle": "Eruption of Vesuvius: Pliny the Younger and Plinia Marcella 35",
+    "source": "PDF page 35",
+    "blocks": [
+      {
+        "heading": "All History is Biography",
+        "paragraphs": [
+          "The second letter reveals far richer details about the eruption of Vesuvius than the first, yet Pliny insists that the first letter is worthy of history while the second is not. Consider how humbly he describes the second letter as he concludes the second letter on the facing page:",
+          "haec nēquāquam historiā digna. p. 34 These things by no means worthy of history",
+          "In the introduction to the first letter, Pliny says that he considered blessed those who are allowed:",
+          "aut facere scrībenda aut scrībere legenda p. 2 either to do things worth writing about or write things worth reading about",
+          "For Pliny, the subject of history is not the eruption itself but how people respond to adversity—and more specifically what that response reveals about character. The eruption is simply the backdrop. Tacitus clearly requested information about the uncle’s death because the uncle was admiral of the Roman fleet at Misenum, and the admiral’s organized response to the eruption is a topic worthy of history. But Pliny suggests that his uncle should be recognized not simply for being the leader of Rome’s organized response but for the heroic character than he displayed in attempting to rescue others and in responding soberly and fearlessly in the face of great adversity."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-18",
+    "author": "pliny",
+    "lesson": 18,
+    "label": "Lesson 18",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: Proconsul Curtius Rufus 37",
+    "source": "PDF page 37",
+    "blocks": [
+      {
+        "heading": "Who is Sura?",
+        "paragraphs": [
+          "Lucius Licinius Sura was a senator from Hispania who served as consul three times: twice during the reign of Trajan in 102 and 107, and possibly a third time in 93 or possibly 97. Sura is believed to have supported Trajan, a fellow senator from Hispania, as a successor to the Emperor Nerva (96-98) and to have remained a loyal and trusted friend of Trajan while he was emperor (AD 98-117). Only two of the 247 surviving letters from Pliny are addressed to Sura (4.30 and 7.27). In this letter Pliny tells three stories about supernatural visions: (1) the prophecy of Curtius Rufus, (2) the Haunted House in Athens, and (3) two mysterious hair-cropping incidents in Pliny’s own familia."
+        ]
+      },
+      {
+        "heading": "First Story about Ghosts: the Proconsul Curtius Rufus",
+        "paragraphs": [
+          "In this first story, a woman claiming to be the personification of Africa foretells Curtius Rufus’ rise in political honors and eventual death in Africa. Although Pliny does not state it explicitly, his argument is that the woman could not have predicted Curtius’ rise from such a lowly status in life, unless she were supernatural. Below are three ways that Pliny emphasizes Curtius’ lowly status in lines 5-6:",
+          "(1) tenuis, “poor,” regularly means “thin” or “lean” and is the opposite of crassus, “fat” or “thick.” The association of thinness with poor diet likely led tenuis to mean “poor” or “insignificant.”",
+          "(2) obscūrus, “obscure” usually means “dim” and is the opposite of clārus, ‘bright,” “famous,” or “distinguished” (i.e. so bright that he stands out). Curtius has done nothing to stand out.",
+          "(3) comes haeserat, “had clung as a companion” indicates that Curtius Rufus is serving under an elected official and has not been elected to office himself.",
+          "Curtius was consul in 43 in the reign of Claudius (41-54) and died as proconsul in Africa afterwards."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-19",
+    "author": "pliny",
+    "lesson": 19,
+    "label": "Lesson 19",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: the Philosopher Athenodorus 39",
+    "source": "PDF page 39",
+    "blocks": [
+      {
+        "heading": "Conclusion of First Story: the Proconsul Curtius Rufus",
+        "paragraphs": [
+          "Pliny says that all the predictions actually happened and that Curtius Rufus, returning to Africa as proconsul and governor after his consulship in Rome in AD 43, believed that the prophecy was successful in the past. When Curtius became ill, he lost hope in any recovery and, although Pliny does not explicitly state it, died as predicted. Below are some conclusions:",
+          "1. Curtius’ passive acceptance in the prophecy make it self-fulfilling. Others are hopeful that Curtius will recover, but it is his fearful belief in the prophecy convinces him not to treat his illness.",
+          "2. Pliny does not challenge the prophecy, suggest it is coincidence, or question why it happens."
+        ]
+      },
+      {
+        "heading": "Second Story about Ghosts: the Sceptical Philosopher Athenodorus",
+        "paragraphs": [
+          "Pliny explains how a haunted house was abandoned by tenants until a philosopher Athenodorus (lit. “gift of Athena”) who was sceptical of the existence of ghosts moved in. The ghost appears to the philosopher and leads him to an area of the house, which is later dug up to reveal the human remains. After the bones are properly buried, the house, we assume, is no longer haunted."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-20",
+    "author": "pliny",
+    "lesson": 20,
+    "label": "Lesson 20",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: the Philosopher Athenodorus 41",
+    "source": "PDF page 41",
+    "blocks": [
+      {
+        "heading": "Pliny’s Scepticism: Pliny suggests that Fear led to Sickness, Death, and Abandoning the House",
+        "paragraphs": [
+          "Curtius Rufus was a victim of a self-fulfilling prophecy. His fear led him to neglect his illness ( morbō ) and precipiated his own death. Although Pliny does not interpret Curtius’ fate that way— Pliny offers no interpretation at all—only a paragraph later he expresses scepticism concerning the haunted house and suggests that fear ( metus ) led to disease ( morbus ), death, and the abandoned house."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-21",
+    "author": "pliny",
+    "lesson": 21,
+    "label": "Lesson 21",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: the Philosopher Athenodorus 43",
+    "source": "PDF page 43",
+    "blocks": [
+      {
+        "heading": "Pugillārēs, Stilum, and Lūmen",
+        "paragraphs": [
+          "A pugillārēs is a handheld wax-tablet. The stilus, “stylus,” is a metal tool used to scratch writing into the wax, and the lūmen, “lamp,” provided light and, more importantly, a flame where the writer could heat up the sharp end of the stylus to write into the wax or the flat end of the stylus to smear the wax and erase a mistake. Pugillārēs is an adjective and substantive from the word pugnus, “fist,” with the plural noun libellī, “tablets,” missing but understood. It means a “fist-sized (tablet).” Compare how we use the words “handbook,” “handheld,” or paperback“manual” in English today."
+        ]
+      },
+      {
+        "heading": "The philosopher Athenodorus shows scepticism—but not disbelief",
+        "paragraphs": [
+          "Pliny portrays Athenodorus as someone with healthy scepticism. First, (1) the philosopher does not allow fear—especially without evidence—to keep him from buying the house at a very cheap price. Next (2), as Pliny explains, the philosopher focuses on his work so that he does not allow his imagination to take over and confuse what he hears and sees. It is only when (3) the philosopher hears sounds that cannot be explained by his imagination that he looks back to gather more evidence and sees the ghost. By not allowing his imagination to take over, Athenodorus shows healthy scepticism. But, he is not so foolish as to disbelieve and reject evidence that is immediately before him."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-22",
+    "author": "pliny",
+    "lesson": 22,
+    "label": "Lesson 22",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: the Philosopher Athenodorus 45",
+    "source": "PDF page 45",
+    "blocks": [
+      {
+        "heading": "Why does Athenodorus the Philosopher Ignore the Ghost the First Time?",
+        "paragraphs": [
+          "It was common practice in Roman divination, the science of reading divine signs and omens, to seek a second sign to confirm the first. For this reason, the word secundus can mean “favorable,” because a second omen was taken to confirm that it was favorable. Note that the philosopher resumes his work after the first sound, but when the ghost makes another sound and confirms its presence, the philosopher looks back and follows the ghost. In short, Athenodorus’ response is reasonable from a Roman point of view. He suspects that the first sound is just his imagination, but once he has a second sign as confirmation, he assumes that the sound and ghost are real and follows. This is scepticism. If Athenodorus continued to ignore the evidence, he would be expressing unhealthy scepticism and disbelief."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-23",
+    "author": "pliny",
+    "lesson": 23,
+    "label": "Lesson 23",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: Pliny’s Freedman and Slave 47",
+    "source": "PDF page 47",
+    "blocks": [
+      {
+        "heading": "Conclusion of the Second Story: the Sceptical Philosopher Athenodorus",
+        "paragraphs": [
+          "The philosopher showed healthy scepticism, while the proconsul Curtius showed no scepticism:",
+          "1. The philosopher was not deterred by fear or by his imagination.",
+          "2. His focus on his tablets prevented his imagination from wandering and kept him clear-headed.",
+          "3. Although sceptical, he changed his mind after he received second confirmation of the evidence.",
+          "4. He immediately called the magistrates when he suspected that there was a body. Bodies are not buried in the city walls, so the philosopher rightly has public officials address the problem.",
+          "5. Once buried, the manes, “ghost,” no longer haunted the house."
+        ]
+      },
+      {
+        "heading": "Third Story about Ghosts: Pliny’s own Freedman and Slave had their Hair Cropped",
+        "paragraphs": [
+          "In this third story, Pliny tells how his own freedman and slave on separate occasions had their hair cropped (cut short on top but kept long on the edges) by a ghost. Pliny then interprets the significance of the haircuts in light of events in his own life."
+        ]
+      },
+      {
+        "heading": "What is a Libertus?",
+        "paragraphs": [
+          "A lībertus, “freedman,” and līberta, “freedwoman,” are people who were once slaves but have been freed. In Roman society, a freedman or freedwoman often maintains ties with the former owner as a client in client and patron relationship (see p. 56 for an example). Do not confuse these terms with the adjective līber, lībera, līberum: free, which can refer (1) in general to free people who are not slaves or (2) specifically to people who are free-born and have never been slaves. The lībertus on the facing page is a former slave of Pliny who had been manumitted (i.e. set free) and now assumed to role of client in a patron-client relationship with Pliny."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-24",
+    "author": "pliny",
+    "lesson": 24,
+    "label": "Lesson 24",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: Pliny’s Freedman and Slave 49",
+    "source": "PDF page 49",
+    "blocks": [
+      {
+        "heading": "Conclusion of Third Story about Ghosts: Why not a Simpler Explanation?",
+        "paragraphs": [
+          "In this second part of the third story, Pliny narrates how his puer, “slave boy,” had his hair cut by two figures. Pliny suggests that what happened to his freedman earlier and to his slave on the facing page were intended as good omens that Pliny, who unknowingly was threatened with accusations and death under the emperor Domitian, would be saved from prosecution. This interpretation by Pliny seems unreasonable and lacks the healthy scepticism shown by the philosopher in the second story. Why not assume that these two were victims of childish pranks: the freedman by his brother, and the boy by the others in the dormitory? The reason Pliny does not entertain a simpler interpretation for the haircuts is considered in the following pages."
+        ]
+      },
+      {
+        "heading": "What is a Paedagogium?",
+        "paragraphs": [
+          "A paedagogium was a school for the training and educating of slaves. The Emperor had his own paedagogium for slaves to work in his imperial administration. The puer, “slave-boy,” who is being trained is Pliny’s slave, although Pliny does not state it at first. This explains why Pliny believes what happens to the freedman in the previous story is connected to what happens to the puer and why Pliny refers to the boy as meōrum, “(one) of my own,” in line 8."
+        ]
+      },
+      {
+        "heading": "An Accusation Against Pliny during Domitian’s Reign of Terror (AD 93-96)",
+        "paragraphs": [
+          "The emperor Domitian ruled AD 81-96, but around 89 or, as some say, as late as 93 an increasing number of opponents in the Senate were formally accused and executed. This period until Domitian’s assassination in 96 is now known as “Domitian’s reign of terror.” Mettius Carus was a well known accuser who acted on behalf to Domitian to have senators formally accused and executed. When Pliny claims that there was a formal accusation submitted by Mettius Carus, Pliny suggests that he was on the list to be executed along with fellow senators under Domitian. And, when Pliny claims that the written accusation was in Domitian’s scrinium, a cylindrical box for documents, he suggests that he would have been executed, if Domitian had not been assassinated before he could address the paperwork."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-25",
+    "author": "pliny",
+    "lesson": 25,
+    "label": "Lesson 25",
+    "passage": "Pliny 7.27",
+    "subtitle": "Ghosts and Visions: What do you think, Sura? 51",
+    "source": "PDF page 51",
+    "blocks": [
+      {
+        "heading": "The Ghost of Domitian is the Real Ghost in this Letter 1",
+        "paragraphs": [
+          "1. Pliny’s Rhetorical Sleight of Hand",
+          "Foolish readers! This letter is not about ghosts—it is about Pliny and his reputation. Pliny frames the letter as an inquiry into questionable ghost stories so that he can introduce something unproven as if it were an undisputable fact. Pliny’s framing encourages Sura to debate the merits of the various ghost stories but at the same time allows Pliny’s claim that he too was a victim of Domitian’s reign of terror to go unchallenged:",
+          "Story #1: Did Curtius Rufus passively fulfill a prophecy or did his belief make it self-fulfilling? Story #2: Did Athenodorus, a sceptical philosopher, rid his house of an improperly buried ghost? Story #3: Did Pliny’s freedman and slave have their hair cropped by ghosts as a good omen? Fact?: Pliny faced an accusation and possible execution under Domitian’s reign of terror.",
+          "2. Pliny was very successful under Domitian’s reign of terror",
+          "Pliny made his reputation as a persuasive orator in the lawcourts in the 80s. And it was those skills that helped him, Tacitus, and many others advance under Domitian’s regime (AD 81-96). He was selected by Domitian as a Quaestor Caesaris, “Financial Officer of Caesar,” in 88 or 89, became a senator for life as a result, and was elected praetor, “judge,” in 93 at the very moment when Domitian’s reign of terror and prosecution of senators and others intensified. He continued to rise in a number of senior positions under the emperors Nerva (96-98) and Trajan (98-117) and served as consul suffectus (100) and lastly governor of Bithynia and Pontus (AD 110-2) under Trajan.",
+          "3. Loyalties were questioned after Domitian’s assassination",
+          "Immediately after the death of Domitian in 96, the Senate passed a damnatio memoriae, in which all mention of Domitian was erased—even his image on coins were modified or melted down! In the years that followed, the bitterness turned from Domitian to those who supported and were enriched by the emperor. Since Pliny benefited so much under Domitian’s regime and had even been praetor in 93, it seems reasonable to assume that Pliny’s loyalties were questioned.",
+          "4. Domitian’s ghost hovers over Pliny’s letters",
+          "In numerous surviving letters Pliny condemns Domitian’s actions and goes out of the way to point out how he advocated for those who were victims under his regime. The details of those letters are too numerous to address here. What is notable is that Pliny considered the question of loyalty important and did not discuss the accusation submitted by Carus and threat of punishment in other letters.",
+          "5. Why Sura? Was Sura aware of Pliny’s framing?",
+          "Sura was consul in 102, 107, and possibly 93 or 97 and is thought to have been close to Trajan (AD 98-117). He was therefore very influential in the senate and with the emperor, and his opinion of Pliny could affect Pliny’s political future. Sura is the sort of man Pliny would want to win over. What remains unknown is whether Pliny expected Sura to focus on the ghost stories and accept Pliny’s account of himself with Domitian as fact or Pliny anticipated that Sura would see through the framing and realize the true purpose of the letter. We may never know.",
+          "1 Baraz, Y. (2012). Pliny’s Epistolary Dreams and the Ghost of Domitan. TAPA, 142(1), 105-32 was the source for the title and interpretative framework of this page."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-26",
+    "author": "pliny",
+    "lesson": 26,
+    "label": "Lesson 26",
+    "passage": "Pliny 10.37",
+    "subtitle": "Pliny to Trajan: An Aqueduct for Nicomedia 53",
+    "source": "PDF page 53",
+    "blocks": [
+      {
+        "heading": "Pliny Rescues Bithynia and Pontus from Financial Mismanagement (AD 111-113)",
+        "paragraphs": [
+          "Pliny was appointed governor of the Roman provinces Bithynia and Pontus (Asia Minor along the Black Sea) from AD 111-113 during the reign of Trajan (AD 98-117). According to the numerous letters between Pliny and Trajan, a lack of oversight and financial mismanagment by local leaders and previous Roman governors led to unfinished projects, and Trajan appointed Pliny specifically to address these problems. Nicomedia is a Greek city on the waterway between the Mediterranean and Black Sea, and Sinope in the next letter is a Greek city in the middle of the southern coast on the Black Sea. Nicomedia and Sinope prospered from trade between the Roman Empire and Black Sea. Both cities are building aqueducts, and Pliny sends this letter to update Trajan and to request an expert on aqueduct-building. This letter reveals (a) how governors communicated and interacted with the Emperor, (b) how much or little governors were involved with local governments, and (3) how the Roman presence encouraged and oversaw large public projects such as aqueducts and sewers."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "/figures/lessons-26-27-bithynia.png",
+        "alt": "Map locating Nicomedia and Sinope in Bithynia and Pontus",
+        "caption": "Nicomedia and Sinope in the Roman province of Bithynia and Pontus. Figure 3 in the commentary.",
+        "credit": "Milenioscuro (CC BY 4.0)"
+      }
+    ]
+  },
+  {
+    "id": "lesson-27",
+    "author": "pliny",
+    "lesson": 27,
+    "label": "Lesson 27",
+    "passage": "Pliny 10.90",
+    "subtitle": "Pliny to Trajan: An Aqueduct for Sinope 55",
+    "source": "PDF page 55",
+    "blocks": [
+      {
+        "heading": "Sinope and Romanization on the Black Sea",
+        "paragraphs": [
+          "At Nicomedia Pliny supervised an aqueduct project that had already begun, but here in Sinope Pliny asks the Emperor for permission to start an entirely new aqueduct project. The people had water, but not enough to meet their needs, and Pliny has found a suitable water spring 16 miles from the city. Sinope was an old Greek colony that Julius Caesar made a Roman colony and renamed Colonia Iulia Felix in 47 BC. This designation set aside land for landless Romans and veteran soldiers to resettle, a practice that not only provided pensions for retired soldiers but also led to Romanization: the spread of the Latin language and Roman culture to people who would in turn (a) be loyal to Rome, (b) be able to defend Roman rule, and (c) provide soldiers for the next generation of Roman armies."
+        ]
+      },
+      {
+        "heading": "Roman Support for Aqueduct Construction",
+        "paragraphs": [
+          "1. Roman governors and Emperor encourage aqueduct construction. This support includes (a) oversight and (b) contributing master-builders not available in the area.",
+          "2. Local governments and inhabitants pay for the entire cost. Pliny assumes that the people of Sinope and Nicomedia will pay—despite past mismanagement. Trajan in an unread reply hints at partial funding but is glad that Sinope will pay for it.",
+          "3. Pliny, as governor, is hands-on and knowledgeable about building materials, terrain, and water sources. If there was financial mismanagement before Pliny’s arrival, Pliny may have included such details to ensure the emperor that Pliny is avoiding future financial mismanagement."
+        ]
+      },
+      {
+        "heading": "Aqueducts make Roman Cities more appealing than Non-Roman Cities",
+        "paragraphs": [
+          "1. Abundant fresh water improves health. Inhabitants do not have to drink water mixed with human waste or other contaminants and are less likely to suffer from dehydration.",
+          "2. An improved sewage system makes people healthier. Gravity-fed aqueducts must flow out of the city as quickly as they flow in. This ensures swift removal of human waste and other contaminants.",
+          "3. Reliable and accessible water makes citizens more productive: Women, who traditionally are tasked with walking great distances for water daily, can save their time and energy for other tasks.",
+          "4. Abundant water for farms and businesses. Irrigation for farms and gardens is possible. Bakeries, fulleries (laundries), and restaurants who rely on daily access to water can thrive.",
+          "5. Aqueducts promote the development of public latrines, baths, and urban infrastructure. Once a ready source of gravity-fed water is available, other Roman amenities can be added."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "/figures/lessons-26-27-bithynia.png",
+        "alt": "Map locating Nicomedia and Sinope in Bithynia and Pontus",
+        "caption": "Nicomedia and Sinope in the Roman province of Bithynia and Pontus. Figure 3 in the commentary.",
+        "credit": "Milenioscuro (CC BY 4.0)"
+      }
+    ]
+  },
+  {
+    "id": "lesson-28",
+    "author": "pliny",
+    "lesson": 28,
+    "label": "Lesson 28",
+    "passage": "Pliny 10.5",
+    "subtitle": "Trajan to Pliny: Citizenship for Former Slaves (AD 98) 57",
+    "source": "PDF page 57",
+    "blocks": [
+      {
+        "heading": "Pliny in Rome asks Trajan for Grants of Citizenship in AD 98",
+        "paragraphs": [
+          "The next three letters 10.5-7 were written in the year 98, about 13 years before Pliny became governor of Bithynia and Pontus in 111-3. In 98, Pliny was Praefectus Aerarii Saturni, “Prefect of the Treasury of Saturn” (i.e. State Treasury), and in his capacity as Prefect he submitted requests for citizenship to the Emperor Trajan and received a response from Trajan.",
+          "An iatrialiptes is a doctor (Grk. iatros ) who uses ointments (Grk. alipta ). What he does is uncertain, but it may involve anointing, rubbing, and treating the body just as a modern physical therapist does."
+        ]
+      },
+      {
+        "heading": "Women as Slave-owners and Slaves, Patrons and Clients, Freedwomen and Citizens",
+        "paragraphs": [
+          "1. Thermuthis and Antonia Maximilla were dominae (slave-owners) and patronae (patrons) to the slaves they personally freed. Thermuthis was a perigrīna (Egyptian), and Antonia, a cīvis.",
+          "2. Hedia and Antonia Harmeris were slaves who became lībertae (freedwomen), and, along with the freedman Harpocras, became Roman citizens ( cīvēs ). Such was social mobilty in Rome."
+        ]
+      },
+      {
+        "heading": "Cīvēs vs. Peregrinī",
+        "paragraphs": [
+          "Under Roman law, free people were either cīvēs, “citizens,” or peregrinī, “foreigners.” In other words, peregrinī were non-citizens—foreign residents in the empire without Roman citizenship. When Pliny says on the facing page that Harpocras “est enim peregrīnae condiciōnis manūmissus ā peregrīnā,” Pliny is declaring that (a) Harpocras was born without Roman citizenship, (b) was a slave, who was later freed, and (c) his former master who then became his patron, Thermuthis of Theon, was herself without Roman citizenship. (Thermuthis is an Egyptian name.) Mention of Thermuthis’ death explains why Pliny rather than Thermuthis is making the request ( petitiō ) on behalf of Harpocras. Pliny is doing a favor for Harpocras a patron does for a client."
+        ]
+      },
+      {
+        "heading": "Ius Quirītium vs. Civitās Rōmāna",
+        "paragraphs": [
+          "Both Iūs Quirītium, “full Roman citizenship” (lit. “Right of the Quirites/Romans”) and Cīvitās Rōmāna, “Roman citizenship,” extend over the same rights, but while the designation Iūs Quirītium can be offered to lībertī, ‘freedpeople,” of cīvēs (e.g. Hedia and Antonia Harmeris), the designation Cīvitās Rōmāna is offered to peregrīnī (e.g. Harpocras). This distinction explains why Pliny requests Iūs Quirītium for Hedia and Antonia Harmeris, and Cīvitās Rōmāna for Harpocras. Citizenship included the following rights and allows citizens to avoid a poll tax paid by non-citizens:",
+          "iūs suffrāgiī et honōrum right of voting and obtaining public offices iūs commerciī right of commerce (ability to enforce contracts in court) iūs cōnnūbiī right of marriage (ability to enforce inheritance, etc.)",
+          "Non-citizens, of course, can intermarry and have commerce, but only citizens can enter Roman courts and have business contracts and the rights of marriage and inheritance enforced and protected by law."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-29",
+    "author": "pliny",
+    "lesson": 29,
+    "label": "Lesson 29",
+    "passage": "Pliny 10.6",
+    "subtitle": "Trajan to Pliny: Citizenship for Former Slaves (AD 98) 59",
+    "source": "PDF page 59",
+    "blocks": [
+      {
+        "heading": "Harpocras must apply for Alexandrian Citizenship first and only then Roman Citizenship",
+        "paragraphs": [
+          "In this follow-up to Letter 10.5, Pliny thanks Trajan for approving the Roman citizenship requests but is reminded by others that he failed to explain adequately Harpocras’ background and should have requested Alexandrian citizenship first and only afterwards requested Roman citizenship. Now, Pliny asks that Trajan give both forms of citizenship to correct Pliny’s own mistake.",
+          "Alexandrian Citizenship: When the emperor Augustus (31 BC-AD 14) seized Egypt as a Roman province in 30 BC, he acknowledged the Greeks inhabiting the three major Greek cities in Egypt— Alexandria, Ptolemais, and Naucratis—as having citizenship distinct from the indigenous Egyptians. This citizenship was named after Alexandria, the most important of those three cities. Those with Alexandrian citizenship—just as Roman citizens—were exempt from the poll tax (fixed tax on each person in the empire) paid by indigenous Egyptians. Oddly, as Pliny notes in the letter, indigenous"
+        ]
+      },
+      {
+        "heading": "Addressing the Emperor Trajan as “Domine”",
+        "paragraphs": [
+          "Domine: In the master-slave relationship dominus commonly means “slave-master,” but slaves apparently did not call masters ‘Domine’ in Latin literature. Although the word is clearly problematic, when Pliny addresses Trajan as “Domine”, he is not acknowledging that Trajan is a sort of slave- master and Pliny is his slave. Instead, it seems to be a private address of respect similar to “sir.”"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-30",
+    "author": "pliny",
+    "lesson": 30,
+    "label": "Lesson 30",
+    "passage": "Pliny 10.7",
+    "subtitle": "Trajan to Pliny: Citizenship for Former Slaves (AD 98) 61",
+    "source": "PDF page 61",
+    "blocks": [
+      {
+        "heading": "Evidence of the Emperor Trajan’s Leadership and Character",
+        "paragraphs": [
+          "1. Trajan follows the legal precedent set by previous emperors when possible",
+          "To follow precedent is to give priority to previous decisions. Trajan does not decide arbitrarily or just choose what feels best but respects the decisions of his predecessors on Alexandrian citizenship:",
+          "secundum īnstitūtiōnem prīncipum according to the custom of the Emperors l. 2",
+          "2. Trajan shows understanding rather than frustration or anger toward Pliny",
+          "Rather than criticize Pliny and demand that he rigidly follow precedent and apply for Alexandrian citizenship first and reapply for Roman citizenship later, Trajan allows Harpocras to keep the Roman citizenship as a show of respect to Pliny ( negāre nōn sustineō, l. 4) but makes it clear that he will respect precedent as well and arrange the necessary Alexandrian citizenship through Pompeius Planta, Prefect of Egypt.",
+          "3. Patron-Client Relationship: Trajan is patron to Pliny, as Pliny is the patron to Harpocras",
+          "When Trajan identifies Harpocras as Pliny’s therapist (Arpocrātī, iātraliptae tuō, l. 2), Trajan is acknowledging (a) that Pliny is seeking special treatment for Harpocras precisely because Harpocras is Pliny’s client, and (b) therefore Trajan, as patron to Pliny, will fulfill the special request as a favor to Pliny. Without these personal patron-client relationships, Harpocras’ request would certainly have never been considered. The same is true for the citizenship granted to the lībertae Hedia and Antonia Harmeridis. In Letter 10.6 Pliny mentions that their patron Antonia Maximilla is a necessāria, ‘a very close friend,’ to him. Pliny is doing a personal favor for a friend, and Trajan, as patron to Pliny, honors that request."
+        ]
+      },
+      {
+        "heading": "Nomus and Alexandrian Citizenship",
+        "paragraphs": [
+          "A nomus (Grk. nomōs), “nome” or “district,” is an administrative division in Egypt. (Compare the division of the United States into states and counties.) In the follow-up letter not in this book (Letter 10.10) we learn that Harpocras is from the nomus of Memphis, a major city in Egypt. The years and census information that Pliny is submitting will be passed along by Trajan’s administration to Pompeius Planta, who will ensure that Harpocras’ Alexandrian citizenship is registered under the correct nomus. Note that Harpocras was previously a slave and could not have been registered. But since he is now a lībertus, “freedman,” this registration is possible upon approval."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-31",
+    "author": "pliny",
+    "lesson": 31,
+    "label": "Lesson 31",
+    "passage": "Pliny 6.4",
+    "subtitle": "Pliny suffers while his wife Calpurnia recuperates in Campania 63",
+    "source": "PDF page 63",
+    "blocks": [
+      {
+        "heading": "1st Half: Calpurnia’s physical health improves when away in Campania, a region that includes the",
+        "paragraphs": [
+          "Bay of Naples and Vesuvius. She is likely in Baiae, a seaside resort near Misenum. Wealthy Romans had second homes along the bay, and the hot springs were believed to have health-restoring powers. 2nd Half: Pliny’s mental health declines while remaining in Rome. Business prevents Pliny from going with Calpurnia, just as homework kept him from his uncle. Calpurnia is in the area where the eruption occurred. Where Calpurnia and others see pleasure, relaxation, and rejuvenation, Pliny likely recalls death and suffering. The frequent use of the synonyms below highlights Pliny’s agitated state."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-32",
+    "author": "pliny",
+    "lesson": 32,
+    "label": "Lesson 32",
+    "passage": "Pliny 6.7",
+    "subtitle": "Pliny suffers while his wife Calpurnia remains in Rome 65",
+    "source": "PDF page 65",
+    "blocks": [
+      {
+        "heading": "1st Half: Pliny’s letters give Calpurnia comfort",
+        "paragraphs": [
+          "1. The letters are a substitute for Pliny himself: Pliny notices that his wife treats his writings as if they were Pliny himself (cf. prō mē ) and even places them where Pliny usually spends time. Pliny suggests that this substitution is what gives Calpurnia comfort when Pliny is away.",
+          "2. The letters are a form of medicine: Metaphor is the use of imagery to invite comparison of things not alike. Pliny claims his books are an ointment or bandage ( fōmentīs ) to Calpurnia."
+        ]
+      },
+      {
+        "heading": "2nd Half: Calpurnia’s letters give Pliny anguish",
+        "paragraphs": [
+          "3. Rereading letters enflames Pliny. While Calpurnia accepts Pliny’s writings in place of her husband, Calpurnia’s letters set Pliny on fire ( accendor ) with longing for the real woman.",
+          "4. Frequent letters torture Pliny. While Pliny’s writings serve as a form of medicine for Calpurnia, her frequent letters delight and, more importantly, torture ( torquet ) Pliny!",
+          "Calpurnia grew up in Comum, Pliny’s home town in Northern Italy. She married Pliny around AD 97 (or perhaps in 104). At the time Pliny was 36-7, and she was likely about 15, since it was her first marriage. Pliny had been married twice before and lost his second wife to illness in 97. Remarriage was common, and Pliny still was without an heir. Pliny and Calpurnia never had children, but Pliny’s letters strongly suggest that the marriage was a very happy one."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-33",
+    "author": "vergil",
+    "lesson": 33,
+    "label": "Lesson 33",
+    "passage": "Short Introduction to the Aeneid",
+    "subtitle": "Short Introduction to the Aeneid 67",
+    "source": "PDF pages 66-67",
+    "blocks": [
+      {
+        "heading": "Short Introduction to the Aeneid",
+        "paragraphs": [
+          "This lesson is meant to provide a break before readers begin reading the Aeneid in earnest in Lesson 34. Readers should use this time to (a) review the historical and literary context below, (b) review and master not only the new core vocabulary in lesson 34 but all core words introduced in the preceding Pliny readings, or perhaps (c) practice scanning epic verse (printable materials are on the website)."
+        ]
+      },
+      {
+        "heading": "Who is Publius Vergilius Maro (70-19 BC)?",
+        "paragraphs": [
+          "Vergil, also spelled “Virgil,” was born in northern Italy to a family of equestrian rank in 70 BC. In 42 BC Octavian, Julius Caesar’s grand-nephew and future emperor, confiscated Vergil’s farm in order to resettle soldiers. Vergil was later able to recover that estate with the influence of friends. Around the time of the publication of the Eclogues, a poem about shepherding, in 37 BC, Vergil gained the financial support of Maecenas, a patron of the arts and close advisor to Octavian. Vergil dedicated the Georgics, a work about farming, to Maecenas in 31 BC, and the Eclogues and Georgics continue to be read today. Since Maecenas was part of Octavian’s inner circle of advisors, it is reasonable to assume that Octavian, i.e. Augustus, was indirectly or directly Vergil’s patron. From 29-19 BC, Vergil composed the Aeneid, “Song of Aeneas,” a work of propaganda that connected Aeneas and the mythology of the Trojan war directly to the rule of Augustus. In 19 BC Vergil accompanied Augustus to Athens, where the poet fell ill. Vergil died on his return home in Brundisium, Italy and requested that his unfinished Aeneid not be published. Augustus instead had the poem edited and published on Vergil’s behalf."
+        ],
+        "timeline": [
+          {
+            "date": "70 BC",
+            "event": "Born near Mantua in northern Italy"
+          },
+          {
+            "date": "42",
+            "event": "Farm confiscated by Octavian"
+          },
+          {
+            "date": "37",
+            "event": "Completes the Eclogues; Maecenas becomes his patron"
+          },
+          {
+            "date": "31",
+            "event": "Completes the Georgics"
+          },
+          {
+            "date": "29-19",
+            "event": "Composes the Aeneid"
+          },
+          {
+            "date": "19",
+            "event": "Dies at Brundisium, age 52"
+          }
+        ]
+      },
+      {
+        "heading": "Who is Caesar Augustus (63 BC – AD 14)?",
+        "paragraphs": [
+          "Gaius Octavius, Octavian, and Caesar Augustus refer to the same person at different periods of time. When Gaius Julius Caesar (100-44 BC) was assassinated in 44 BC, his only child Julia had already died while giving birth in 54. And so, Julius Caesar adopted his 17-year old grand-nephew Gaius Octavius posthumously in his will and made him his heir. Since it was common for an adoptee to assume the name of his adopted father and make his own nomen a cognomen, Gaius Octavius was renamed in 44 BC as Gaius Julius Caesar Octavianus, whom we today call Octavian. In 27 BC, the Senate bestowed on the emperor the honorific name Augustus, “the Enricher” or “Venerable one.” Today, we typically call him Octavian between 44 and 31 BC (Battle of Actium) and either Augustus or Caesar Augustus when he became sole ruler and emperor from 31 BC until his death in AD 14. Other relevant details about Augustus are revealed in individual lessons throughout this commentary."
+        ],
+        "timeline": [
+          {
+            "date": "63-44 BC",
+            "event": "Gaius Octavius"
+          },
+          {
+            "date": "43-27",
+            "event": "Gaius Julius Caesar Octavianus (Octavian)"
+          },
+          {
+            "date": "27 BC-AD 14",
+            "event": "Gaius Julius Caesar Octavianus Augustus"
+          }
+        ]
+      },
+      {
+        "heading": "Where does Vergil’s Aeneid fit in the Roman Republic?",
+        "paragraphs": [],
+        "timeline": [
+          {
+            "date": "509-31 BC",
+            "event": "Roman Republic"
+          },
+          {
+            "date": "133-122",
+            "event": "Gracchi brothers and escalating factional conflict"
+          },
+          {
+            "date": "91-88",
+            "event": "Social War over Italian citizenship and rights"
+          },
+          {
+            "date": "88-87, 82-81",
+            "event": "Civil wars and Sulla's dictatorship"
+          },
+          {
+            "date": "73-71",
+            "event": "Spartacus' revolt is suppressed"
+          },
+          {
+            "date": "63",
+            "event": "Catiline's conspiracy is suppressed"
+          },
+          {
+            "date": "58-49",
+            "event": "Julius Caesar conquers Gaul"
+          },
+          {
+            "date": "49-45",
+            "event": "Caesar defeats Pompey in civil war"
+          },
+          {
+            "date": "44-42",
+            "event": "Octavian and Antony defeat Caesar's assassins"
+          },
+          {
+            "date": "32-30",
+            "event": "Octavian defeats Antony and Cleopatra"
+          },
+          {
+            "date": "31",
+            "event": "Battle of Actium"
+          },
+          {
+            "date": "29-19",
+            "event": "Vergil composes the Aeneid"
+          },
+          {
+            "date": "27 BC-AD 14",
+            "event": "Augustus consolidates power under the Pax Romana"
+          }
+        ]
+      },
+      {
+        "heading": "From Republic to Empire",
+        "paragraphs": [
+          "After 375 years of what Vergil’s contemporaries viewed as unified government, imperial expansion, and prosperity (509-133 BC), the Roman republic suffered a century of civil wars, social upheaval, and political unrest that led to what we now call the “Fall of the Republic” (133-31 BC) and consolidation of power under Augustus. The details are too numerous to review, but readers should note that Vergil wrote the Aeneid (29-19 BC) when the republican government existed in form (consuls, senate, assemblies), but Augustus alone possesssed the loyalty of all legions and real decision-making power."
+        ]
+      },
+      {
+        "heading": "Books 1-6 imitate the Odyssey Books 7-12 imitate the Iliad",
+        "paragraphs": [
+          "The first 6 books are an imitation of Homer’s Odyssey and the second 6 are an imitation of Homer’s Iliad, ancient Greek epics composed 700 years before the Aeneid but well known to Rome’s Greek- educated aristocracy. In Book 1 Juno sends a storm that shipwrecks Aeneas and the Trojans at Carthage. At a banquet hosted by Queen Dido, Aeneas recalls in Book 2 the Fall of Troy and in Book 3 his travels at sea for 7 years. In Book 4 Dido and Aeneas fall in love, and, when Aeneas is urged by the gods to leave, Dido commits suicide. In Book 5 he travels to Sicily and celebrates funeral games for his father Anchises, and in Book 6 Aeneas enters the Underworld in Italy to seek advice from his father. In Book 7 Aeneas lands in Latium, and King Latinus offers to the Trojan his daughter Lavinia— and the future rule of the Latins. Juno incites the Latin Turnus, who was engaged to marry Lavinia before Aeneas’ arrival, to wage war. In Book 8 Aeneas seeks help from Evander and the Greeks who settled near the site of Rome and from the Etruscans. In this war (Books 9-12), Aeneas is likened to the Greek Achilles. Just as Achilles kills the Trojan Hector to avenge the death of Achilles’ friend Patroclus in Homer’s Iliad, so in Book 12 Aeneas kills Turnus to avenge the death of Aeneas’ friend Pallas."
+        ],
+        "table": {
+          "headers": [
+            "Books 1-6: Odyssey",
+            "Books 7-12: Iliad"
+          ],
+          "rows": [
+            [
+              "1 · Storm and Carthage",
+              "7 · Latium and war"
+            ],
+            [
+              "2 · Fall of Troy",
+              "8 · Evander and Aeneas' shield"
+            ],
+            [
+              "3 · Travels at sea",
+              "9 · Nisus and Euryalus"
+            ],
+            [
+              "4 · Dido and Aeneas",
+              "10 · Turnus kills Pallas"
+            ],
+            [
+              "5 · Funeral games for Anchises",
+              "11 · Pallas' burial and Camilla"
+            ],
+            [
+              "6 · The Underworld",
+              "12 · Aeneas kills Turnus"
+            ]
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-34",
+    "author": "vergil",
+    "lesson": 34,
+    "label": "Lesson 34",
+    "passage": "Aeneid 1.1-11",
+    "subtitle": "Invocation of the Muse: Why must the pious suffer? 69",
+    "source": "PDF page 69",
+    "blocks": [
+      {
+        "heading": "Context & analysis",
+        "paragraphs": [
+          "The initial 33 lines of the Aeneid are challenging! But do not be discouraged. These lines are dense but very meaningful. Once Vergil finishes the introduction, the narrative will be easier to follow."
+        ]
+      },
+      {
+        "heading": "Imitation of the Iliad and the Odyssey",
+        "paragraphs": [
+          "1. arma virumque (line 1): The first word summarizes an epic in the same way as the title of a music album encapsulates the songs in the album. The first word in Homer’s Odyssey is andra, ‘man,’ and the first word in Homer’s Iliad, about Achilles and the last year of the Trojan war, is mēnin, ‘wrath.’ Both were written in Greek in 750-720 BC. Here, Vergil alludes to both epics and effectively asserts: ‘This is my Odyssey and this is my Iliad, a Latin work that will rival the greatest Greek epics.’",
+          "2. fātō profugus (l. 2): Vergil suggests that his work will not merely rival but surpass the epics of Homer. The suggestion that the man, i.e. Aeneas, was a fugitive by fate is provocative. The Greeks, on this view, did not win the Trojan war because of their military prowess or the favor of the gods but because fate had a greater purpose: to drive the defeated Trojans to Italy and give rise to Rome. And so, just as Christians call the Hebrew Bible the ‘Old Testament’ and thereby assert that their New Testament is more important, so Vergil suggests that his epic and its account of the rise of Rome are more important than the Greek epics and all the Greek art and literature influenced by those epics.",
+          "3. multum ille et terrīs iactātus et altō (l. 3)…multa quoque et bellō passus (l. 5): This is the narrative of Books 1-6 and 7-12 respectively. As readers will discover, the first six books imitate the Odyssey while the second six imitate the Iliad. By alluding to the travels of Odysseus and war with Achilles, Vergil elevates the minor hero Aeneas to the heroic status of both Odysseus and Achilles.",
+          "4. dum conderet urbem inferretque deōs…Rōmae (ll. 5-7): The use of the subjunctive indicates purpose and offers a partial explanation for the word ‘fatō’ in line 2. Vergil connects the world of Greek myth and literature with the founding of Rome. As Vergil later reveals, Aeneas will found the city Lavinium and rule the Latins for 3 years; his son Ascanius will found Alba Longa and rule the Albans for 30 years; and, after 300 years of kings at Alba Longa, Romulus will found the city of Rome (I.265-74). Note how Vergil begins the introduction with the word ‘Troiae’ and ends the final line with ‘Rōmae.’ In doing so, Vergil explicitly connects the gods of Troy with those of Rome itself."
+        ]
+      },
+      {
+        "heading": "The entire poem is composed to answer one question: Why must the pious suffer?",
+        "paragraphs": [
+          "5. Mūsa, mihī causās memorā (l. 8): The invocation of the muse is a common epic convention, found in the Odyssey and Iliad. In effect, the rest of the epic is told by the goddess of creativity through Vergil. This allows the poet to be an omniscient narrator and relate details about the divine world and private conversations that humans would not know otherwise.",
+          "6. īnsignem pietāte virum (l. 10): The entire poem is composed to answer one question: Why must the pious suffer? The word pietās signifies devotion to family, community, and the gods, and the Romans closely identified such devotion with success. How can Aeneas be pious and yet still suffer?"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-35",
+    "author": "vergil",
+    "lesson": 35,
+    "label": "Lesson 35",
+    "passage": "Aeneid 1.12-22",
+    "subtitle": "Reasons for Juno’s anger 71",
+    "source": "PDF page 71",
+    "blocks": [
+      {
+        "heading": "Rome and Carthage",
+        "paragraphs": [
+          "The three Punic Wars fought between Rome and Carthage, a city-state in North Africa, transformed Rome into a naval power with a vast western Mediterranean empire. By the end of the wars, Rome had acquired the provinces of Sicily, Sardinia, Corsica, Hispania, and much of Libya (North Africa).",
+          "The Carthaginians were originally colonists from the Phoenician cities of Tyre and Sidon, located in modern day Lebanon. The Romans acknowledged this origin by calling the Carthaginians Poenī or Pūnī, ‘Phoenicians.’ Since the name Carthāginiēnsēs does not fit in epic meter, Vergil refers to the people three times as Tȳriī, ‘Tyrians,’ and once as Sidōniī, ‘Sidonians.’",
+          "In lines 19-22, Vergil ingeniously suggests that not only the rise of Rome but the Punic wars and rise of the Romans as a Mediterranean power were preordained by fate and the gods."
+        ],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Conflict",
+            "Dates"
+          ],
+          "rows": [
+            [
+              "First Punic War",
+              "261-241 BC"
+            ],
+            [
+              "Second Punic War",
+              "218-201 BC"
+            ],
+            [
+              "Third Punic War",
+              "149-143 BC"
+            ]
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-36",
+    "author": "vergil",
+    "lesson": 36,
+    "label": "Lesson 36",
+    "passage": "Aeneid 1.23-33",
+    "subtitle": "Reasons for Juno’s anger 73",
+    "source": "PDF page 73",
+    "blocks": [
+      {
+        "heading": "Four Reasons for Juno’s Anger",
+        "paragraphs": [
+          "In addition to 1. the future destruction of Carthage by the descendants of Troy in I.19-22, Vergil mentions several additional reasons why Juno feels anger toward Aeneas and the Trojans.",
+          "2. Judgment of Paris ( iūdicium Paridis): After the goddess Discord throws an apple inscribed with the words “to the most beautiful” into the wedding party of Thetis and Pelias, Achilles’ parents, Mercury whisks the apple away and gives it to Paris, one of the fifty sons of King Priam of Troy. Soonafter, the goddesses Juno (Hera), Minerva (Athena), and Venus (Aphrodite) approach Paris and offer rewards in return for the apple. Juno offers political power; Minerva, victory in battle; and finally Venus, the most beautiful woman. Paris awards the apple to Venus and thus incurs the anger of both Juno and Minerva in the Trojan war and beyond.",
+          "3. Hated People (genus invīsum): Although the phrase can be translated as the “hated people,” it likely means “hated lineage” and refers to one of the founders of the Trojans, Dardanus. Dardanus was the offspring of an illicit affair between Jupiter and the mortal Electra. Juno undoubtedly knew about the affair and blamed Dardanus, who served as a reminder of her husband’s infidelity.",
+          "4. Honors of kidnapped Ganymede (raptī Ganymēdis honōrēs): Dardanus’ grandson Trōs gave birth to three sons, Ilus, Assaracus, and Ganymede, whom Homer describes as the most handsome of mortal men. In the form of an eagle, Jupiter kidnapped Ganymede and made the boy his personal cupbearer. Juno appears to have envied the affection that Jupiter gave to the young man."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-37",
+    "author": "vergil",
+    "lesson": 37,
+    "label": "Lesson 37",
+    "passage": "Aeneid 1.88-101",
+    "subtitle": "Aeneas prays for death 75",
+    "source": "PDF page 75",
+    "blocks": [
+      {
+        "heading": "What We Missed: Summary of Aeneid 1.34-84",
+        "paragraphs": [
+          "The Trojans are sailing around Sicily in 20 ships to Italy. Juno, angry that she cannot destroy the Trojans, approaches Aeolus, whom Jupiter as patron set over the winds. Juno orders Aeolus to release the winds without Jupiter’s knowledge, and Aeolus complies. The result is a storm at sea."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Aeneas’ First Speech and Odyssey Book 5",
+        "paragraphs": [],
+        "variant": "boxed",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "In the following speech from Odyssey Book 5, Odysseus is lost at sea during a storm and laments his fate. Note how Aeneas’ speech in lines 92-101—particularly the underlined sections—is an imitation of this speech."
+          },
+          {
+            "type": "verse",
+            "lines": [
+              {
+                "segments": [
+                  {
+                    "text": "Then were the knees of Odysseus loosened",
+                    "emphasis": true
+                  },
+                  {
+                    "text": " and his heart"
+                  }
+                ],
+                "line": "297"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "melted, and deeply moved he spoke to his own mighty spirit:"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "“Ah me, wretched that I am! What is to befall me at the last?"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "I fear me that verily all that the goddess said was true, when"
+                  }
+                ],
+                "line": "300"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "she declared that on the sea, before ever I came to my native land,"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "I should fill up my measure of woes; and lo, all this now is being brought to pass."
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "In such wise does Zeus overcast the broad heaven with clouds,"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "and has stirred up the sea, and the blasts"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "of all manner of winds sweep upon me; now is my utter destruction sure."
+                  }
+                ],
+                "line": "305"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "Thrice blessed those Danaans, aye, four times blessed, who of old perished",
+                    "emphasis": true
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "in the wide land of Troy,",
+                    "emphasis": true
+                  },
+                  {
+                    "text": " doing the pleasure of the sons of Atreus."
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "Even so would that I had died and met my fate on that day",
+                    "emphasis": true
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "when the throngs of the Trojans hurled upon me bronze-tipped spears,"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "fighting around the body of the dead son of Peleus.",
+                    "emphasis": true
+                  }
+                ],
+                "line": "310"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "Then should I have got funeral rites, and the Achaeans would have spread my fame,"
+                  }
+                ]
+              },
+              {
+                "segments": [
+                  {
+                    "text": "but now by a miserable death was it appointed me to be cut off.”"
+                  }
+                ]
+              }
+            ],
+            "citation": "Odyssey V.297-312 (trans. A. T. Murray, 1919)"
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "1. Vergil expected his readers to know the Odyssey in Greek and recognize the imitation."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "2. By having Aeneas mimic Odysseus’ words, Vergil elevates Aeneas, a very minor figure in myth and legend, and encourages readers to view him as a hero of equal status to the famed Odysseus."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "3. Vergil wishes us to view Aeneas’ fear and wish for death as an expression of the heroic ideal."
+          }
+        ]
+      },
+      {
+        "heading": "The Traditional Epic Hero",
+        "paragraphs": [
+          "At first glance Aeneas and Odysseus may appear to be cowards wishing for death, but in fact both are expressing the ideal of the epic hero. A traditional epic hero strives through deeds to achieve immortal glory. Both Aeneas and Odysseus express this same ideal when they wish that they had died in battle and were remembered rather than die without glory at sea. When Aeneas recalls the fallen Trojans Hector and Sarpedon, he is lamenting that, while they will be remembered for their heroism, though tumbling in the Simois river after death, Aeneas will most certainly be forgotten drowning at sea."
+        ],
+        "variant": "boxed"
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-38",
+    "author": "vergil",
+    "lesson": 38,
+    "label": "Lesson 38",
+    "passage": "Aeneid 1.102-7, 496-502",
+    "subtitle": "Dido, likened to Diana, sits under the Temple of Juno 77",
+    "source": "PDF page 77",
+    "blocks": [
+      {
+        "heading": "Context & analysis",
+        "paragraphs": [
+          "Ancient Science: The Storm as Disorder of Natural Elements Note how the disorder stirred up by the winds is depicted as the unnatural mixing of the four primary elements (earth, water, air, and fire) from their natural places: e.g. water high in the air, land where there should be water, water described as land masses, etc. You will enjoy the storm passage much more if you notice these details."
+        ]
+      },
+      {
+        "heading": "What we Missed: Summary of Aeneid 1.107-496",
+        "paragraphs": [
+          "1. Neptune calms the storm: Neptune notices Juno’s influence and summons the personifed winds. He commands the winds to return to Aeolus and tell him not to interfere with his domain, the sea.",
+          "2. Aeneas recovers 7 of his 20 ships near Carthage: As the Trojans feed on deer which Aeneas just hunted, Aeneas delivers a famous speech of encouragement—imitating Odysseus in the Odyssey.",
+          "3. Dido and Carthage: Venus, disguised as a Spartan huntress, approaches Aeneas and Achates as they recon the unknown land. Venus explains that Phoenician Dido is sister to Pygmalion, the king of the city of Tyre. Pygmalion had secretly killed Dido’s husband, Sychaeus. In a dream Sychaeus tells Dido what happened and reveals a hidden treasure. Dido and her Phoenician followers find the treasure, flee to North Africa, and use the treasure to buy land and found the city of Carthage.",
+          "4. Aeneas and Achates, enveloped in mist of invisibilty by Venus, visit Carthage: As they admire the city that is being built, they see a mural of the Trojan war and approach a large Temple of Juno."
+        ]
+      },
+      {
+        "heading": "Dido’s Character and Leadership",
+        "paragraphs": [
+          "Dido is portrayed very positively in Book 1, but readers will see her character decline as she gives in to unrestrained emotions such as love in Book 4 with consequences for both herself and her people. It is as if Vergil wants to instruct us on the negative effects of love even on those who seem virtuous.",
+          "Note Dido’s positive attributes, which Vergil mentions, even before she meets Aeneas:",
+          "(1) shows strong leadership when fleeing from Pygmalion, King of Tyre (1.340-68)",
+          "(2) demonstrates piety in building Temple of Juno, under which she now sits (1.505-6)",
+          "(3) is likened to the goddess Diana (1.498-503)",
+          "(4) dispenses rights and laws to men (1.507)",
+          "(5) avoids favoritism by assigning work fairly or even by lottery (1.508)",
+          "(6) offers to help 13 lost Trojan ships depart or to rule Carthagians and Trojans as equals (1.569-74)"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-39",
+    "author": "vergil",
+    "lesson": 39,
+    "label": "Lesson 39",
+    "passage": "Aeneid 1.503-12",
+    "subtitle": "Under the Temple of Juno, Dido rules the Carthaginians justly 79",
+    "source": "PDF page 79",
+    "blocks": [
+      {
+        "heading": "What Happens Next: Summary of the end of Aeneid Book 1",
+        "paragraphs": [
+          "1. Dido offers Hospitality: Aeneas and Achates watched unobserved behind the mist of invisibilty as Trojan leaders of the 13 lost ships approach Dido who sits under the Temple of Juno. The Trojan leader Ilioneus requests hosptiality, explains that they are Trojans, praises their lost leader Aeneas, and asks for safe passage to Sicily or their fated destination in Italy. Dido delivers a speech in reply where she assures the Trojans that their suffering is well-known, offers safe passage to Sicily or Italy, and even offers to rule over the Trojans as equals if they wish to stay.",
+          "2. Immediately after Dido finishes her speech, Aeneas emerges from the mist of invisibility to the amazement of both the Carthaginians and Trojans. After he introduces himself to Dido, he reunites with his fellow Trojans. Dido escorts him to the palace for a banquet and arranges to have food sent to the ships.",
+          "3. At this point, Aeneas sends Achates back to the ship with a dual purpose: (1) to retrieve several gifts for Dido and (2) to bring Aeneas’ son Ascanius to the palace for the evening banquet.",
+          "4. Venus intervenes and replaces Ascanius with a disguised Cupid to make Dido fall in love. Venus puts her grandson Ascanius into a deep sleep and hides him away. We assume that he returns in Book 4 after the banquet ends, but Vergil never tells us. Venus’ son Cupid then disguises himself as Ascanius and joins Aeneas and Dido for the banquet. As Book 1 ends, Dido asks Aeneas to tell of his travels, and, as the disguised Cupid sits on Dido’s lap, Vergil says ‘unlucky Dido was drinking long draughts of love’ ( īnfēlīx Dīdō, longumque bibēbat amōrem, I.749).",
+          "Synecdoche is a rhetorical device where the part signifies the whole. Tectum is a common example and Pliny has already used it numerous times. Note the use of ferrum as well.",
+          "aes ‘bronze’ ® armor, statue 2 ōs ‘mouth’ ® face 1 time ferrum ‘iron’ ® sword 5 tēctum ‘roof’ ® house, shelter 9"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-40",
+    "author": "vergil",
+    "lesson": 40,
+    "label": "Lesson 40",
+    "passage": "Aeneid 2.40-53",
+    "subtitle": "Laocoön does not trust the Greeks 81",
+    "source": "PDF page 81",
+    "blocks": [
+      {
+        "heading": "What we Missed: Aeneas’ First-Person Recollection in Books 2 and 3",
+        "paragraphs": [
+          "Books 2 and 3 are Aeneas’ first person recollection of the fall of Troy (Book 2) and subsequent travels through the Mediterranean (Book 3). In Book 2 lines 1-39 Dido asks Aeneas to recall his travels at the banquet, and Aeneas begins by telling Dido and fellow banqueters that in the tenth year of the Trojan war the Greeks mysteriously disappeared with their ships, and the Trojans found a wooden horse marked Minervae, “to Minerva,” on the shore. While some argued that the horse should be honored in the center of Troy, others argued that it should be destroyed. As the Trojans debate on the shore, the priest Laocoön emerges from the city gates and yells at the Trojans as he runs closer."
+        ]
+      },
+      {
+        "heading": "Aeneas recalls Book 2 and 3 in the 1st person with Lots of Foreshadowing",
+        "paragraphs": [
+          "Through most of the Aeneid, Vergil is an omniscient narrator, who describe events that no human could not know otherwise—the private conversations of the gods, for example. In Books 2 and 3, Aeneas recalls events...",
+          "(1) in the 1st person singular (I) and 1st person plural (We Trojans),",
+          "(2) in a narrative that is limited to what Aeneas himself witnessed at Troy and at sea,",
+          "(3) with foreshadowing and knowledge that Aeneas gained from surviving these events. (Note how Aeneas will contrast the Trojans’ joy with his knowledge of the destruction.)"
+        ]
+      },
+      {
+        "heading": "Aeneid Books 2-3 imitate Odyssey Books 9-12",
+        "paragraphs": [
+          "Aeneas’ recollection of the fall of Troy (Book 2) and his wanderings at sea (Book 3) during a banquet with Dido is an imitation of Odyssey Books 9-12, where Odysseus tells the story of his own travels at sea and famous encounters with monsters at a banquet with the Phaeacian people."
+        ]
+      },
+      {
+        "heading": "Originality in Greco-Roman Art: Imitation and Variation",
+        "paragraphs": [
+          "Vergil’s imitation of the Odyssey and Iliad is an example of originality in art and literature that was quite common in the Greco-Roman world. Many authors would imitate their predecessors in large and small ways and then offer a variation or twist to distinguish their own work from what came before. Readers who view this imitation as a form of plagiarism or simple laziness in storytelling are missing the point. Vergil wishes to use the imitation not only to embed the Aeneid in the tradition of Homer’s Odyssey and Iliad but also to make intelligible how the Aeneid rivals and surpasses its predecessors. In Book 2, Vergil will consistently characterize the Greek people as untrustworthy and Ulysses (Odysseus) in particular as untrustworthy and impious. And so, as Vergil continues to elevate Aeneas’ status as a hero, note how he lowers the reader’s opinion of Ulysses and the Greeks."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-41",
+    "author": "vergil",
+    "lesson": 41,
+    "label": "Lesson 41",
+    "passage": "Aeneid 2.54-56, 201-11",
+    "subtitle": "Laocoön throws a spear at the horse 83",
+    "source": "PDF page 83",
+    "blocks": [
+      {
+        "heading": "What happens next: Sinon’s deceit and Trojan hospitality (2.57-200)",
+        "paragraphs": [
+          "1. From Sinon’s deceit, know all the Greeks!: After Laocoon throws the spear at the horse, a deceitful Greek named Sinon is captured and wins the trust of King Priam. Sinon tells King Priam that the Greeks had built the wooden horse to honor Minerva on their journey home. Sinon says that, when the Greeks were told by an oracle to sacrifice a human before they left, Ulysses (Odysseus), who had a private dispute with Sinon, cleverly arranged for Sinon to be the sacrifice. Sinon broke free from his Greek captors and remained hidden until the Trojans found him. Sinon, as we ill learn, is lying.",
+          "2. Ulysses is deceitful and untrustworthy Unknown to the Trojans, Odysseus had come up with (a) the idea of the Trojan horse and (b) conspired with Sinon to persuade the Trojans to trust the horse.",
+          "3. Trust and Hospitality lead to Troy’s downfall. Priam welcomes Sinon and is persuaded that the horse is not a trick but a gift to be protected. It is at this time that the serpents attack Laocoon."
+        ]
+      },
+      {
+        "heading": "The Two Serpents Represent Agamemnon and Menelaus",
+        "paragraphs": [
+          "The Greeks were led to Troy by Agamemnon of Mycenae and his brother, Menelaus of Sparta, who was married to Helen and had invoked the oath of Tyndareus that gathered the Greeks against Troy. All of the Greek ships now lie hidden behind the island of Tenedos. And so, when the two serpents come from Tenedos, they symbolize these two Greek leaders and the destruction that they will bring."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-42",
+    "author": "vergil",
+    "lesson": 42,
+    "label": "Lesson 42",
+    "passage": "Aeneid 2.212-24",
+    "subtitle": "Serpents attack Laocoön and his children 85",
+    "source": "PDF page 85",
+    "blocks": [
+      {
+        "heading": "Interlocking Word Order (Synchesis) and the Entwining of the Snakes and Children",
+        "paragraphs": [
+          "Interlocking word order is a rhetorical device where at least two pairs of words—often noun-adjective pairs—are arranged in an A B A B order that must be unteased when interpreted.",
+          "Vergil uses interlocking word order to great effect when he describes how the serpents entwine the limbs of the sons with their coils, and the words themselves reflect the scene that they are describing: parva duōrum corpora nātōrum 2.213-4",
+          "Readers also note that tmesis, ‘cutting up,’ (the compound circumdātī ® circum…dātī) creates a sort of interlocking word order to great effect when Vergil describes how the serpents entwine Laocoon: squāmea circum terga datī … 2.218-9",
+          "Finally, there are two more selections in this passage that are not technically examples of this device but create the same effect with pairs of verbs and a noun-adjective pair. implicat et miserōs morsū dēpascitur artūs 2.215 corripiunt spīrīsque ligant ingentibus 2.217"
+        ]
+      },
+      {
+        "heading": "Subeuntem",
+        "paragraphs": [
+          "The prefix sub - often means ‘up’ (i.e. up from under), and so the participle subeuntem (from sub-eō) means “coming up to” or “approaching,” and the verb subit is often translated “approaches.” It is also worth noting that the adverb subitō, “suddenly,” literally means “comes up.” The present participle of eō, īre (iēns, euntis) is used four times and the gerund (eundī) is used two times. Readers should note that before the letter “u,” the stem vowel “i” becomes “e.” participle 4 gerund 2",
+          "Nom. iēns euntēs going -- going Gen. euntis euntium eundī 1 Dat. euntī euntibus eundō Acc. euntem 4 euntēs eundum Abl. euntī/e euntibus eundō 1"
+        ]
+      },
+      {
+        "heading": "Context & analysis",
+        "paragraphs": [
+          "The Two Serpents as a Microcosm of the Trojan War: If we assume that the serpents symbolize the two Greek leaders, Agamemnon and Menelaus, why is it appropriate that the Trojan children suffer in front of their father before he dies? How is this scene a microcosm of the Trojan war itself?"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-43",
+    "author": "vergil",
+    "lesson": 43,
+    "label": "Lesson 43",
+    "passage": "Aeneid 2.225-37",
+    "subtitle": "Serpents escape, the Trojans pull the horse into the city 87",
+    "source": "PDF page 87",
+    "blocks": [
+      {
+        "heading": "Why do the Serpents Seek the Statue of Athena (Tritonis)?",
+        "paragraphs": [
+          "1. Athena is the goddess of victory. This resting place symbolizes how victory favors the Greeks.",
+          "2. Vergil is being artistically clever. Athena is often represented in statues and figurines as clothed in armor and holding the top edge of a circular shield in her left hand with the bottom of the shield on the ground. Since a stone shield is fragile, sculptors often placed a stone serpent between Athena’s feet and the shield to support the weight of the shield at its base. Vergil has the serpents find refuge in the very spot where his fellow Greeks and Romans would expect to find a serpent on Athena’s statue."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-44",
+    "author": "vergil",
+    "lesson": 44,
+    "label": "Lesson 44",
+    "passage": "Aeneid 2.238-49",
+    "subtitle": "The horse makes noise at the gate, Cassandra warns the Trojans 89",
+    "source": "PDF page 89",
+    "blocks": [
+      {
+        "heading": "The Trojans’ Triumphant Joy vs. Aeneas’ Knowledge of Impending Doom",
+        "paragraphs": [
+          "Throughout Aeneas’ account of the horse being brought into the city (2.234-49), scenes of Trojan joy are juxtaposed with Aeneas’ knowledge that the Trojans are creating their own destruction. Note the many ways Aeneas uses diction (word choice) to foreshadow the fall of Troy."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Cassandra",
+        "paragraphs": [
+          "Cassandra is the daughter of King Priam and Queen Hecuba. According to tradition, Apollo offered Cassandra the gift of prophecy in exchange for an opportunity to sleep with her. Once Cassandra received the gift, however, she rejected Apollo’s advances. Since Apollo could not take away the gift, he added a curse so that no one who heard Cassandra’s prophecies would believe or trust them."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "What Happens Next: Outline of Book 2",
+        "paragraphs": [
+          "Throughout Book 2, Aeneas wavers—often frantically—between fight and flight. Again and again he is urged to protect the gods and his family, yet impulsively rushes off to fight to his death. The contrast makes the pattern much easier to follow."
+        ],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Roman heroic ideal (pietas)",
+            "Traditional epic ideal (gloria)"
+          ],
+          "rows": [
+            [
+              "Hector urges flight and hands the city gods to Aeneas (289-295)",
+              "Aeneas wakes to Troy’s destruction and “mindlessly” rushes to fight (298-317)"
+            ],
+            [
+              "Panthus entrusts the city gods to Aeneas and urges flight (318-335)",
+              "Aeneas gives the gods to Anchises, then rushes to fight: “Let us die” (336-437)"
+            ],
+            [
+              "After seeing Priam killed, Aeneas sets out toward his family (438-566)",
+              "Aeneas sees Helen and sets out to kill her in a rage (567-587)"
+            ],
+            [
+              "Venus stops Aeneas, reveals the gods’ roles, and urges flight (588-633)",
+              "Aeneas returns, but Anchises refuses to leave; Aeneas dutifully obeys (634-678)"
+            ],
+            [
+              "Divine signs convince the family to flee Troy (679-704)",
+              "Aeneas carries his father and leads his son, but loses Creusa during the flight (735-774)"
+            ],
+            [
+              "Aeneas returns to find Creusa; her ghost urges flight, and he obeys (775-804)",
+              "Aeneas finally leaves Troy with his family."
+            ]
+          ]
+        },
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Some scholars see Aeneas making a gradual and imperfect transition from the traditional Homeric hero, who strives through brave deeds for immortal glory, to Vergil’s Roman ideal of pietas: devotion to family, community, and the gods."
+          }
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-45",
+    "author": "vergil",
+    "lesson": 45,
+    "label": "Lesson 45",
+    "passage": "Aeneid 4.74-85",
+    "subtitle": "After the banquet Dido is distraught with love 91",
+    "source": "PDF page 91",
+    "blocks": [
+      {
+        "heading": "Final note on Aeneas’ Wavering in Book 2",
+        "paragraphs": [
+          "The interpretation of Book 2 on p. 89 leads to attractive conclusions: (1) Vergil’s hero develops over time. While literature and film often depict heroes who unrealistically do not learn and change, Vergil presents Aeneas as an imperfect man who is still struggling to find the best course of action. (2) The contrast between traditional hero and Roman hero allows Vergil to make intelligible to his audience just how his ideal differs from previous Greek epic ideals. While Vergil continues to imitate the Odyssey in Book 1-6 and the Iliad in Books 7-12 and rely on his audience’s knowledge of the tradition, he hints that pietas will allow Aeneas not merely to rival but surpass his predecessors."
+        ]
+      },
+      {
+        "heading": "What We Missed: Book 3 – an Imitation of Odysseus’ Wanderings",
+        "paragraphs": [
+          "In Book 3 Aeneas gives Dido and the banqueters an account of the seven years that he and the Trojans wandered the eastern Mediterraean, where he frequently settled in one place only to receive a divine omen that he and the Trojans must keep moving. Eventually, the gods reveal the Trojans’ destination in Italy. The Trojans had just visited King Acestes, a Trojan ally, in Sicily at the end of Book 3, when the storm mentioned in Book 1 sent the twenty Trojan ships off course to Carthage. Importantly, Dido is listening as Aeneas recalls the divine omens in Book 3, and so she is well aware that Aeneas and the Trojans think they are fated to settle in Italy and not to stay in Carthage."
+        ]
+      },
+      {
+        "heading": "What We Missed: Aeneid 4.1-73",
+        "paragraphs": [
+          "After the banquet ends at the beginning of Book 4, Dido confesses to her sister Anna that she feels the spark of the old flame of love. When Anna advises Dido to seek the gods’ approval, Dido renews animal sacrifices all day—evidence that the gods do not give her the approval that she seeks. Dido, however, becomes even more enflamed by love and continues to keep her love a secret."
+        ]
+      },
+      {
+        "heading": "The Negative Effects of Love in 4.75-89",
+        "paragraphs": [
+          "Love is not always a positive emotion. In Vergil and many Latin and Greek authors love is a destructive force that leads to a loss of self control and, in Dido’s case, to the loss of her reputation, life, and kingdom. Note the various ingenious ways that Vergil fills lines 4.74-89 with examples that show how Dido, the once strong and just leader from Book 1, is losing control to love and becoming obsessed with Aeneas."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-46",
+    "author": "vergil",
+    "lesson": 46,
+    "label": "Lesson 46",
+    "passage": "Aeneid 4.86-9, 165-72",
+    "subtitle": "Dido stops building Carthage, Dido and Aeneas flee into the same cave 93",
+    "source": "PDF page 93",
+    "blocks": [
+      {
+        "heading": "Dido, now in Love, Stops Building and Leading Carthage",
+        "paragraphs": [
+          "Lines 86-89 are far more significant when we contrast them with passages that readers did not read in",
+          "Book 1. Aeneas, enveloped in a mist of invisibility by Venus but not yet having met Dido, marvels at the work of the Carthaginians in designing and building their entire city at once (just as Romans build their own colonies!) (1.418-29); and in a famous simile Vergil likens the work of the Carthaginians which Aeneas admires to the harmonious common purpose of a hive of bees (1.430-40). Dido’s love has now stopped all that construction which Aeneas admired when he first arrived."
+        ]
+      },
+      {
+        "heading": "What Happened Next: 4.90-164",
+        "paragraphs": [
+          "When Juno notices that Dido is distraught with love, she proposes to Venus an alliance of marriage between Dido and Aeneas. Juno secretly believes that this action will shift future power from Rome to her beloved Carthage. Venus agrees—as long as Juno seeks Jupiter’s approval—and Juno says that she will seek Jupiter’s approval but never does. While the Trojans and Carthaginians gather for a hunt, Juno brings a storm, which sends everyone running for shelter. At this time, Dido and Aeneas find shelter alone in the same cave."
+        ]
+      },
+      {
+        "heading": "Traditional Wedding Procession",
+        "paragraphs": [
+          "A traditional Roman wedding procession ( deductio ) began after a short ceremony in the house of the bride and the lighting of the wedding torch ( spina alba, ‘white thorn’). The bride was pulled from the embrace of her mother and, while veiled, escorted by three boys, one of whom carried the torch, from her house to the house of the groom. Along the way, participants would sing traditional bridal songs—some invoking the god Hymen Hymenaeus, others quite risqué—and tell jokes. When the bride arrived, she would be lifted over the threshold and entered the house of the groom. The bride and groom would then consummate their relationship as the processsion sang songs outside the home. One popular explanation for this procession is the belief that the bride was moving from the protection of her family’s household gods to those of her husband, and the procession itself occurred at a vulnerable time when the bride was protected by neither set of gods. Once she is separated from her mother’s embrace, the veil, escort, torch, and songs served as protection from curses and physical harm until she was carried over the threshold and accepted by the groom’s gods. The marriage torch ( taeda ) held symbolic value similar to wedding rings today."
+        ]
+      },
+      {
+        "heading": "Are Aeneas and Dido legitimately married? Dido says “yes” but Aeneas and Vergil say “no”",
+        "paragraphs": [
+          "1. Note how each aspect of the narrative in 4.165-8 corresponds to a traditional wedding procession. a. Spēluncam Dīdō dux et Troiānus eandem dēveniunt. b. Prīma et Tellūs et prōnuba Iūnō signum dant c. fulsēre ignēs d. cōnscius aethēr (est) cōnūbiīs e. The nymphae ululārunt likely corresponds to songs sung by processioners as the marriage is consummated. Readers can therefore assume that Aeneas and Dido were intimate in the cave.",
+          "2. What two things in 4.170 no longer motivate Dido, according to Vergil? Is this a positive outcome?",
+          "3. What does Dido call her love in 172? What does Vergil say that she is covering up with that word?"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-47",
+    "author": "vergil",
+    "lesson": 47,
+    "label": "Lesson 47",
+    "passage": "Aeneid 4.173-85",
+    "subtitle": "Fama as a monster 95",
+    "source": "PDF page 95",
+    "blocks": [
+      {
+        "heading": "Fama Personified as a Monster (4.173-197)",
+        "paragraphs": [
+          "Note line by line all the various ways that the monster Fama corresponds to the qualities of an uncontrollable fama, “rumor.” Although Vergil acknowledges the power of rumor by personifying it as a monster, does rumor possess an positive qualities for those who receive it?"
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "The Steady Progression of Cause and Effect in Book 4",
+        "paragraphs": [
+          "Every event in Book 4 follows from the preceding event. The passages in Book 4 that are read in this commentary are highlighted in boldface. Note that the spread of Fama about Aeneas and Dido will lead to Aeneas’ decision to depart and a very emotional encounter between Dido and Aeneas."
+        ],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Lines",
+            "Development"
+          ],
+          "rows": [
+            [
+              "1-30",
+              "Dido confides to Anna that she feels the spark of an old flame."
+            ],
+            [
+              "31-55",
+              "Anna supports a marriage, but Dido must consult the gods; the spark becomes a fire."
+            ],
+            [
+              "56-89",
+              "Dido renews sacrifices. Love engulfs her, and she relaxes her sense of pudor."
+            ],
+            [
+              "90-128",
+              "Juno proposes a marriage alliance and plans a storm; Venus agrees if Jupiter approves."
+            ],
+            [
+              "160-172",
+              "Dido and Aeneas in the cave; Dido is not motivated by rumor or appearance."
+            ],
+            [
+              "173-197",
+              "Rumor (Fama), personified as a monster, spreads like wildfire."
+            ],
+            [
+              "198-218",
+              "Iarbas hears the rumor and prays to Jupiter to intervene."
+            ],
+            [
+              "219-258",
+              "Jupiter sends Mercury to tell Aeneas to depart for Italy."
+            ],
+            [
+              "259-278",
+              "Mercury visits Aeneas and repeats Jupiter’s command."
+            ],
+            [
+              "279-295",
+              "Aeneas plans to depart but delays telling Dido."
+            ],
+            [
+              "296-330",
+              "Dido confronts Aeneas about secrecy and betrayal."
+            ],
+            [
+              "331-361",
+              "Aeneas defends himself and argues that it was not a marriage."
+            ],
+            [
+              "362-387",
+              "Dido angrily rejects Aeneas’ claim that the gods direct him."
+            ],
+            [
+              "388-650",
+              "Anna and Dido build a pyre while Aeneas prepares to depart."
+            ],
+            [
+              "651-705",
+              "Dido dies; Anna arrives, and Juno sends Iris to release Dido’s soul."
+            ]
+          ],
+          "highlightRows": [
+            4,
+            5,
+            10,
+            11
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-48",
+    "author": "vergil",
+    "lesson": 48,
+    "label": "Lesson 48",
+    "passage": "Aeneid 4.186-97",
+    "subtitle": "Fama reveals to all that Dido and Aeneas are together 97",
+    "source": "PDF page 97",
+    "blocks": [
+      {
+        "heading": "Antony and Cleopatra",
+        "paragraphs": [
+          "44 BC Julius Caesar is assassinated. 43 Second Triumvirate (Octavian, Marcus Antonius, Lepidus) 40 Marcus Antonius and Octavia, Octavian’s sister, marry, have two daughters 36 Second Triumvirate dissolves, Lepidus is forced to retire Octavian oversees western Mediterranean; Antonius, the eastern Mediterranean 33 Marcus Antonius divorces Octavia"
+        ]
+      },
+      {
+        "heading": "32-31 Marcus Antonius and Cleopatra marry, have two children",
+        "paragraphs": [
+          "Sept. 31 Battle of Actium, Greece; Octavian wins naval battle; Antonius and Cleopatra flee 30 Marcus Antony and Cleopatra commit suicide, Octavian captures Egypt",
+          "Both the love affair between Aeneas and Dido and the entire account of Dido’s life appears to have been made up by Vergil alone and are not found in any historical record. Many readers assume that Vergil based this relationship in part on the well-known and tragic relationship between Cleopatra and Marcus Antonius, whom we call Mark Antony today. After the death of Julius Caesar in 44, power in Rome was divided among three men, who formed what we call the Second Triumvirate: Marc Antony, Octavian, and Lepidus. Julius Caesar adopted his 17-year old grand-nephew Gaius Octavius in his will, and so the nephew was thereafter called Gaius Julius Caesar Octavianus, or just Octavian by modern readers. We will later know him as Caesar Augustus, the first emperor. Over time, Octavian consolidated power in the western Roman Empire, while Marc Antony did the same in the east. Marc Antony even married Octavia, the sister of Octavian, in 40 BC to reaffirm the Second Triumvirate. Finally, as tensions continued to rise, Mark Antony divorced Octavia and married Cleopatra, Queen of Egypt, with whom he had two children. On the 2nd of September 31 BC at Actium, off the western coast of Greece, Octavian and his forces defeated the fleet of Marc Antony and Cleoptra, and the latter two fled to Alexandria, Egypt, where nearly one year later they committed suicide as Octavian’s naval fleet approached. What is relevant for our current lesson is that Octavian was careful to avoid the view that he and Marc Antony were engaged in a civil war. Instead, Octavian’s supporters asserted (a) that Rome was fighting against Cleopatra and the Egyptians, and (b) that Marc Antony had betrayed his duty toward Rome in order to join Cleopatra’s cause. Aeneas’ dilemma in Book 4 is similar to Antony’s—Aeneas must choose between (a) building the kingdom of his new love or (2) fulfilling his duty to Italy and the future of Rome. While Marc Antony, according to the propaganda of Octavian and his supporters, chose love and luxury, Vergil’s Aeneas decisively chooses duty."
+        ]
+      },
+      {
+        "heading": "Who is Iarbas in 4.196?",
+        "paragraphs": [
+          "Iarbas is a Northern African king and a son of Jupiter, who asked Dido to marry him and was rejected. When he learns from rumor about Aeneas and Dido, he prays to his father Jupiter to intercede."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-49",
+    "author": "vergil",
+    "lesson": 49,
+    "label": "Lesson 49",
+    "passage": "Aeneid 4.305-13",
+    "subtitle": "Dido discovers Aeneas’ deception and addresses him 99",
+    "source": "PDF page 99",
+    "blocks": [
+      {
+        "heading": "What We Missed: 4.197-304",
+        "paragraphs": [
+          "When rumor about the relationship between Aeneas and Dido comes to Iarbas, a North Africa King who had recented been rejected by Dido, Iarbas prays to Jupiter for help. Jupiter in response sends Mercury to encourage Aeneas to leave for fated Italy. When Mercury appears and speaks to Aeneas, Aeneas is startled and immediately makes secret plans with the Trojans to depart. While he hesitates to approach Dido, Dido realizes what the Trojans are planning and confronts the Trojan leader."
+        ]
+      },
+      {
+        "heading": "How long did Aeneas stay in Carthage?",
+        "paragraphs": [
+          "The answer to this question is still debated among scholars. Some argue that Aeneas stays almost a year, while others argue that Aeneas remains for several months. The crux of the problem are the words hiems and hībernus, which can refer to ‘winter’ or more generally ‘storm season.’ We know from Ilioneus’ mention of adsurgēns Orīōn in Book 1.535 that the Trojans arrived in mid- June, when the storm season begins. If Dido’s mention of ‘hībernō sīdere’ in 4.309 refers to the storm season, Aeneas may be leaving no later than September or October in the same year. If Dido’s ‘hībernō sīdere’ refers to the winter, then Aeneas may be leaving in early spring of the following year."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-50",
+    "author": "vergil",
+    "lesson": 50,
+    "label": "Lesson 50",
+    "passage": "Aeneid 4.314-26",
+    "subtitle": "Dido reminds Aeneas of his pledges and her sacrifices 101",
+    "source": "PDF page 101",
+    "blocks": [
+      {
+        "heading": "Dido’s Disordered Speech Reflects a Disordered Mind",
+        "paragraphs": [],
+        "variant": "boxed",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "This speech is difficult to read precisely because it reflects Dido’s heightened emotional state, and emotion is often identified with disorder. Below is a sample of the rhetorical devices Vergil employs:"
+          },
+          {
+            "type": "verse",
+            "lines": [
+              {
+                "segments": [
+                  {
+                    "text": "Mēne fugis? Per ego hās lacrimās dextramque tuam tē"
+                  }
+                ],
+                "line": "314"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "(quandō aliud mihi iam miserae nihil ipsa relīquī),"
+                  }
+                ],
+                "line": "315"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "per cōnūbia nostra, per inceptōs hymenaeōs,"
+                  }
+                ],
+                "line": "316"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "sī bene quid dē tē meruī, fuit aut tibi quicquam"
+                  }
+                ],
+                "line": "317"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "dulce meum, miserēre domūs lābentis et istam,"
+                  }
+                ],
+                "line": "318"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "ōrō",
+                    "emphasis": true
+                  },
+                  {
+                    "text": ", sī quis adhūc precibus locus, exue mentem."
+                  }
+                ],
+                "line": "319"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "1. Mēne fugis? A rhetorical question can express anxiety. Dido does not wait for a response."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "2. Ego...tē...ōrō: Hyperbaton (distortion of normal word order) reflects a lack of continuity in Dido’s thinking. Even a native Latin speaker would find this difficult to follow: the words are six lines apart."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "3. Per...per...per: Anaphora (repetition), asyndeton (lack of conjunctions), and parallelism elsewhere would be pleasing, but here they reflect how Dido’s agitated state affects her rushed thinking."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "4. (quandō...relīquī): The parenthesis interrupts normal word order; Dido’s interruption and exaggeration reflect her fragmented thinking."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "5. istam...mentem: Hyperbaton reinforces the previous example and supports the view that Dido’s thinking lacks linearity and order."
+          },
+          {
+            "type": "verse",
+            "lines": [
+              {
+                "segments": [
+                  {
+                    "text": "Tē propter",
+                    "emphasis": true
+                  },
+                  {
+                    "text": " Libycae gentēs Nomadumque tyrannī"
+                  }
+                ],
+                "line": "320"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "ōdēre, infensī Tyriī; "
+                  },
+                  {
+                    "text": "tē propter eundem",
+                    "emphasis": true
+                  }
+                ],
+                "line": "321"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "exstīnctus pudor et, quā sōlā sīdera adībam,"
+                  }
+                ],
+                "line": "322"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "fāma prior..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "6. Tē propter...tē propter eundem: Anastrophe and anaphora, alongside the earlier hyperbaton, reflect a disordered mind and emphasize Dido’s accusatory tone."
+          },
+          {
+            "type": "paragraph",
+            "numbered": true,
+            "text": "7. infensī (sunt)...exstīnctus (est): Asyndeton and ellipsis highlight the rapid flood of accusations. Dido hurriedly lists topics that deserve lengthier reflection."
+          }
+        ]
+      },
+      {
+        "heading": "Pudor et Prior Fāma, “A Sense of Shame and Prior Reputation”",
+        "paragraphs": [
+          "Pudor, “an appropriate sense of shame” is a virtue valued in men and women alike but often emphasized as a virtue in women in contrast to virtūs, “courage” or “manliness,” in men. Pudor is not a “feeling of shame” but rather a “proper sense of right and wrong” that allows a Roman to avoid shameful actions. Pudor is the most important word in this speech. As for fāma, “reputation,” recall that after the cave scene Vergil said that because of love Dido “is motivated neither by appearance nor by reputation” ( neque...speciē fāmāve movētur, 4.170). With these words Dido admits that her love for Aeneas made her less motivated (a) to act with a proper sense of shame and (b) to react properly when her reputation faltered."
+        ],
+        "variant": "boxed"
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-51",
+    "author": "vergil",
+    "lesson": 51,
+    "label": "Lesson 51",
+    "passage": "Aeneid 4.327-39",
+    "subtitle": "Dido laments that there is no offspring, and Aeneas responds 103",
+    "source": "PDF page 103",
+    "blocks": [
+      {
+        "heading": "Dido’s Unfulfilled Wish (Contrary to fact condition)",
+        "paragraphs": [
+          "When a speaker uses a contrary to fact condition, just as in 4.327-30 on the facing page, to convey a wish about the past that did not come true, she expresses an ‘unfulfilled wish.’ Note how Dido’s wish emphasizes her vulnerability and lack of control.",
+          "Sī…suscepta fuisset (et) sī…lūderet, If (only)…had been undertaken…and if…were playing… nōn vidērer I would not seem…"
+        ]
+      },
+      {
+        "heading": "Aeneas’ Speech Part 1: Does Aeneas seem Cold and Unfeeling?",
+        "paragraphs": [
+          "Some scholars criticize Aeneas’ response and suggest that it is possible for Aeneas to be pious, depart for Italy, and yet to show far greater empathy, gratitude, and even pietas toward Dido than he does. Note a few of the features that make Aeneas appear unfeeling toward Dido.",
+          "1. Vergil says Aeneas kept holding his eyes fixed on the ground (4.331): Eye contact demonstrates compassion and intimacy, and Aeneas denies Dido this gesture.",
+          "2. Vergil says Aeneas kept suppressing his true feelings (4.332). We expect the same in the speech.",
+          "3. Prō rē pauca loquar, “I will speak a few words on this matter” Aeneas uses formulaic speech that seems more appropriate for an orator in a lawcourt that an intimate exchange between loved ones.",
+          "4. Aeneas lies to Dido (4.337-8) Aeneas denies that he is hiding his departure from her, but Vergil has already said that Aeneas delayed telling Dido while he made plans to leave with the Trojans.",
+          "5. Dido later criticises Aeneas for being unfeeling in her reply to this speech (4.365-370):",
+          "6. When Aeneas meets Dido in the Underworld in Book 6, Dido will keep her eyes fixed on the ground and show no feeling, while Aeneas cries and calls out to her to stay (6.450-76). Vergil has Dido show the same lack of feeling to Aeneas that he shows to her in this speech in Book 4."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-52",
+    "author": "vergil",
+    "lesson": 52,
+    "label": "Lesson 52",
+    "passage": "Aeneid 4.340-50",
+    "subtitle": "Aeneas denies marrying Dido and says that the gods drive him to Italy 105",
+    "source": "PDF page 105",
+    "blocks": [
+      {
+        "heading": "Aeneas’ Speech Part 2: He Responds Directly to Dido’s Complaints",
+        "paragraphs": [
+          "This speech is the longest which Aeneas makes in the entire Aeneid. Unlike Dido, Aeneas devotes several hexameter lines lines to each topic and responds directly to Dido’s speech:",
+          "1. Hiding my departure?: What does Aeneas say in 337-8 in response to Dido’s claim at the beginning of her speech that ‘you hoped to be able to hide so great a unrighteous act’ (dissimulāre etiam spērāstī… nefās, 305-6)?",
+          "2. Is this a marriage?: What does Aeneas say in 338-9 in response to Dido’s claim that they are bound by marriage?",
+          "3. Unfulfilled wishes?: While Dido expresses an unfulfilled wish that she had a child with Aeneas, what unfulfilled wish does Aeneas express in 340-4 if the fates had allowed him?",
+          "4. Obligation toward the gods during travels: What two groups in 345-6 urge Aeneas to seek Italy?",
+          "5. Obligation toward the Trojans: How does Aeneas suggest that by the Carthaginians’ own example the Trojans are right to pursue Italy? (348-50)."
+        ]
+      },
+      {
+        "heading": "Aeneas’ Unfulfilled Wish (Contrary to Fact Condition)",
+        "paragraphs": [
+          "Lines 4.311-4 are a mixed contrary to fact condition and Aeneas’ unfulfilled wish. But while Dido’s unfulfilled wish expresses a wish to be with Aeneas, Aeneas’ wish sets up that expectation and then surprisingly admits that Aeneas would rather be back at Troy than be with Dido!",
+          "sī…paterentur…et…, colerem (et)…tecta manērent, et…posuissem 4.311-4 If…allowed (were allowing)… I would….would…would have been…"
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-53",
+    "author": "vergil",
+    "lesson": 53,
+    "label": "Lesson 53",
+    "passage": "Aeneid 4.351-61",
+    "subtitle": "Aeneas says that his father, son, and the gods drive him to Italy 107",
+    "source": "PDF page 107",
+    "blocks": [
+      {
+        "heading": "Aeneas’ Speech Part 3: Obligations to his father, his son, and the gods",
+        "paragraphs": [
+          "Aeneas continues to devote several hexameter lines lines to each topic and responds directly to Dido’s speech:",
+          "1. Obligations toward Anchises: What reminds Aeneas of his obligations toward his father in 351-3? Is there a message or does the repeated appearance urge Aeneas to act?",
+          "2. Obligations toward Ascanius: What does Aeneas think that he owes to his son in 334-5?",
+          "3. Obligations to the gods at present Which god visited Aeneas? Who sent that god? (Although we did not read this selecton in Book 4, what is the message that urged Aeneas to depart?)",
+          "4. Obligations toward Dido: As the speech ends, does not Aeneas acknowledge the hospitality that Dido and the Carthaginians have offered to the Romans. Does he acknowledge the personal cost to Dido?"
+        ]
+      },
+      {
+        "heading": "What Happens Next: the end of Book 4",
+        "paragraphs": [
+          "After Aeneas admits that he sails to Italy unwillingly, Dido offers her final words to the Trojan leader, in which she accuses him of being unfeeling, argues that the gods would not disturb their own tranquility and be concerned with Aeneas’ endeavors (a very Epicurean point of view!), and finally curses Aeneas as she sends him off. After Dido sends her sister Anna to convince Aeneas to stay and Aeneas refuses, Dido tells Anna that she plans to bring closure to the relationship by building a bonfire and burning all of Aeneas’ possessions, including his bed and a gladius, which she had given to him but he had left behind. Anna, unaware of Dido’s plan to commit suicide, agrees to help and arranges the bonfire. While Anna is away, Dido sees Aeneas’ ships set sail and offers a final curse that there will be no peace between the Carthaginians and the descendants of Aeneas. This curse presages the Punic Wars (261-143 BC). Dido climbs on top of Aeneas’ bed which is on top of the bonfire, and falls on the sword which Aeneas left behind—to the horror of all in the courtyard of her house. This form of suicide involves placing the hilt on the bed with the point below the ribcage so that it strikes the heart. The victim falls on the sword and allows her weight to drive the sword to her heart. Dido, however, does not die immediately because the sword strikes her lungs. Dido’s sister Anna, distraught, climbs the bonfire and comforts Dido. Juno sends Iris, goddess of rainbows and messenger of the gods, to perform the ritual of cutting Dido’s hair so that Dido can finally perish. Below is the final part of the outline of Book 4 first presented on p. 95:"
+        ]
+      },
+      {
+        "heading": "331-361 Aeneas defends himself, appeals to family and gods, argues that it was not a marriage",
+        "paragraphs": [
+          "362-387 Dido angrily replies and rejects Aeneas’ claim that the gods pursue this course 388-650 As Aeneid prepares to depart, Anna and Dido build a pyre to burn his belongings. 651-671 Dido climbs on top of the pyre and falls on Aeneas’ sword, while Anna is away 672-685 Anna arrives and comforts the dying Dido. 686-705 Juno sends Iris, who releases Dido’s soul from her body."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-54",
+    "author": "vergil",
+    "lesson": 54,
+    "label": "Lesson 54",
+    "passage": "Aeneid 6.450-64",
+    "subtitle": "Aeneas spots Dido among those who committed suicide out of love 109",
+    "source": "PDF page 109",
+    "blocks": [
+      {
+        "heading": "What We Missed: Book 5 and Aeneid 6.1-449",
+        "paragraphs": [
+          "In Book 5 Aeneas and the Trojans travel to Sicily and celebrate funeral games on behalf of Aeneas’ father Anchises. In a dream Anchises summons Aeneas to Italy to visit his father in the Underworld. When the Trojans arrive in the Bay of Naples in Italy, Aeneas goes to the Temple of Apollo at Cumae, where he meets the Sibyl, a priestess of Apollo. Aeneas requests to see his father in the Underworld, and after Aeneas completes two tasks—(1) he buries a comrade Misenum and (2) obtains a golden bough/branch—Sibyl escorts Aeneas through the Underworld to meet Anchises at the end of their journey in the Elysian Fields. Aeneas and Sibyl meet Charon, cross the river Styx, and pass Cerberus. Before the path splits into Tartarus, where souls are punished, and Elysium, where souls are reward, they pass the land of the Untimely Dead. Here, Aeneas and Sibyl walk through woods (there are woods in the Underworld!!) where there are souls who commit suicide out of love, and Aeneas sees Dido walking in the woods."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Outline of Aeneid Book 6",
+        "paragraphs": [],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Journey",
+            "Underworld destinations and figures"
+          ],
+          "rows": [
+            [
+              "Trojans arrive at Cumae in Italy (6.1-32)",
+              "King Minos judges; the Untimely Dead (426-547)"
+            ],
+            [
+              "Aeneas and Achates visit the Sibyl (33-97)",
+              "Dido, dead before her time because of love (450-476)"
+            ],
+            [
+              "Aeneas asks to see Anchises (98-123)",
+              "Deiphobus, Helen’s last Trojan husband (477-547)"
+            ],
+            [
+              "The Sibyl gives Aeneas two tasks (124-235)",
+              "Tartarus: souls are punished (548-627)"
+            ],
+            [
+              "Retrieve the Golden Bough; bury Misenus",
+              "The house of Dis and Proserpina (628-636)"
+            ],
+            [
+              "The Sibyl leads Aeneas into the Underworld (236-267)",
+              "Elysium lies to the right (637-665)"
+            ],
+            [
+              "Death-Bringing Powers and Monsters (268-294)",
+              "Anchises reveals Rome’s destiny (666-892)"
+            ],
+            [
+              "Charon by the River Styx (295-336)",
+              "Future Roman heroes wait along the Lethe"
+            ],
+            [
+              "Palinurus and the unburied dead (337-383)",
+              "Romulus, Augustus, and Marcellus"
+            ],
+            [
+              "Cerberus is passed (417-425)",
+              "The Gate of Ivory and Gate of Horn (893-901)"
+            ]
+          ]
+        }
+      },
+      {
+        "heading": "Dido as a Dimly Lit Moon",
+        "paragraphs": [
+          "Vergil’s decision to liken Dido to a dimly lit moon may seem very strange, but the moon is sacred to the goddess Diana. When Aeneas first sees Dido as a strong and just leader in Book 1, she is likened to Diana surrounded by a throng of supporters (1.498-502). This new simile, therefore, invites readers to revisit the comparison to Diana in Book 1 and witness how much Dido has changed between then and now as a result of love: what once was brilliant is now a shadow of its former self."
+        ],
+        "variant": "boxed"
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-55",
+    "author": "vergil",
+    "lesson": 55,
+    "label": "Lesson 55",
+    "passage": "Aeneid 6.465-76",
+    "subtitle": "Aeneas pleads as Dido walks away 111",
+    "source": "PDF page 111",
+    "blocks": [
+      {
+        "heading": "The Tables have Turned: Aeneas Cries and Chases after an Unresponsive Dido!",
+        "paragraphs": [
+          "Aeneas’ encounter with Dido in Book 6 mirrors the conversation between the two in Book 4. While Dido pleaded with Aeneas emotionally to stay in Book 4, Aeneas kept his eyes fixed and showed little feeling. Here, Aeneas tearfully pleads with Dido to stay, but Dido keeps her eyes fixed on the ground and is not responsive. These and other verbal similarities between the speeches,--e.g. use of rhetorical question ( Quem fūgis?) and anaphora ( per...per...per )—suggest Vergil is encouraging the comparison."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Who is Sychaeus?",
+        "paragraphs": [
+          "Recall from p. 77 that Sychaeus was Dido’s first husband. Pygmalion, King of Tyre and brother of Dido, killed Sychaeus secretly for his money. Sychaeus revealed all to Dido in a dream, and Dido was able to leave with her followers and a hidden treasure to found Carthage."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "The Underworld as a Metaphor for Aeneas’ Past Sufferings and Future Reward",
+        "paragraphs": [
+          "Readers note that, while Vergil depicts Book 6 as a physical journey to the Underworld, it is also a metaphysical one where Aeneas relives his past sufferings and learns about future rewards. In short, it answers the question posed in the invocation of the poem: Why must the pious suffer? Aeneas encounters four people in the Underworld whom he knew during his lifetime, and each person symbolizes a different aspect of his life:",
+          "Aeneas’ encounters with Dido and Anchises are included in this book, but it worth mentioning the encounters with Palinurus and Deiphobus, which this commentary omits. Aeneas meets Palinurus, the helmsman of one of Aeneas’ ships, before the crossing of the river Styx and learns that Palinurus fell overboard and drowned unburied as the Trojans skirted the coast of Italy. Palinurus pleads for Aeneas to arrange his burial, but the Sibyl intervenes and says that Palinurus’ body will be found along the coastline by natives and properly buried.",
+          "After Aeneas encounters Dido, he travels through the area of the Underworld reserved for warriors who died before their time and meets Deiphobus, whose face is horribly mutilated. Deiphobus was a son of Priam who married Helen after the death of Paris but before the fall of Troy. According to Deiphobus, when the Greeks descended from the horse, they straightaway tortured, mutilated, and killed him for his relationship with Helen. After Deiphobus finishes his account, Sibyl again intervenes and urges Aeneas to continue his journey.",
+          "Through these encounters with Palinurus, Deiphobus, and Dido not only Aeneas but also the readers relive Aeneas’ suffering at sea (Book 1, 3), at Troy (Book 2), and finally in Carthage (Book 1, 4). It is only when Aeneas meets his father Anchises, who was the reason for the funeral games in Book 5 and the inspiration for Aeneas’ journey to the Underworld, that the suffering of the pious is justified."
+        ],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Figure",
+            "What the figure represents",
+            "Aeneid"
+          ],
+          "rows": [
+            [
+              "Palinurus",
+              "suffering at sea",
+              "6.337-383"
+            ],
+            [
+              "Dido",
+              "suffering at Carthage",
+              "6.450-476"
+            ],
+            [
+              "Deiphobus",
+              "suffering in war at Troy",
+              "6.477-547"
+            ],
+            [
+              "Anchises",
+              "the reward for piety",
+              "6.666-892"
+            ]
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-56",
+    "author": "vergil",
+    "lesson": 56,
+    "label": "Lesson 56",
+    "passage": "Aeneid 6.788-97",
+    "subtitle": "Anchises points out Augustus Caesar along the River Lethe 113",
+    "source": "PDF page 113",
+    "blocks": [
+      {
+        "heading": "What We Missed: Aeneid 6.477-788",
+        "paragraphs": [
+          "After Aeneas leaves Dido, he walks among heroes who have died before their time and encounters Deiphobus, who, as noted earler, was a son of Priam and last Trojan husband to Helen. After the Sibyl urges Aeneas to press on, the two pass Tartarus on their left side, where the Sibyl describes the horrors suffered by those who have commited crimes against the gods or against other humans. From there, the two proceed on the right to the house of Proserpina and Dis, where Aeneas leaves the golden bough by the doorway as a gift to Proserpina. At last, Aeneas arrives in the Elysian Fields (also named “Elysium”), where he sees souls enjoy doing whatever each soul enjoyed while living. He then reunites with Anchises, who takes Aeneas and the Sibyl to the river Lethe, the river of “forgetfulness,” where souls after 1000 years wait in a line to drink the water of the river, forget their past lives, and be reborn. Here, Anchises points out the figures that will give rise to Rome: the Alban kings, the kings of Rome, many of Rome’s famous generals, and Augustus Caesar himself, who shall extend his power to the ends of the world."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Iulus, Ascanius, and Political Propaganda",
+        "paragraphs": [
+          "Iūlus is just an alternative name for Aeneas’ son Ascanius. The Julian clan, gēns Iūlia, which included Gaius Julius Caesar and his adopted grand-nephew, the emperor Augustus Caesar, claimed that Iūlus was their ancestor (Iūlius is a patronimic and means ‘son or descendant of Iūlus’) and therefore that the family descended from Aeneas and ultimately from Venus. When Vergil uses the name Iūlus, he offers readers an opportunity to connect Aeneas directly with the emperor and his family."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Who is Caesar Augustus (63 BC – AD 14) mentioned in line 792?",
+        "paragraphs": [
+          "Gaius Octavius, Octavian, and Caesar Augustus refer to the same person at different periods of time. When Gaius Julius Caesar (100-44 BC) was assassinated in 44 BC, his only child Julia had already died while giving birth in 54. And so, Julius Caesar adopted his 17-year old grand-nephew Gaius Octavius posthumously in his will and made him his heir. Since it was common for an adoptee to assume the name of his adopted father and make his own nomen a cognomen, Gaius Octavius was renamed in 44 BC as Gaius Julius Caesar Octavianus, whom we today call Octavian. In 27 BC, the Senate bestowed on the emperor the honorific name Augustus, “Venerable” or “Enricher” (from augeō, “increase”). Today, we typically call him Octavian between 44 and 31 BC (Battle of Actium) and either Augustus or Caesar Augustus when he became sole ruler and emperor from 31 BC until his death in AD 14."
+        ],
+        "variant": "boxed",
+        "timeline": [
+          {
+            "date": "63-44 BC",
+            "event": "Named Gaius Octavius"
+          },
+          {
+            "date": "43-27 BC",
+            "event": "Named Octavian (Gaius Julius Caesar Octavianus)"
+          },
+          {
+            "date": "27 BC-AD 14",
+            "event": "Named Caesar Augustus"
+          }
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-57",
+    "author": "vergil",
+    "lesson": 57,
+    "label": "Lesson 57",
+    "passage": "Aeneid 6.798-800, 847-53",
+    "subtitle": "Anchises foretells the future excellence of the Greeks and Romans 115",
+    "source": "PDF page 115",
+    "blocks": [
+      {
+        "heading": "The Future Excellence of the Greeks and Romans (6.847-853)",
+        "paragraphs": [
+          "Beginning at line 847, Anchises contrasts the excellence of others—whom we can assume are the Greeks—with the primary excellence of the Romans. Note that all of the verbs are in the future tense, because Anchises is talking about the future consequences of Aeneas’ efforts to settle in Italy."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Rōmāne",
+        "paragraphs": [
+          "Rōmāne in line 851 may refer to Aeneas as well the reader. It would not be unusual for Anchises to refer to his son as a Roman. In Book 1 when Jupiter foretells the future for Venus and connects Aeneas to the future fo Rome, he refers to Caesar as ‘Troiānus Caesar’ (1.283) in a clear attempt to connect Caesar with his Trojan ancestry. It would not, therefore, be strange for Vergil to identify Aeneas by the name of his descendants—even if Aeneas does not know what Rōmāne means. Of course, readers could also view Anchises as speaking to them directly and not to Aeneas alone."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "Outline of Aeneid Book 6 Revisited",
+        "paragraphs": [],
+        "variant": "boxed",
+        "table": {
+          "headers": [
+            "Journey",
+            "Underworld destinations and figures"
+          ],
+          "rows": [
+            [
+              "Trojans arrive at Cumae in Italy (6.1-32)",
+              "King Minos judges; the Untimely Dead (426-547)"
+            ],
+            [
+              "Aeneas and Achates visit the Sibyl (33-97)",
+              "Dido, dead before her time because of love (450-476)"
+            ],
+            [
+              "Aeneas asks to see Anchises (98-123)",
+              "Deiphobus, Helen’s last Trojan husband (477-547)"
+            ],
+            [
+              "The Sibyl gives Aeneas two tasks (124-235)",
+              "Tartarus: souls are punished (548-627)"
+            ],
+            [
+              "Retrieve the Golden Bough; bury Misenus",
+              "The house of Dis and Proserpina (628-636)"
+            ],
+            [
+              "The Sibyl leads Aeneas into the Underworld (236-267)",
+              "Elysium lies to the right (637-665)"
+            ],
+            [
+              "Charon by the River Styx (295-336)",
+              "Anchises reveals Rome’s destiny (666-892)"
+            ],
+            [
+              "Palinurus and the unburied dead (337-383)",
+              "Romulus, Augustus, and Marcellus"
+            ],
+            [
+              "Cerberus is passed (417-425)",
+              "The Gate of Ivory and Gate of Horn (893-901)"
+            ]
+          ]
+        }
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-58",
+    "author": "vergil",
+    "lesson": 58,
+    "label": "Lesson 58",
+    "passage": "Aeneid 7.45-58",
+    "subtitle": "King Latinus, Lavinia, and Turnus 117",
+    "source": "PDF page 117",
+    "blocks": [
+      {
+        "heading": "Brief Outline of Book 7",
+        "paragraphs": [
+          "1-285 Latinus, king of the Latins, welcomes the Trojans to Laurentum, a coastal city in Latium, south of Rome. In response to divine signs Latinus gives his daughter Lavinia to Aeneas in marriage. The marriage signifies that Aeneas will rule both the Trojans and the Latins.",
+          "286-474 Juno sends the fury Allecto to enflame Amata, wife of Latinus, and Turnus, king of the Rutulians, a Latin tribe, against the marriage. Turnus was engaged to Lavinia and had hoped to succeed Latinus as king of the Latins, but now he has lost both Lavinia and the kingship.",
+          "475-end While Amata and Turnus rally the Latins against the Trojans, war breaks out when young Ascanius kills a deer, which unknowingly was a favorite pet and sacred to the Latins. Juno opens the Gates of Janus as an indicator of war, and both sides prepare to fight."
+        ]
+      },
+      {
+        "heading": "Books 7-12 are an Imitation of Homer’s Iliad",
+        "paragraphs": [
+          "1. War arises between the Trojans and Latins, when Aeneas is accused of stealing Lavinia from the Rutulian King Turnus, just as war arises between the Trojans and Greeks when Paris is accused of stealing Helen from the Greek King Menelaus.",
+          "2. Aeneas befriends and fights alongside a young Pallas, son of a local Greek leader Evander, just as Achilles befriends and fights alongside Patroclus. Turnus will kill young Pallas and puts on parts of his armor, just as the Trojan hero Hector kills Patroclus and puts on parts of his armor/",
+          "3. Aeneas and Turnus fight a duel, and Aeneas kills Turnus because of the death of Pallas, just as Achilles and Hector fight a duel, and Achilles kills Hector because of the death of Patroclus. Just as Hector’s death leads to the fall of Troy. so Turnus’ death marks the end of the war in Italy."
+        ]
+      },
+      {
+        "heading": "What to Take away from Lesson 58: Latinus has no male heirs.",
+        "paragraphs": [
+          "1. King Latinus is the great-grandson of Saturn (Saturn-Picus-Faunus-Latinus) and rules peacefully.",
+          "2. Since Latinus has no male heirs, he must pass his kingship not to his daughter Lavinia but to the husband whom Latinus chooses for Lavinia. Many, including Turnus, seek marriage with her.",
+          "3. Portents and omens ( portenta, l. 58) stand in the way. Latinus will later marry her off to Aeneas."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-59",
+    "author": "vergil",
+    "lesson": 59,
+    "label": "Lesson 59",
+    "passage": "Aeneid 7.783-92",
+    "subtitle": "Turnus’ armor as he prepares for war 119",
+    "source": "PDF page 119",
+    "blocks": [
+      {
+        "heading": "What Happened Next: A Catalogue of Italian Fighters Ends with Turnus and Camilla",
+        "paragraphs": [
+          "Book 7 ends with a catalogue, i.e. list, of Italian warriors that culminates with detailed descriptions of two heroes: Turnus and the female warrior Camilla. Turnus is king of the Rutulians, a minor Latin tribe in Ardea, a town 7 miles southeast of King Latinus’ city Laurentum. Turnus lost both a marriage with Lavinia and the future kingship of the Latins because of Aeneas, and Turnus will lead the Rutulians and allied Italians against the Trojans in Books 7-12. Camilla, leader of the Volscians, a non-Latin Italian tribe south of Ardea, is a unique female hero whose life and death will be the focus of readings in Lessons 61 through 65 in Book 11. Vergil’s decision to list the warriors with short descriptions is a convention of epic poetry. Homer devotes Book 2 of the Iliad to a catalogue of the Greek warriors who sailed their ships to Troy, and Vergil appears to be imitating the Iliad or epic convention with this catalogue of Italian warriors."
+        ]
+      },
+      {
+        "heading": "Turnus’ Helmet 7.785-8: Is Chimera a Mountain or a Monster?",
+        "paragraphs": [
+          "The Chimera is represented as a monster on the helmet, but it is described as both a mountain and a monster in lines 785-8. Mt. Chimera, located in Asia Minor (modern Turkey), is not an active volcano but produces methane and other gases that burn constantly and give the mountain the reputation for being fire-breathing. It is this reputation that likely gave rise to the myth of the monstrous Chimera, a fire-breathing monster from the same region, which is the form of a lion with a goat’s neck and head protruding from its back and with a serpent’s neck and head as its tail. Lines 785-6 hint at Chimera’s origin as a mountain and go so far as to compare its fires to the fires of Mt. Etna, an active volcano well-known to Romans on the eastern coast of Sicily. But lines 787-8 clearly identify Chimera as the monster, which roars ( fremēns ) like a lion, is wild ( effera ), breathes fire ( flammīs ), and foments bloody battles ( effusō sanguine )."
+        ]
+      },
+      {
+        "heading": "Turnus’ Shield 7.789-92: Io, Argus, and Inachus",
+        "paragraphs": [
+          "Io symbolizes Juno’s wrath. Jupiter once had an affair with the human Io, a priestess of Juno. When Juno was about to discover the affair, Jupiter turned Io into a cow to hide her. Juno noticed the deceit and sent a gadfly to sting and torture the cow Io continuously and ordered Argus, a one-hundred-eyed monster, to guard her night and day to prevent Jupiter from approaching her. Io and her father Inachus, the river god mentioned in 792, are ancestors of Turnus himself (see 7.373ff.). And so, while some readers may see Io as a symbol of the wrath that Juno will heap upon Aeneas through Turnus, others see Io as a symbol of history repeating itself: just as Juno provoked Turnus’ ancestor Io with the gadfly, so Juno provokes Io’s descendant Turnus with the fury Allecto. There is truth to this second reading. Turnus, while angry about losing Lavinia, is initially unwilling to foment a war. It is only when Juno sends the fury Allecto to instill fury in Turnus’ heart that Turnus incites violence. While Turnus sees his ancestors on his shield, we readers see something else."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-60",
+    "author": "vergil",
+    "lesson": 60,
+    "label": "Lesson 60",
+    "passage": "Aeneid 7.803-17",
+    "subtitle": "Camilla, leader of the Volsci, prepares for war 121",
+    "source": "PDF page 121",
+    "blocks": [
+      {
+        "heading": "Camilla, the Female Warrior",
+        "paragraphs": [
+          "Turnus’ armor characterizes Turnus through contrasting imagery: he is both a fierce fighter like the Chimera and a victim of Juno’s provocations like his ancestor Io. Camilla, the last warrior mentioned in the catalogue, is also described through contrasting imagery. The list below is not comprehensive but meant to encourage readers to read with contrasts in mind:",
+          "she leads troops flowering... but flowering with bronze a warrior unaccustomed to weaving... but an unmarried woman who endures war she could graze the tops of grain and waves... but she has not done so in reality young men marvel at her... but older mothers marvel at her decorated in gold and royal purple... but equipped with an arrow-quiver and spear men marvel at a warrior wearing gold & purple... but mothers marvel at a woman bearing arms a quiver is for hunting, a staff for shepherding but she carries these as weapons of war",
+          "This juxtaposition of contrasting images is called antithesis. The Greeks and Romans viewed female warriors as unique and oddly paradoxical, and Vergil ingeniously uses antithesis again and again to highlight that uniqueness and prepare us for the much greater role Camilla will play in Book 11."
+        ]
+      },
+      {
+        "heading": "Camilla recalls Penthesilea, Harpalyce, and Atalanta!",
+        "paragraphs": [
+          "Vergil likely modeled Camilla after several female warriors known in myth. The Amazon queen Penthesilea led female warriors at Troy in the lost Greek epic Aethiopis and was killed by no other than Achilles himself. Harpalyce was a famous, swift-footed hunter, who was left motherless and raised by her father as a warrior, just as Camilla will be described in Book 11. There is also swift- footed Atalanta, the sole female Argonaut, who outran every man in races and could not be beaten without deceit. Camilla seems to embody characteristics of all three of these mythical figures."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-61",
+    "author": "vergil",
+    "lesson": 61,
+    "label": "Lesson 61",
+    "passage": "Aeneid 11.532-43",
+    "subtitle": "Diana tells the story of Camilla’s childhood (1 of 5) 123",
+    "source": "PDF page 123",
+    "blocks": [
+      {
+        "heading": "What We Missed: Book 8 (Aeneas visits Rome) as Imitation of the Iliad",
+        "paragraphs": [
+          "At the beginning of the war in Book 8 Aeneas sets out to find allies and, guided by the river god Tiberinus (Tiber), comes to the future site of Rome. There, he meets the Greek King Evander and takes a tour of the future site of Rome, which at that time was a Greek settlement called Pallanteum. Evander agrees to help Aeneas and sends Greek soldiers along with his young son Pallas, who will be important in the final scene of the epic. While Aeneas visits Evander, Venus asks Vulcan to prepare a shield for Aeneas. This request is a clear imitation of Book 18 of the Iliad, where Achilles’ mother Thetis asks Hephaestus to make divine armor for Achilles to wear against Hector. Vulcan’s Shield of Aeneas depicts figures and events in Roman history including Romulus and Remus, the Gallic sack of Rome, Catiline, and Cato. The centerpiece depicts Caesar Augustus’ victory at Actium over Marc Antony and Cleopatra in 31 BC and his triple triumph in 27 BC. The depiction suggests that the events that led to Augustus’ rule as emperor were fated by the gods. Aeneas receives the armor but does not understand the imagery."
+        ]
+      },
+      {
+        "heading": "What We Missed: Book 9 (Nisus and Euryalus) as Imitation of the Iliad",
+        "paragraphs": [
+          "While Aeneas is away, Turnus and the Italians besiege the Trojan camp, just as Achilles and the Greeks besieged the Trojans in the Iliad. Nisus and Euryalus, two close Trojan soldiers, sneak out of the camp and carry out a night raid. They kill many unsuspecting soldiers and seize a lot of loot, but when Euryalus takes a gleaming Rutulian helmet, he draws the attention of the Italians, and the two Trojans are killed. This night raid is a clear imitation of Book 10 of the Iliad, where Diomedes and Odysseus perform a night raid to recover the horses of Rhesus."
+        ]
+      },
+      {
+        "heading": "What We Missed: Book 10 (Pallas and Mezentius) as Imitation of the Iliad",
+        "paragraphs": [
+          "In Book 10, when Aeneas, Pallas, and the Greek soldiers return to the Trojan camp, fighting ensues. Aeneas becomes the foremost fighter among the Trojans and succeeds in killing Mezentius, the hated king of the Etruscans. Pallas, whom Aeneas agreed to protect, is killed by Turnus. Turnus takes the war belt off of Pallas and wears it on his own body, just as Hector kills Patroclus and takes his armor."
+        ]
+      },
+      {
+        "heading": "What We Missed: First Half of Book 11 (Defense of the City Laurentum)",
+        "paragraphs": [
+          "In the first half of Book 11, there is a 12-day truce, and the Trojans bury and mourn Pallas. When the Trojans split up into two forces to attack the city Laurentum, Turnus and Camilla agree to divide up leadership. Turnus leads away Italians to ambush the force led by Aeneas, while Camilla defends the city from the second Trojan force. Camilla is treated as an equal to Turnus in leadership and in battle."
+        ]
+      },
+      {
+        "heading": "Diana tells the nymph Opis the story of Camilla’s childhood over the next four lessons.",
+        "paragraphs": [
+          "Diana ( Latonia, l. 534) addresses the nymph Opis and tearfully reveals that Camilla, dear to Diana beyond others, will die in battle. Diana then recalls Camilla’s childhood. Metabus, Camilla’s father, was expelled as Etruscan king of the Volscian city Privernum and escapes with Camilla as an infant. Since Camilla’s mother, Casmilla, died giving birth to Camilla, Metabus raises his daughter alone."
+        ]
+      },
+      {
+        "heading": "Who are the Volscians?",
+        "paragraphs": [
+          "The Volscians (or Voslci) are an Italian tribe who lived on the western shore of Italy south of Latium. Both the city Privernum and river Amasenus, mentioned on the next page, are located in this region. Metabus, his wife Casmilla, and daughter Camilla are Etruscans, an Italian people living in twelve major cities north of Rome. Metabus was therefore a foreign king when he was ousted from ruling the Volscians. His daughter Camilla regained the throne and is leading the Volscans in battle in Book 11."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-62",
+    "author": "vergil",
+    "lesson": 62,
+    "label": "Lesson 62",
+    "passage": "Aeneid 11.544-56",
+    "subtitle": "Diana tells the story of Camilla’s childhood (2 of 5) 125",
+    "source": "PDF page 125",
+    "blocks": [
+      {
+        "heading": "Metabus Dedicates his Daughter Camilla to Diana and Escapes Across a River",
+        "paragraphs": [
+          "Diana continues to tell Opis about Metabus’ escape with Camilla. When Metabus is chased by Volscians and comes to the river Amasenus, he ties the infant Camilla around a spear ( iaculum ). After vowing that Camilla will be a servant to the goddess Diana, he throws the spear and Camilla safely across the river and then swims across to join his daughter and flee into the wilderness."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-63",
+    "author": "vergil",
+    "lesson": 63,
+    "label": "Lesson 63",
+    "passage": "Aeneid 11.557-69",
+    "subtitle": "Diana tells the story of Camilla’s childhood (3 of 5) 127",
+    "source": "PDF page 127",
+    "blocks": [
+      {
+        "heading": "Camilla and Famula are Synonyms",
+        "paragraphs": [
+          "Camilla is a synonym for the word “famula” (11.558). In Latin, the nouns “camillus” and “camilla” refer to servants who assist in certain sacred rites. They are priests. Compare how we today use the word “minister.” And so, while Metabus appears in historical records before the Aeneid and is based on a historical figure, Vergil likely made up the character Camilla with a name fitting for someone dedicated to be a servant (i.e. priestess) to Diana."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "/figures/lesson-63-diana-head.png",
+        "alt": "Engraved head from the Diana of Versailles",
+        "caption": "Head from the Diana of Versailles, connecting Camilla's name and dedication to Diana. Figure 4 in the commentary.",
+        "credit": "Thurs, public domain"
+      }
+    ]
+  },
+  {
+    "id": "lesson-64",
+    "author": "vergil",
+    "lesson": 64,
+    "label": "Lesson 64",
+    "passage": "Aeneid 11.570-80",
+    "subtitle": "Diana tells the story of Camilla’s childhood (4 of 5) 129",
+    "source": "PDF page 129",
+    "blocks": [
+      {
+        "heading": "The Development of Camilla’s Character",
+        "paragraphs": [
+          "1. Women were conspicuously absent in Camilla’s upbringing",
+          "a. lacte ferīnō, “wild milk” (11.571): It was not uncommon for a relative or a slave, known as a “wet nurse,” to breastfeed a child in place of a mother. The fact that Camilla is fed by a female horse indicates that there is no other woman to breastfeed and serve as a role model in her childhood. The lack of sheep or goat milk reveals that she is hunting and not shepherding flocks.",
+          "b. tigridis exuviae, “skins of a wild cat” (11.577): It was traditionally the task of women to weave clothing from wool, and so the fact that Camilla wears a tiger skin indicates not only that she is a fierce hunter but more importantly that there were no women to teach her to weave or to make her clothing. Since there were no tigers in Italy, tigris likely refers to wild cats found in ancient Italy.",
+          "2. Camilla rejects marriage, the traditional role for women",
+          "c. sōlā contenta Diānā, “content with Diana alone” (11.582): In the next lesson Vergil will add that many mothers hoped to have Camilla as a daughter-in-law. Why does Vergil add this detail? If Camilla had never been asked to marry, her devotion to virginity and Diana would seem less noble. The fact that she had many opportunities to marry highlights her rejection of this traditional role.",
+          "3. Camilla was taught the weapons of hunting before she could walk",
+          "Vergil’s remark that Camilla held a spear when she was taking her prīmīs plantīs, “first steps,” (11.573) suggests that hunting and its weapons were part of her character. These weapons include iaculum acutum, “a sharp javelin” (11.574), tēla puerila, “javelins suited for a child” (578), arcus et spīcula, “bow and arrows” (575), and funda, “sling bullets” (579)."
+        ]
+      }
+    ],
+    "figures": [
+      {
+        "src": "/figures/lesson-64-diana.png",
+        "alt": "Engraving of the Diana of Versailles with a deer",
+        "caption": "Diana of Versailles, reinforcing Camilla's devotion to Diana and rejection of conventional roles. Figure 6 in the commentary.",
+        "credit": "Thurs, public domain"
+      }
+    ]
+  },
+  {
+    "id": "lesson-65",
+    "author": "vergil",
+    "lesson": 65,
+    "label": "Lesson 65",
+    "passage": "Aeneid 11.581-94",
+    "subtitle": "Diana tells the story of Camilla’s childhood (5 of 5) 131",
+    "source": "PDF page 131",
+    "blocks": [
+      {
+        "heading": "Diana Blames Camilla for her own Death",
+        "paragraphs": [
+          "In lines 584-5 Diana expresses an unfulfilled wish in which Camilla could have kept herself alive:",
+          "Vellem haud correpta fuisset Would that she had by no means been seized by such mīlitiā tālī, cōnāta lacessere Teucrōs military service, having attempted to provoke the Trojans",
+          "(1) Diana notes that, although Camilla is a hunter and the favorite of Diana, goddess of the hunt, she allowed herself to be caught up by mīlitiā which is neither Camilla’s nor Diana’s domain of power and strength. (2) When Diana adds that Camilla attempts lacessere, “to provoke” the Trojans, Diana emphasizes that Camilla chose to be an aggressor and could have avoided war and death altogether."
+        ]
+      },
+      {
+        "heading": "Diana, unlike Juno, does not Attempt to Hinder Fate",
+        "paragraphs": [
+          "Unlike Juno, who defies fate by sending the Trojans off course to Carthage in Book 1, stirs up war against the Trojans in Book 7, and intervenes on numerous occasions until the end of Book 12, Diana acknowledges the bitter fate of Camilla ( fātīs urgētur acerbīs, 11.587) and does not defiantly resist it. Instead, Diana finds ways within the limits of fate to honor Camilla (a) by calling on Opis to punish Camilla’s killer and (b) by promising to envelope Camilla’s body in a mist of invisibility so that her body will not be mistreated and she can receive a honorable burial in her homeland."
+        ]
+      },
+      {
+        "heading": "What Happens Next: Camilla’s Aristeia and Death on the Battlefield (11.666-831)",
+        "paragraphs": [
+          "An aristeia, “moment of excellence,” is a descriptive scene in epic where a hero achieves his or her peak performance in battle. Soon after Diana sends Opis, Camilla’s aristeia begins. When Turnus is away from battle, Camilla swiftly kills twelve (12) Trojan warriors with her javelin and battle-axe. While she is distracted by another foe, the enemy Arruns sneaks up unnoticed and kills her with his javelin. As if to show that she is the equal of Turnus, Vergil describes her death exactly as Turnus’ in 12.952: “and with a groan her life fled indignant under the shades” ( vītaque...umbrās, 11.831)."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-66",
+    "author": "vergil",
+    "lesson": 66,
+    "label": "Lesson 66",
+    "passage": "Aeneid 12.791-96, 803-9",
+    "subtitle": "Jupiter and Juno reconcile 133",
+    "source": "PDF page 133",
+    "blocks": [
+      {
+        "heading": "What We Missed: Book 12.1-790",
+        "paragraphs": [
+          "Turnus asks King Latinus to arrange a duel with Aeneas. The Rutulians and Trojans agree to settle the war with that final contest, but Juno intervenes yet again and urges Juturna, goddess of fountains and divine sister of Turnus, to help her brother. The fighting resumes. When Queen Amata hangs herself in despair, Turnus resolves to meet Aeneas. During the final duel, Turnus’ sword breaks when he strikes Aeneas’ shield, and Aeneas chases after Turnus. When Aeneas’ spear misses and becomes stuck in a tree, Juturna uses the opportunity to provide Turnus with a sword. Venus also intervenes and helps free Aeneas’ spear. It is at this point—while gods on both sides intervene to help Turnus and Aeneas—that Juno and Jupiter meet to reconcile their differences on Mt. Olympus."
+        ]
+      },
+      {
+        "heading": "Aeneas is Deified",
+        "paragraphs": [
+          "The adjective indiges is rare, and the origin of the word remains in dispute, but it clearly refers to heroes who are deified and regarded as gods in their native land after death. The word is likely related to indi-genus, “native” or “born in,” from which we get the English word “indigenous.” This is another example of political propaganda. Caesar Augustus and the Julian clan can claim ancestry not only from the goddess Venus but from Aeneas—who is himself worshiped as a god."
+        ]
+      },
+      {
+        "heading": "Reasons for Juno’s Anger and the Conditions for Peace",
+        "paragraphs": [
+          "Reconciliation with Jupiter allows Juno to address some, but not all, of her earlier grievances against the Trojans. Recall the reasons for Juno’s anger from Book 1.22-33:",
+          "1. the future destruction of Carthage through the descendants of Troy",
+          "2. the judgment of Paris, which insulted Juno",
+          "3. the hated People (ancestors born from Jupiter’s affairs)",
+          "4. the honors of kidnapped Ganymede, who rivaled Juno for Jupiter’s affections",
+          "Juno must allow the descendants of Troy to destroy her beloved Carthage (#1), and she cannot change grievances #2-4, which are part of the mythical past. But, by requesting that all signs of Trojan identity—their language, their culture, and their memory—be erased over time as the Trojans intermarry with the Latins and assimilate to Latin culture, Juno offers a condition that Jupiter can readily accept and still allows Juno to preserve her honor. Since the new people will not technically be Trojans, Juno has no reason to punish them for past grievances #2-4."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-67",
+    "author": "vergil",
+    "lesson": 67,
+    "label": "Lesson 67",
+    "passage": "Aeneid 12.810-12, 818-28",
+    "subtitle": "Jupiter and Juno reconcile 135",
+    "source": "PDF page 135",
+    "blocks": [],
+    "figures": []
+  },
+  {
+    "id": "lesson-68",
+    "author": "vergil",
+    "lesson": 68,
+    "label": "Lesson 68",
+    "passage": "Aeneid 12.919-29",
+    "subtitle": "Aeneas and Turnus fight in a duel 137",
+    "source": "PDF page 137",
+    "blocks": [
+      {
+        "heading": "What We Missed: Aeneid 12.889-919",
+        "paragraphs": [
+          "Jupiter accepts Juno’s condition that the Trojan name, language, and culture be erased as the Trojans intermarry and assimilate with the Latins. In one final intervention, Juno has Juturna, goddess of fountains and sister of Turnus, refrain from helping Turnus and remove herself from the battlefield.",
+          "In the duel, Turnus throws an immense boulder that barely misses Aeneas. Aeneas, on the facing page, throws his spear and strikes Turnus in the thigh."
+        ],
+        "variant": "boxed"
+      },
+      {
+        "heading": "The Final Simile of the Aeneid in 12.921-923",
+        "paragraphs": [],
+        "variant": "boxed",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "When Aeneas hurls the spear that strikes Turnus, Aeneas’ throw is likened to (1) a rock propelled from a siege machine against a city wall and (2) a thrown thunderbolt."
+          },
+          {
+            "type": "verse",
+            "lines": [
+              {
+                "segments": [
+                  {
+                    "text": "Cūnctantī telum Aenēās fatāle coruscat,"
+                  }
+                ],
+                "line": "919"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "sortitus fortūnam oculīs, et corpore tōtō"
+                  }
+                ],
+                "line": "920"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "ēminus intorquet. "
+                  },
+                  {
+                    "text": "Mūrālī concita numquam",
+                    "emphasis": true
+                  }
+                ],
+                "line": "921"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "tormentō sīc saxa fremunt nec fulmine tantī",
+                    "emphasis": true
+                  }
+                ],
+                "line": "922"
+              },
+              {
+                "segments": [
+                  {
+                    "text": "dissultant crepitūs.",
+                    "emphasis": true
+                  }
+                ],
+                "line": "923"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "text": "These similes are especially apt. Aeneas kills Turnus while the Trojans besiege the Latin city of Laurentum and after Jupiter has reconciled with Juno in Aeneas’ favor. Aeneas’ throw therefore symbolizes both the fall of Laurentum and the approval of thunderbolt-throwing Jupiter."
+          }
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-69",
+    "author": "vergil",
+    "lesson": 69,
+    "label": "Lesson 69",
+    "passage": "Aeneid 12.930-9",
+    "subtitle": "Turnus surrenders publicly and begs for his life 139",
+    "source": "PDF page 139",
+    "blocks": [
+      {
+        "heading": "Turnus Surrenders Publicly and Pleads for his Life",
+        "paragraphs": [
+          "After Turnus speaks, Aeneas restrains his right hand and hesitates from killing him. Turnus’ speech proves to be effective and deserves a careful reading. Note that the hand gestures, “dextram precantem” in 12.930 and “victum tendere palmās” in 12.936, signal to the Rutulians and Trojans who are watching the duel that Turnus has publicly surrendered, and the acknowledgement “tua est Lāvīnia coniūnx” proves that Turnus no longer poses any threat to Aeneas."
+        ]
+      },
+      {
+        "heading": "Aeneas as Achilles, Turnus as Hector",
+        "paragraphs": [
+          "Vergil imitates the Iliad throughout Books 7-12, and this final duel is no different. This exchange between Turnus and Aeneas recalls a similar scene after the duel between Hector and Achilles in Book 22 of the Iliad. Achilles had just stabbed Hector with a spear in the neck, and as Hector lies dying, he pleads with Achilles to return his body to his parents for burial. Achilles refuses and, after Hector perishes, ties Hector’s body behind his chariot and drags it around the walls of Troy daily."
+        ]
+      }
+    ],
+    "figures": []
+  },
+  {
+    "id": "lesson-70",
+    "author": "vergil",
+    "lesson": 70,
+    "label": "Lesson 70",
+    "passage": "Aeneid 12.940-52",
+    "subtitle": "Aeneas kills Turnus 141",
+    "source": "PDF page 141",
+    "blocks": [
+      {
+        "heading": "The Signficance of the Armor: an Imitation of the Iliad",
+        "paragraphs": [
+          "In the Iliad, young Patroclus puts on Achilles’ armor and joins the battle when Achilles, angry at the Greek King Agamemnon, refuses to fight. Both Trojans and Greeks think that Patroclus is Achilles, until Patroclus is killed, and his identity is revealed. After Hector kills Patroclus in Book 16, he puts Achilles’ armor on himself and wears it for the remainder of the Iliad. And so, when Achilles finally rejoins the battle with the sole purpose of killing Hector and avenging young Patroclus, the armor that Hector wears in the duel (Book 22) serves as a provocation for Achilles’ murderous rage. Pallas’ belt ( balteus, cingula ) serves a similar purpose for Aeneas."
+        ]
+      },
+      {
+        "heading": "Turnus’ Death is not a Predictable Imitation of the Iliad",
+        "paragraphs": [
+          "As we mentioned on p. 81, Vergil’s imitation of the Odyssey and Iliad is an example of originality in art and literature that was quite common in the Greco-Roman world. Many authors would imitate their predecessors in large and small ways and then offer variations or twists to distinguish their own work from what came before. Vergil uses the imitation not only to embed the Aeneid in the tradition of Homer’s epics but also to make intelligible how the Aeneid rivals and surpasses its predecessors. Turnus’s death was not predictable for Vergil’s readers. Those familiar with the Iliad know that the duel between Hector and Achilles in Book 22 is not the end of the epic. In Book 24, the Trojan King Priam sneaks through the Greek camp at night to Achilles’ tent to plead for the return of Hector’s body. In a very moving conversation between Priam and Achilles, both men recognize their common suffering as fathers and sons (Priam lost Hector; Achilles will never see his father Peleus). Achilles shows respect by sending King Priam off safely with Hector’s body, and the last line of the epic describes Hector’s burial. In short, the Iliad ends with reconciliation and the recognition of common suffering between enemies. Turnus’ speech hints at this possible ending when he asks Aeneas to take pity on his father Daunus and reminds Aeneas of his own father Anchises. And so, readers of the Iliad have some expectation that Aeneas will show the same restraint and respect that Achilles shows toward Priam."
+        ]
+      },
+      {
+        "heading": "Furia vs. Pietās",
+        "paragraphs": [
+          "Furia, often translated as “madness,” “rage,” or simply “fury,” is an unrestrained emotion that leads to a lack of self control and actions that are the opposite of pietas, “a devotion to family, community, and the gods.” Furia and pietas are key terms in the Aeneid, but are surprisingly rare in the selections chosen for this commentary. Pietas is a defining feature for Aeneas as a Roman epic hero, while furia frequently leads individuals in the epic—whether it is Dido, Juno, Turnus or even Aeneas—to behave in ways contrary to pietas. It is not surprising, therefore, to see the word furia or pietas appear in the closing of the epic. The sight of the belt leads Aeneas to be motivated by furia before he offers a final speech and kills Turnus:",
+          "furiīs accensus et īrā terribilis enflamed by madness and terrible in anger 12.946",
+          "Furia is not just a synonym for “very angry.” By giving into furia, Vergil is suggesting that Aeneas is acting contrary to the ideal of pietas that Aeneas has attempted to uphold throughout the epic."
+        ]
+      }
+    ],
+    "figures": []
+  }
+]

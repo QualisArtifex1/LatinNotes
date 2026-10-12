@@ -77,7 +77,7 @@ for (const author of Object.keys(original).filter(a => !['Pliny the Younger', 'V
 }
 const html = read('index.html');
 assert(html.indexOf('lesson-readings.js') < html.indexOf('assets/index-DNmu9U65.js'));
-assert.match(html, /index-DNmu9U65\.js\?v=20261012-snapshots-1/);
+assert.match(html, /index-DNmu9U65\.js\?v=20261012-culture-1/);
 console.log('PASS: 69 ordered lessons; exact Latin coverage; combined passages; lesson-specific commentary; other authors unchanged; cache version.');
 // Exercise the shipped decoder and lesson enrichment, including exact verse maps.
 (async () => {
@@ -90,7 +90,7 @@ console.log('PASS: 69 ordered lessons; exact Latin coverage; combined passages; 
   const data = await sandbox.window.LATIN_COMMENTARY_PROMISE;
   for (const lesson of lessons) {
     const entry = data[lesson.label];
-    assert.equal(entry.notes.length, lesson.commentaryRefs.length);
+    assert.equal(entry.notes.length, lesson.commentaryRefs.length + (lesson.number === 48 ? 1 : 0));
     assert(entry.notes.every(note => note.reading === lesson.label));
     if (lesson.author === 'Vergil') assert.equal(entry.lineNumbers.length, lesson.text.split('\n').length);
   }
