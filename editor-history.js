@@ -76,7 +76,7 @@ export function useEditorHistory(React, snapshot, apply, enabled, blocked) {
     reset: () => { history.current.reset(null); setReading(false); }
   };
 }
-export function EditorActions({React, history}) {
+export function EditorActions({React, history, compact=false}) {
   const button = (label, action, disabled, title, extra = {}) => React.createElement('button', {
     type: 'button', onClick: action, disabled, title,
     className: 'px-3 py-2 rounded-lg border border-stone-300 dark:border-stone-600 bg-white dark:bg-stone-800 text-sm font-semibold text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-700 disabled:opacity-30 disabled:cursor-not-allowed', ...extra
@@ -85,7 +85,7 @@ export function EditorActions({React, history}) {
     button('↶ Undo',history.undo,!history.canUndo,'Undo (Ctrl/Cmd+Z)',{'aria-label':'Undo', 'aria-keyshortcuts':'Control+z Meta+z'}),
     button('↷ Redo',history.redo,!history.canRedo,'Redo (Ctrl/Cmd+Shift+Z; Ctrl+Y)',{'aria-label':'Redo', 'aria-keyshortcuts':'Control+Shift+z Meta+Shift+z Control+y'}),
     button(history.reading?'Return to Annotating':'Reading View',history.toggleReading,false,'Toggle Reading View (Alt/Option+Shift+R)',{'aria-pressed':history.reading,'aria-keyshortcuts':'Alt+Shift+r'}),
-    history.reading && React.createElement('span',{className:'text-sm text-stone-500 dark:text-stone-400',role:'status'},'Annotations are hidden, not deleted.')
+    !compact && history.reading && React.createElement('span',{className:'text-sm text-stone-500 dark:text-stone-400',role:'status'},'Annotations are hidden, not deleted.')
   );
 }
 export function ReadingText({React, words, fontSize, lineSpacing}) {

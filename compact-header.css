@@ -1,0 +1,34 @@
+.compact-header {display:flex;align-items:center;gap:16px;padding:8px 24px;min-height:54px;flex-shrink:0;background:#fff;border-bottom:1px solid #e7e5e4;position:relative;z-index:60;color:#44403c}
+.compact-header h1 {font-family:'EB Garamond',serif;font-size:24px;font-weight:700;color:#78350f;margin:0 auto 0 0;white-space:nowrap}
+.compact-header [role=group] {margin:0;gap:6px;flex-wrap:nowrap}
+.compact-header button {min-height:34px;padding:5px 10px;font-size:13px;white-space:nowrap}
+.compact-utilities {display:flex;gap:6px;align-items:center;border-left:1px solid #e7e5e4;padding-left:12px}
+.compact-utilities button,.compact-help summary {border:1px solid #e7e5e4;border-radius:8px;background:transparent;min-width:34px;height:34px;text-align:center;cursor:pointer}
+.compact-help summary {display:grid;place-items:center;font-weight:600;list-style:none}
+.compact-help summary::-webkit-details-marker {display:none}
+.compact-help-panel {position:absolute;right:20px;top:calc(100% + 6px);width:min(340px,calc(100vw - 32px));padding:16px;background:#fff;border:1px solid #e7e5e4;border-radius:12px;box-shadow:0 8px 25px #0002;font-size:13px;line-height:1.5}
+.compact-help-panel p {margin:8px 0 0}
+.dark .compact-header,.dark .compact-help-panel {background:#1c1917;color:#e7e5e4;border-color:#44403c}
+.dark .compact-header h1 {color:#fbbf24}
+.dark .compact-utilities,.dark .compact-utilities button,.dark .compact-help summary {border-color:#57534e}
+@media(max-width:600px){.compact-header {gap:8px;padding:8px 12px;flex-wrap:wrap}.compact-header h1{font-size:22px}.compact-header [role=group]{order:3;width:100%}.compact-utilities{border:0;padding:0}.compact-header button{min-height:36px}}
+/* The passage is the visual center; surrounding controls stay quiet. */
+.annotation-toolbar {border:0!important;border-bottom:1px solid #d6d3d1!important;border-radius:0!important;box-shadow:none!important;background:transparent!important;gap:12px!important;padding:4px 0 10px!important}
+.annotation-toolbar > div[data-tool-group] {position:relative;padding-top:19px;min-height:54px}
+.annotation-toolbar > div[data-tool-group]::before {content:attr(data-tool-group);position:absolute;top:0;left:0;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#78716c;font-weight:600}
+.annotation-toolbar button:disabled {opacity:.5!important}
+.annotation-toolbar button {box-shadow:none!important}
+.latin-page {max-width:1120px;margin:auto}
+#editor-container {background:#fff!important}
+.dark #editor-container {background:#292524!important}
+main > div > div:has(> #editor-container) {box-shadow:none!important;border-radius:8px!important}
+.notes-drawer {flex-shrink:0;border-top:1px solid #e7e5e4;background:#fafaf9;color:#57534e}
+.drawer-tabs {display:flex;gap:20px;padding:0 20px}
+.drawer-tabs button {font-size:12px;font-weight:600;padding:12px 0;text-align:left}
+.drawer-tabs button[aria-expanded=true] {color:#92400e}
+.drawer-content {padding:0 20px 16px}
+.drawer-content textarea {display:block;width:100%;height:120px;max-height:30vh;resize:vertical;border:1px solid #d6d3d1;border-radius:6px;padding:12px;background:#fff;color:#292524;font-size:17px;font-family:'EB Garamond',serif}
+.dark .notes-drawer {background:#1c1917;border-color:#44403c;color:#d6d3d1}
+.dark .drawer-content textarea {background:#292524;border-color:#57534e;color:#f5f5f4}
+.dark .drawer-tabs button[aria-expanded=true] {color:#fbbf24}
+.dark .annotation-toolbar > div[data-tool-group]::before {color:#a8a29e}
