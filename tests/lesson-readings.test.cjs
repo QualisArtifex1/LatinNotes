@@ -77,7 +77,7 @@ for (const author of Object.keys(original).filter(a => !['Pliny the Younger', 'V
 }
 const html = read('index.html');
 assert(html.indexOf('lesson-readings.js') < html.indexOf('assets/index-DNmu9U65.js'));
-assert.match(html, /index-DNmu9U65\.js\?v=20261012-culture-1/);
+assert.match(html, /index-DNmu9U65\.js\?v=20261015-pdf-1/);
 console.log('PASS: 69 ordered lessons; exact Latin coverage; combined passages; lesson-specific commentary; other authors unchanged; cache version.');
 // Exercise the shipped decoder and lesson enrichment, including exact verse maps.
 (async () => {
