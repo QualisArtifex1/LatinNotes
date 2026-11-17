@@ -130,3 +130,17 @@ main > div > div:has(> #editor-container) {box-shadow:none!important;border-radi
   background-color:var(--highlight-color)!important;
   color:#1c1917!important;
 }
+
+.gather-text-control {display:flex;align-items:center;flex-wrap:wrap;gap:4px 12px;margin-top:8px}
+.gather-text-button {padding:6px 12px;border:1px solid #d6d3d1;border-radius:7px;color:#92400e;background:#fffbeb;font-size:13px;font-weight:600}
+.gather-text-button:hover {background:#fef3c7}
+.gather-text-hint,.gather-text-control p {font-size:12px;color:#78716c}
+.gather-text-control p {flex-basis:100%;margin:2px 0 0}
+.gather-text-control p:empty {display:none}
+.dark .gather-text-button {background:#292524;color:#fbbf24;border-color:#78716c}
+.dark .gather-text-button:hover {background:#44403c}
+.dark .gather-text-hint,.dark .gather-text-control p {color:#a8a29e}
+@media(max-width:600px) {
+  #root form:has(.gather-text-control) {min-height:0;overflow-y:auto}
+  #root form:has(.gather-text-control) > textarea {flex-shrink:0;min-height:120px}
+}

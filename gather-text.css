@@ -1,0 +1,33 @@
+:root {color-scheme:light dark;font-family:system-ui,sans-serif;color:#292524;background:#fafaf9}
+* {box-sizing:border-box}
+body {margin:0;display:flex;flex-direction:column;height:100dvh}
+header {padding:14px 20px;background:#fff;border-bottom:1px solid #d6d3d1;flex:none}
+.heading {display:flex;align-items:center;justify-content:space-between;gap:12px}
+h1 {font:700 24px Georgia,serif;margin:0;color:#78350f}
+a {color:#92400e;font-size:12px}
+p {font-size:14px;line-height:1.5;margin:8px 0;color:#57534e}
+.actions {display:flex;flex-wrap:wrap;gap:8px}
+button {font:600 13px system-ui,sans-serif;padding:9px 12px;border:1px solid #d6d3d1;border-radius:7px;background:#fafaf9;color:#44403c;cursor:pointer}
+button:hover {background:#f5f5f4}
+button:focus-visible,a:focus-visible,textarea:focus-visible {outline:3px solid #d97706;outline-offset:2px}
+button.primary {background:#92400e;border-color:#92400e;color:#fff}
+button.primary:hover {background:#78350f}
+button:disabled {opacity:.6;cursor:wait}
+#status:empty,#paste-status:empty {display:none}
+#status,#paste-status {font-weight:600}
+iframe {display:block;width:100%;border:0;flex:1;min-height:0;background:#fff;color-scheme:light}
+dialog {width:min(650px,calc(100% - 24px));max-height:90dvh;overflow:auto;padding:24px;border:1px solid #d6d3d1;border-radius:12px;background:#fff;color:#292524}
+dialog::backdrop {background:#0006}
+h2 {font:700 24px Georgia,serif;margin:0 0 12px}
+label {display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+textarea {width:100%;resize:vertical;min-height:140px;padding:12px;font:19px/1.5 Georgia,serif;border:1px solid #a8a29e;border-radius:6px;background:#fff;color:#292524;margin-bottom:12px}
+@media(prefers-color-scheme:dark) {
+  :root {color:#f5f5f4;background:#1c1917}
+  header,dialog {background:#1c1917;color:#f5f5f4;border-color:#57534e}
+  h1 {color:#fbbf24} a {color:#fcd34d} p {color:#d6d3d1}
+  button,textarea {background:#292524;color:#f5f5f4;border-color:#78716c}
+  button:hover {background:#44403c}
+  button.primary {background:#fbbf24;border-color:#fbbf24;color:#1c1917}
+  button.primary:hover {background:#fcd34d}
+}
+@media(max-width:500px) {header {padding:12px}.heading {align-items:flex-start}h1 {font-size:22px}.actions {gap:6px}button {padding:9px 10px}}
