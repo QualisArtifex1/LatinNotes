@@ -117,3 +117,16 @@ main > div > div:has(> #editor-container) {box-shadow:none!important;border-radi
 .author-portrait img {max-height:170px;object-fit:contain;}
 .author-portrait figcaption {font-size:11px;line-height:1.4;}
 .author-intro-dialog .before-you-read-close {position:sticky;top:0;float:right;cursor:pointer;}
+
+/* Opaque, saturated highlights stay legible when classroom projectors wash out
+   pale colors. Keep dark ink in either theme, including commentary mode. */
+.qa-highlight-red {--highlight-color:#f87171}
+.qa-highlight-green {--highlight-color:#4ade80}
+.qa-highlight-blue {--highlight-color:#60a5fa}
+.qa-highlight-yellow {--highlight-color:#facc15}
+.qa-highlight-purple {--highlight-color:#c084fc}
+.qa-highlight-orange {--highlight-color:#fb923c}
+:root .qa-highlight, :root.dark .qa-highlight {
+  background-color:var(--highlight-color)!important;
+  color:#1c1917!important;
+}

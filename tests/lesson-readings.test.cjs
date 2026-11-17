@@ -9,7 +9,8 @@ const context = { window: {} };
 vm.runInNewContext(read('lesson-readings.js'), context);
 const lessons = JSON.parse(JSON.stringify(context.window.LATIN_LESSONS));
 const bundle = read('assets/index-DNmu9U65.js');
-const start = bundle.indexOf('zc=Object.assign(') + 'zc=Object.assign('.length;
+const marker = 'zc=Object.assign({},window.LATIN_READINGS=';
+const start = bundle.indexOf(marker) + marker.length;
 const end = bundle.indexOf(',window.LATIN_LESSON_READINGS)', start);
 assert(start > 0 && end > start);
 const original = vm.runInNewContext('(' + bundle.slice(start, end) + ')');
@@ -77,7 +78,7 @@ for (const author of Object.keys(original).filter(a => !['Pliny the Younger', 'V
 }
 const html = read('index.html');
 assert(html.indexOf('lesson-readings.js') < html.indexOf('assets/index-DNmu9U65.js'));
-assert.match(html, /index-DNmu9U65\.js\?v=20261015-pdf-1/);
+assert.match(html, /index-DNmu9U65\.js\?v=20261117-highlights-1/);
 console.log('PASS: 69 ordered lessons; exact Latin coverage; combined passages; lesson-specific commentary; other authors unchanged; cache version.');
 // Exercise the shipped decoder and lesson enrichment, including exact verse maps.
 (async () => {

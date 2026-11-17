@@ -59,19 +59,32 @@
     return Array.from(editor.querySelectorAll("div[draggable='true'] > span")).filter((span) => normalizeWord(span.textContent));
   }
 
+  // Check the actual passage after every load, including older memory slots
+  // and snapshots that have no reading key. A prior selection is only a hint.
+  const readingSignatures = new Map();
+  function signatureForReading(key, entry) {
+    if (entry.signature) return entry.signature;
+    if (!readingSignatures.has(key)) {
+      const text = Object.values(window.LATIN_READINGS || {})
+        .map((readings) => readings[key]).find((value) => typeof value === "string");
+      readingSignatures.set(key, normalize(text || ""));
+    }
+    return readingSignatures.get(key);
+  }
+
   function inferCurrentReading() {
-    if (STATE.currentKey && DATA[STATE.currentKey]) return STATE.currentKey;
     const words = getWordSpans();
     if (!words.length) return "";
-    const sample = normalize(words.slice(0, 40).map((span) => span.textContent).join(" "));
-    for (const [key, entry] of Object.entries(DATA)) {
-      if (entry.signature && sample && entry.signature.startsWith(sample.slice(0, 80))) {
-        STATE.currentKey = key;
-        localStorage.setItem("qa-commentary-current-reading", key);
-        return key;
-      }
+    const passage = normalize(words.map((span) => span.textContent).join(" "));
+    const matches = (key) => DATA[key] && signatureForReading(key, DATA[key]) === passage;
+    const key = matches(STATE.currentKey) ? STATE.currentKey
+      : Object.keys(DATA).find(matches) || "";
+    if (key !== STATE.currentKey) {
+      STATE.currentKey = key;
+      if (key) localStorage.setItem("qa-commentary-current-reading", key);
+      else localStorage.removeItem("qa-commentary-current-reading");
     }
-    return "";
+    return key;
   }
 
   function commentaryForCurrentReading() {
@@ -417,6 +430,7 @@
   }
 
   function updateMode() {
+    if (!commentaryForCurrentReading()) STATE.active = false;
     document.body.classList.toggle("qa-commentary-active", STATE.active);
     ensureButton();
     ensureNotesButton();
@@ -874,12 +888,14 @@
       requestAnimationFrame(() => {
         scheduled = false;
         const key = inferCurrentReading();
-        const editorSignature = `${key}:${getWordSpans().length}`;
-        if (editorSignature !== STATE.lastEditorKey) {
+        const words = getWordSpans();
+        const editorSignature = `${key}:${words.map((span) => span.textContent).join(" ")}`;
+        if (editorSignature !== STATE.lastEditorKey || words[0] !== STATE.firstEditorWord) {
           STATE.lastEditorKey = editorSignature;
+          STATE.firstEditorWord = words[0];
           closePopover();
           closeReadingNotesPopup();
-          applyHighlights();
+          updateMode();
         }
         ensureButton();
         ensureNotesButton();
