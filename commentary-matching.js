@@ -9,7 +9,7 @@
  function range(line){const m=String(line).match(/(\d+)(?:\s*[-–—]\s*(\d+))?/);if(!m)return null;const a=+m[1];let b=m[2]?+m[2]:a;if(m[2]&&m[2].length<m[1].length){b=Math.floor(a/10**m[2].length)*10**m[2].length+b;if(b<a)b+=10**m[2].length;}return [a,b];}
  function attach(notes,words,reliable=false){
  const assignments=words.map(()=>new Set()),audit=[];
- for(const note of notes){const bounds=range(note.line);for(const phrase of phrases(note.commentHtml)){
+ for(const note of notes){const bounds=range(note.line);for(const phrase of (note.anchorPhrases || phrases(note.commentHtml))){
  if(phrase==='-que…-que'){const rr=range(note.line);const seq=words.map((w,i)=>i).filter(i=>words[i].key.endsWith('que')&&(!rr||!reliable||(words[i].lineNumber>=rr[0]&&words[i].lineNumber<=rr[1])));seq.forEach(i=>assignments[i].add(note.id));audit.push({noteId:note.id,phrase,status:seq.length?'matched':'unmatched',indices:seq});continue;}
  const ts=tokens(phrase),ellipsis=/…|\.{2,}/.test(phrase);if(!ts.length || phrase==='eī)' || phrase.startsWith('Evidence of the Emperor')){audit.push({noteId:note.id,phrase,status:'supplied',indices:[]});continue;}
  const eligible=i=>!reliable||!bounds||(words[i].lineNumber>=bounds[0]&&words[i].lineNumber<=bounds[1]);

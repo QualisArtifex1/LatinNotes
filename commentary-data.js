@@ -45,6 +45,7 @@
         })),
       };
     }
+    Object.assign(data, window.LATIN_CAESAR_COMMENTARY || {});
     // Keep legacy entries for saved annotations, while giving each lesson only its own notes.
     for (const lesson of window.LATIN_LESSONS || []) {
       const notes = lesson.commentaryRefs.map(([key, index], position) => {

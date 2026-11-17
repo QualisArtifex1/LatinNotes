@@ -144,3 +144,5 @@ main > div > div:has(> #editor-container) {box-shadow:none!important;border-radi
   #root form:has(.gather-text-control) {min-height:0;overflow-y:auto}
   #root form:has(.gather-text-control) > textarea {flex-shrink:0;min-height:120px}
 }
+
+.qa-commentary-source {padding:12px;font:12px/1.5 Inter,sans-serif;overflow-wrap:anywhere;border-top:1px solid #d6d3d1}
